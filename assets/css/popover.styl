@@ -1,0 +1,93 @@
+arrow-size = 8px
+
+.webui-popover-content
+  display none
+  
+.webui-popover
+  position absolute
+  top 0
+  left 0
+  z-index 9999
+  display none
+  min-width 50px
+  min-height 32px
+  padding 1px
+  text-align left
+  white-space normal
+  background-color black
+  background-clip padding-box
+  // box-shadow 0 5px 10px rgba(black, .2)
+  &.top
+  &.top-left
+  &.top-right
+    margin-top -15px
+    .webui-arrow
+      bottom: -(arrow-size)
+      left 50%
+      margin-left: -(arrow-size)
+      border-top-color black
+      border-bottom-width 0
+  &.right
+  &.right-top
+  &.right-bottom
+    margin-left 15px
+    .webui-arrow
+      top 50%
+      left: -(arrow-size)
+      margin-top: -(arrow-size)
+      border-right-color black
+      border-left-width 0
+  &.bottom
+  &.bottom-left
+  &.bottom-right
+    margin-top 15px
+    .webui-arrow
+      top: -(arrow-size)
+      left 50%
+      margin-left: -(arrow-size)
+      border-bottom-color black
+      border-top-width 0
+  &.left
+  &.left-top
+  &.left-bottom
+    margin-left -15px
+    .webui-arrow
+      right: -(arrow-size)
+      top 50%
+      margin-top: -(arrow-size)
+      border-left-color black
+      border-right-width 0
+  &.pop
+    transform scale(.8)
+    transition transform 0.15s cubic-bezier(0.3, 0, 0, 1.5)
+    opacity 0
+  &.pop-out
+    transition-property 'opacity,transform'
+    transition .15s linear
+    opacity 0
+  &.fade
+  &.fade-out
+    transition opacity .15s linear
+    opacity 0
+  &.out
+    opacity 0
+  &.in
+    transform none
+    opacity 1
+  .webui-arrow
+    position absolute
+    display block
+    width 0
+    height 0
+    border arrow-size solid transparent
+  .webui-popover-content
+    padding 12px 18px
+    overflow auto
+    display block
+    color white
+    max-width 300px
+    p
+      font-size 13px
+      margin 0
+      &:not(:last-child)
+        margin-bottom 10px

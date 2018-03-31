@@ -1,0 +1,117 @@
+@keyframes remodal-opening-keyframes
+  from
+    transform scale(1.05)
+    opacity 0
+  to
+    transform none
+    opacity 1
+    // filter blur(0)
+
+@keyframes remodal-closing-keyframes
+  from
+    transform scale(1)
+    opacity 1
+  to
+    transform scale(0.95)
+    opacity 0
+    // filter blur(0)
+
+@keyframes remodal-overlay-opening-keyframes
+  from
+    opacity 0
+  to
+    opacity 1
+
+@keyframes remodal-overlay-closing-keyframes
+  from
+    opacity 1
+  to
+    opacity 0
+
+html.remodal-is-locked
+  overflow hidden
+  touch-action none
+
+.remodal
+[data-remodal-id]
+  display none
+
+.remodal-overlay
+  position fixed
+  z-index 10003
+  top -5000px
+  right -5000px
+  bottom -5000px
+  left -5000px
+  display none
+  background rgba(black, .25)
+  &.remodal-is-opening
+  &.remodal-is-closing
+    animation-duration .5
+    animation-fill-mode forwards
+  &.remodal-is-opening
+    animation-name remodal-overlay-opening-keyframes
+  &.remodal-is-closing
+    animation-name remodal-overlay-closing-keyframes
+
+.remodal-wrapper
+  position fixed
+  z-index 10004
+  top 0
+  right 0
+  bottom 0
+  left 0
+  display none
+  overflow auto
+  text-align center
+  overflow-scrolling touch
+  padding 10px 10px 0
+  &:after
+    content ''
+    display inline-block
+    height 100%
+    margin-left -0.05em
+
+.remodal
+.remodal-wrapper:after
+  vertical-align middle
+
+.remodal-overlay
+.remodal-wrapper
+  backface-visibility hidden
+
+.remodal
+  position relative
+  outline none
+  text-size-adjust 100%
+  box-sizing border-box
+  width 100%
+  margin-bottom 10px
+  padding 35px
+  transform translate3d(0, 0, 0)
+  color #2b2e38
+  background white
+  @media medium
+    max-width 700px
+  &.remodal-is-opening
+  &.remodal-is-closing
+    animation-duration .5s
+    animation-fill-mode forwards
+  &.remodal-is-opening
+    animation-name remodal-opening-keyframes
+  &.remodal-is-closing
+    animation-name remodal-closing-keyframes
+
+.remodal-is-initialized
+  display inline-block
+
+.remodal-bg
+  &.remodal-is-opening
+  &.remodal-is-opened
+    // filter blur(0px)
+
+.lt-ie9
+  .remodal-overlay
+    background #2b2e38
+  .remodal
+    width 700px

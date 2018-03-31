@@ -1,0 +1,60 @@
+if include-block-grids
+  
+  block-grid-calc(i = 1)
+    floor(100% / i, ceil-size)
+  
+  block-grid-base()
+    margin 0
+    padding 0
+    list-style none
+    display block
+    block-clear()
+    block-grid-gutter()
+    block-grid-types()
+    block-grid-spaces()
+  
+  block-grid-item()
+    display inline-block
+    width 100%
+    float left
+      
+  block-grid-types()
+    block-grid-type(prefix = block-grid-class + gap)
+      for i in (1 .. block-grid-elements)
+        &.{prefix}{i}
+          > *
+            width block-grid-calc(i)
+            &:nth-child(n)
+              clear none
+            &:nth-child({i}n + 1)
+              clear both
+    block-grid-type()
+    @media small
+      block-grid-type(small-prefix + gap)
+    @media medium
+      block-grid-type(medium-prefix + gap)
+    @media large
+      block-grid-type(large-prefix + gap)
+      
+  block-grid-gutter(gutter = block-grid-default-space)
+    margin 0 rem-calc(- gutter / 2)
+    > *
+      padding 0 rem-calc(gutter / 2) rem-calc(gutter) rem-calc(gutter / 2)
+      
+  block-grid-spaces()
+    block-grid-space(prefix = '')
+      for i in space-sizes
+        &.{prefix}{space-prefix}{gap}{i}
+          block-grid-gutter(i)
+    block-grid-space()
+    @media small
+      block-grid-space(small-prefix + gap)
+    @media medium
+      block-grid-space(medium-prefix + gap)
+    @media large
+      block-grid-space(large-prefix + gap)
+      
+  .{block-grid-class}
+    block-grid-base()
+    > *
+      block-grid-item()

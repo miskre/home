@@ -1,0 +1,26 @@
+{
+  "name": "miskre-ico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Gia <gia@coa.vn>",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.2.0",
+    "bxslider": "git+https://github.com/stevenwanderski/bxslider-4.git",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "iphone-inline-video": "^2.2.2",
+    "jquery": "^3.2.1",
+    "modernizr": "^3.6.0",
+    "moment": "^2.20.1",
+    "particles.js": "^2.0.0",
+    "remodal": "^1.1.1",
+    "slick-carousel": "^1.8.1",
+    "three": "^0.89.0",
+    "typed.js": "^2.0.6"
+  }
+}

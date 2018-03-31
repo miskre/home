@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="39px" viewBox="0 0 23 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>finish</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.826429238 18.3579965 0.826429238 18.3579965 38.9997 0 38.9997"></polygon>
+        <polygon id="path-3" points="0.761900141 0.250729287 19.121 0.250729287 19.121 37 0.761900141 37"></polygon>
+    </defs>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-709.000000, -2278.000000)">
+        <g id="roadmap" transform="translate(319.000000, 1427.000000)">
+            <g id="finish" transform="translate(390.000000, 850.000000)">
+                <g id="Group-3" transform="translate(0.000000, 0.173500)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M9.9791,0.8457 C4.9321,1.1977 0.4881,6.3077 0.0501,12.2577 L0.0221,13.1427 C-0.4709,19.8467 7.2701,37.5757 7.2701,37.5757 L11.0321,38.9997 L9.0651,34.2087 L9.0411,34.2547 C12.0461,28.4997 17.8601,16.8057 18.2301,11.7837 L18.3231,10.9807 C18.7611,5.0317 15.0251,0.4927 9.9791,0.8457" id="Fill-1" fill="#BD4C6C" mask="url(#mask-2)"></path>
+                </g>
+                <g id="Group-6" transform="translate(3.000000, 2.173500)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-5"></g>
+                    <path d="M8.0324,37 C8.0324,37 18.4934,17.999 18.9934,11.208 L19.0864,10.406 C19.5234,4.456 15.7894,-0.083 10.7414,0.27 C5.6954,0.623 1.2494,5.732 0.8124,11.682 L0.7844,12.567 C0.2924,19.271 8.0324,37 8.0324,37" id="Fill-4" fill="#FF6783" mask="url(#mask-4)"></path>
+                </g>
+                <path d="M16.6974,10.9303 C16.5254,13.2733 14.7744,15.2853 12.7864,15.4243 C10.7994,15.5643 9.3284,13.7753 9.5004,11.4323 C9.6724,9.0903 11.4234,7.0773 13.4104,6.9383 C15.3994,6.7983 16.8694,8.5863 16.6974,10.9303" id="Fill-7" fill="#E8E8E8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

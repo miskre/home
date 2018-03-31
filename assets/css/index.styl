@@ -1,0 +1,435 @@
+@import 'nib'
+@import 'fonts'
+@import 'gia.ui/gia.ui'
+@import 'remodal'
+@import 'bxslider'
+
+main-gradient(direction = top)
+  background linear-gradient(direction, #ffb88c, #de6262)
+
+divider-color = rgba(#002937, .1)
+
+.{grid-container-class}
+  padding-left 15px
+  padding-right @padding-left
+  @media large
+    padding-left 20px
+    padding-right @padding-left
+
+html
+  -webkit-font-smoothing antialiased
+
+.home-section
+  text-align center
+  padding 50px 0
+  @media medium
+    padding 90px 0
+  &.dark
+    .block-title
+      color white
+  .block-title
+    font-weight bold
+    color black
+    font-size 36px
+    line-height @font-size
+    margin-bottom 10px
+    @media medium
+      font-size 48px
+      line-height @font-size
+  .block-subtitle
+    font-weight normal
+    font-size 16px
+    color active-color
+
+.menu-toggle
+  text-align right
+  display inline-block
+  margin-top 20px
+  pointer-event all
+  user-select none
+  .open
+    display block
+  .close
+    display none
+  &.opened
+    .open
+      display none
+    .close
+      display block
+
+.bio-modal
+  text-align left
+  p
+    font-size 14px
+    margin 0
+    &:not(:last-child)
+      margin-bottom 15px
+
+#fixed
+  position fixed
+  left 0
+  right 0
+  z-index 10001
+  top 50px
+  pointer-event none
+  @media medium
+    top 80px
+  @media large
+    top 100px
+  .menu-toggle
+    width 32px
+    @media medium
+      width 36px
+
+#menu
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  background-color rgba(black, .95)
+  z-index 10000
+  padding-top 120px
+  @media medium
+    padding-top 200px
+  ul.navigations
+    margin 0
+    padding 0
+    list-style none
+    font-size 0
+    text-align right
+    a
+      color white
+      display inline-block
+      font-weight bold
+      font-size 24px
+      line-height 36px
+      @media medium
+        font-size 28px
+        line-height 38px
+      @media large
+        font-size 36px
+        line-height 48px
+
+#header
+  main-gradient()
+  padding-top 50px
+  margin-bottom 50px
+  @media medium
+    padding-top 80px
+    margin-bottom 100px
+  @media large
+    padding-top 100px
+    margin-bottom 150px
+  .hero
+    position relative
+    &.expanded
+      .canvas
+        transform translateX(-25%)
+      .info
+        display block
+        opacity 1
+        pointer-events all
+    .canvas
+      display inline-block
+      margin-top 50px
+      width 100%
+      max-width 1000px
+      margin-bottom -100px
+      transition transform .5s ease-in-out
+      svg
+        display block
+        max-width 100%
+      @media medium
+        margin-bottom -200px
+      @media large
+        margin-bottom -250px
+    .info
+      opacity 0
+      transition opacity .5s ease-in-out
+      background-color rgba(black, .95)
+      color snow
+      text-align left
+      position absolute
+      padding 30px 20px 20px 20px
+      right 0
+      width 100%
+      top 50px
+      pointer-events none
+      cursor help
+      @media medium
+        width 50%
+        top 100px
+      @media large
+        width 40%
+        top 150px
+      p
+        font-size 14px
+        color base
+        margin 0
+        &:not(:last-child)
+          margin-bottom 15px
+        &.title
+          margin-bottom 20px
+          color white
+          font-size 13px
+          font-weight bold
+          text-transform uppercase
+          letter-spacing 2px
+  g.stamp
+    cursor help
+    transition margin-top .5s ease-in-out
+    &:hover
+      margin-top -100px
+
+#progress
+  .timeline
+    margin-top 35px
+    p
+      font-size 14px
+      line-height 24px
+    .timestamp
+      text-transform uppercase
+      font-size 12px
+      letter-spacing 1px
+      margin 20px 0 0 0
+      color steel
+
+#roadmap
+  .start
+    margin-top 50px
+    margin-bottom 10px
+  .finish
+    margin-top 15px
+  .schedule
+    margin 0
+    list-style none
+    font-size 0
+    position relative
+    z-index 0
+    padding 30px 0
+    @media medium
+      padding 0 0 45px 0
+    &:before
+      content ''
+      position absolute
+      left 50%
+      width 1px
+      top 0
+      bottom 0
+      background-color divider-color
+      z-index -1
+    > li
+      &:not(:last-child)
+        margin-bottom 20px
+      @media medium
+        text-align left
+        width 50%
+        z-index 0
+        position relative
+        block-clear()
+        &:before
+          content ''
+          display block
+          position absolute
+          top 50%
+          height 1px
+          width 100%
+          background-color divider-color
+          z-index -1
+        &:not(:last-child)
+          margin-bottom 30px
+        &:nth-child(even)
+          position absolute
+          right 0
+          margin-top -80px
+          article
+            float right
+    article
+      background-color #fafbfc
+      padding 15px 20px
+      @media medium
+        width 80%
+        max-width 320px
+    .time
+      font-size 12px
+      font-weight bold
+      color black
+      margin-bottom 5px
+    .title
+      font-size 15px
+      font-weight bold
+      margin-bottom 5px
+      color active-color
+    .description
+      color steel
+      font-size 14px
+      line-height 20px
+
+#whitepaper
+  background-color #fafbfc
+  background-repeat no-repeat
+  background-position center
+  background-size auto 100%
+  background-image url(../img/whitepaper.png)
+  .counter
+    margin-top 35px
+    display flex
+    font-weight bold
+    justify-content center
+    > *
+      padding 0 20px
+    .number
+      font-size 36px
+      line-height 36px
+      color black
+    .help
+      font-size 14
+      color steel
+
+#team
+  padding-bottom 60px
+  background-image url(../img/geometry.png)
+  background-color #f6f7f8
+  .help-text
+    font-size 14px
+    line-height 24px
+    color steel
+    margin 20px 0 50px 0
+  .members
+    .avatar
+      cursor pointer
+      display block
+      margin-bottom 20px
+      img
+        max-width 120px
+        max-height @max-width
+        border-radius 12px
+    .name
+      font-size 18px
+      line-height 23px
+      font-weight bold
+      color black
+      margin-bottom 3px
+    .role
+      font-size 14px
+      line-height 18px
+      font-weight bold
+      color active-color
+      margin-bottom 15px
+    .bio
+      margin-bottom 20px
+    .bio p
+      font-size 13px
+      color steel
+      margin 0 0 10px 0
+    .links
+      display flex
+      justify-content center
+      align-items center
+      > a
+        padding 0 10px
+
+#faqs
+  background-repeat no-repeat
+  background-image url(../img/faqs.png)
+  background-position top center
+  .faqs
+    margin 50px 0 0 0
+    padding 0
+    list-style none
+    font-size 0
+    > li
+      text-align left
+      border-top 1px solid divider-color
+      padding-top 18px
+      &:not(:last-child)
+        margin-bottom 20px
+      @media medium
+        display flex
+      .question
+        flex 1
+        font-size 15px
+        font-weight bold
+        color black
+        margin-bottom 10px
+        @media medium
+          margin-bottom 0
+          padding-right 20px
+      .answer
+        flex 1
+        font-size 15px
+        color steel
+
+#blogs
+  .articles
+    margin-top 50px
+  article
+    text-align left
+    &:hover > .image > img
+      transform scale(1.1)
+    .image
+      display block
+      overflow hidden
+      margin-bottom 20px
+      position relative
+      width 100%
+      height 0
+      padding-top 56.25%
+      > img
+        position absolute
+        min-width 120%
+        height auto
+        min-height 100%
+        left -10%
+        top -10%
+        transform scale(1)
+        transition transform .5s ease-in-out
+    .title
+      display block
+      font-weight bold
+      font-size 15px
+      color active-color
+      margin-bottom 10px
+    .description
+      font-size 13px
+      color base
+
+#footer
+  background-image url(../img/footer.jpg)
+  background-repeat no-repeat
+  background-size cover
+  background-position center
+  padding-top 120px
+  padding-bottom 0
+  .social-links
+    display flex
+    justify-content center
+    margin 40px 0 45px 0
+    > a
+      padding 0 10px
+      @media medium
+        padding 0 25px
+  .contact
+    .help
+      color white
+      font-size 16px
+    .email
+      display inline-block
+      main-gradient(right)
+      display inline-block
+      font-weight bold
+      -webkit-background-clip text
+      -webkit-text-fill-color transparent
+      font-size 24px
+      @media medium
+        font-size 36px
+  .copyright
+    margin-top 75px
+    display inline-block
+    background-color black
+    color white
+    font-size 12px
+    font-weight bold
+    padding 15px 30px
+    border-radius 8px 8px 0 0

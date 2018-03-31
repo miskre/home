@@ -1,0 +1,115 @@
+if include-grids
+  
+  grid-calc(i = 1, n = grid-total-columns)
+    floor(100% * (i / n), ceil-size)
+    
+  grid-gutter(gutter = grid-default-space, column-class = grid-column-class)
+    margin-left rem-calc(- gutter / 2)
+    margin-right @margin-left
+    > .{column-class}
+      padding-left rem-calc(gutter / 2)
+      padding-right @padding-left
+        
+  grid-spaces(column-class = grid-column-class)
+    grid-space(prefix = '')
+      for i in space-sizes
+        &.{prefix}{space-prefix}{gap}{i}
+          grid-gutter(i)
+    grid-space()
+    @media small
+      grid-space(small-prefix + gap)
+    @media medium
+      grid-space(medium-prefix + gap)
+    @media large
+      grid-space(large-prefix + gap)
+        
+  grid-column-percentage-sizes()
+    grid-column-percentage-size(prefix)
+      for i in (1 .. grid-total-columns)
+        for j in (1 .. i)
+          if (j != i)
+            &.{prefix}{j}{gap}{i}
+              width grid-calc(j, i)
+    grid-column-percentage-size(grid-column-class + gap)
+    @media small
+      grid-column-percentage-size(small-prefix + gap)
+    @media medium
+      grid-column-percentage-size(medium-prefix + gap)
+    @media large
+      grid-column-percentage-size(large-prefix + gap)
+            
+  grid-column-offsets()
+    grid-column-offset(prefix = '')
+      for i in (1 .. grid-total-columns - 1)
+        &.{prefix}{offset-prefix}{gap}{i}
+          margin-left grid-calc(i, grid-total-columns)
+    grid-column-offset()
+    @media small
+      grid-column-offset(small-prefix + gap)
+    @media medium
+      grid-column-offset(medium-prefix + gap)
+    @media large
+      grid-column-offset(large-prefix + gap)
+            
+  grid-column-sizes()
+    grid-column-size(prefix)
+      for i in (1 .. grid-total-columns)
+        &.{prefix}{i}
+          width grid-calc(i, grid-total-columns)
+    grid-column-size(grid-column-class + gap)
+    @media small
+      grid-column-size(small-prefix + gap)
+    @media medium
+      grid-column-size(medium-prefix + gap)
+    @media large
+      grid-column-size(large-prefix + gap)
+        
+  grid-column-utilities()
+    grid-column-center-utility(prefix = '')
+      &.{prefix}{grid-centered-class}
+        float none
+        margin-left auto
+        margin-right @margin-left
+      &.{prefix}{grid-uncentered-class}
+        &:last-child
+          float default-float
+          &:not(:first-child):not(.end)
+            float last-child-float
+        &:not(:last-child)
+          float default-float
+    grid-column-center-utility()
+    @media small
+      grid-column-center-utility(small-prefix + gap)
+    @media medium
+      grid-column-center-utility(medium-prefix + gap)
+    @media large
+      grid-column-center-utility(large-prefix + gap)
+    
+  grid-container(width = grid-container-width)
+    max-width grid-container-width
+    margin 0 auto
+    
+  grid-row()
+    width auto
+    block-clear()
+    grid-gutter()
+    grid-spaces()
+    
+  grid-column()
+    width 100%
+    float default-float
+    grid-column-sizes()
+    grid-column-offsets()
+    grid-column-percentage-sizes()
+    grid-column-utilities()
+    &:last-child
+      &:not(:first-child):not(.end)
+        float last-child-float
+        
+  .{grid-container-class}
+    grid-container()
+    
+  .{grid-row-class}
+    grid-row()
+    > .{grid-column-class}
+      grid-column()

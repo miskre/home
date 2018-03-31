@@ -1,0 +1,359 @@
+extends _layouts/default
+
+block var
+  - title = 'ICO Page'
+
+block modals
+  .bio-modal(data-remodal-id="ec")
+    p Peter Nguyen is the world’s foremost authority in direct-to-consumer digital advertising. Peter has created dozens of multi-million dollar Internet brands and is the creator of Accelerated Ventures, which is now being taught at the 2nd-ranked entrepreneurship program in the US.
+    p Founder and CEO of Ad Exchange Group, which is the leading direct-to-consumer digital performance-based agency in the nation. Ad Exchange Group services leading brands like Jeunesse, Bulletproof, Dollar Beard Club, Feel Rich, Cosmoderm, Pathway Genomics, and many more.
+  .bio-modal(data-remodal-id="coo")
+    p Doan is a super affiliate and has experience managing several e-commerce teams taking them from 0 to 8 figures a year. He has been passionately interested in the economics of cryptocurrencies since 2013.
+  .bio-modal(data-remodal-id="cto")
+    p Huy's specialty is information security, and machine learning. He played a pivotal role in the development of many currency exchange, money remittance, prepaid card issuance/loading, and foreign exchange platforms for the Asian market. He has been researching blockchain since 2013 and believes that blockchain will be the future of money.
+  .bio-modal(data-remodal-id="cd")
+    p Gia is a super designer and senior front-end engineer. He enjoy turning complex problems into simple, beautiful and intuitive interface designs. He also has experience in building high performance multi-platform applications and ecommerce networks.
+  .bio-modal(data-remodal-id="cmo")
+    p Bao is a super affiliate with over 9 years of internet marketing experience, and is an expert in SEO and E-Commerce. He is super passionate blockchain because he see it as a way to remove advertising fraud on affiliate network for both publishers and advertisers alike.
+  .bio-modal(data-remodal-id="ea")
+    p Darren is master in online business and marketing strategies. Being extremely influential in the social media space has given him the ability to take ecommerce brands from 0 to 6 figures revenues within the first day of launching. He has special talent in positioning brands to flourish.
+    p Prior to focusing on ecommerce, Darren was involved in multiple media websites and with his strategies they reached top 200 in the world within the first few months. Now in this crypto era, he's been focused on taking all his learnings of online business and applying it to a decentralized world where there is no boundaries.
+  .bio-modal(data-remodal-id="am")
+    p Duy has been involved in several high profile projects, and have worked with many top 200 sites in the world. Accountable for steering daily operations and strategic directions of many top websites while keeping all initiatives and projects aligned with company mission, values, and philosophy.
+    p Has extensive experience in developing clear strategies and key programs in myriad of niche categories. Able to establish and maintain strong cross-functioning business relationships with industry leaders and individuals, optimizing business processes and business goals through effective and collaborative teamwork.
+  .bio-modal(data-remodal-id="sms")
+block content
+
+  #fixed
+    .ctn
+      .rw
+        .cl.tr
+          a.menu-toggle
+            img.open(src="/assets/img/icon.menu.svg")
+            img.close(src="/assets/img/icon.close.svg")
+
+  section#menu.h
+    .ctn
+      .rw
+        .cl
+          ul.navigations
+            li
+              a(href="#header") home
+            li
+              a(href="#progress") progress
+            li
+              a(href="#whitepaper") whitepaper
+            li
+              a(href="#roadmap") roadmap
+            li
+              a(href="#team") team
+            li
+              a(href="#faqs") faqs
+            li
+              a(href="#blogs") blogs
+            li
+              a(href="#footer") contacts
+
+  section#header.home-section
+    .ctn
+      .rw
+        .cl.sm-8.sm-ct
+          a.logo(href="/")
+            img(src="/assets/img/logo.light.svg")
+      .rw
+        .cl
+          .hero
+            .canvas
+              include assets/img/hero.svg
+            .info
+              .h(for="app")
+                p.title Miskre App
+                p Multi-purpose app acting as both messaging app and bank account; allowing users to use the app not only to talk to friends and transfer files but also to order goods and services, pay bills, transfer money to other users, online payment processing for internet businesses, and make purchases at physical stores.
+              .h(for="membership")
+                p.title Miskre Membership
+                p Multi-purpose app acting as both messaging app and bank account; allowing users to use the app not only to talk to friends and transfer files but also to order goods and services, pay bills, transfer money to other users, and make purchases at physical stores.
+              .h(for="store")
+                p.title Ecommerce Platform
+                p Retail point-of-sale system, allowing users to easily create an online store to sell their own products or to retail products provided by Miskre Marketplace.
+              .h(for="marketplace")
+                p.title Marketplace
+                p Global marketplace with items from all over the world, priced in both USD and MSK.
+              .h(for="ship")
+                p.title Ship
+                p Our system will encompass all form of freight. Users will be able to track their package every step of the way, the moment the product leave the factory to when it arrives at their doorstep with full transparency on the blockchain.
+              .h(for="fulfillment")
+                p.title Fulfillment
+                p All products will go through our facilities and inspected carefully before being packaged and shipped to customers.
+              .h(for="network")
+                p.title Miskre Network
+                p Transparent and decentralized Ad-Exchange running on our own side-chain: preventing advertising fraud, and protecting the privacy of consumers. Work in unison with our Miskre App; allowing affiliates, internet entrepreneurs, as well as celebrities and personalities to receive payments on time and in accordance with their contracts.
+
+  section#progress.home-section
+    .ctn
+      .rw
+        .cl.md-10.lg-8.sm-ct
+          .block-title progress
+          .block-subtitle start from apr 13, 2014
+          .timeline
+            ul.bxslider
+              li
+                p We start working on Clicklion - an advertising network
+                  br
+                  strong 1920
+                  |  commits from 2014
+                img(src="/assets/img/clicklion.png")
+                p.timestamp apr 13, 2014 - jun 30, 2016
+              li
+                p We also build a system for articles collecting, extracting from random online sources, find relevant contents,
+                  br
+                  | to get analytic information for publishers, advertisers, technical admin and financial analyzer.
+                  br
+                  strong 1346
+                  |  commits from 2014
+                img(src="/assets/img/collector.png")
+                p.timestamp apr 13, 2014 - nov 30, 2015
+              li
+                p We expand our developing field with complete new project.
+                  br
+                  | Clixy - social publishing network, to connect the advertisers to influencers.
+                  br
+                  strong 1270
+                  |  commits from 12/2015
+                img(src="/assets/img/clixy.png")
+                p.timestamp dec 27, 2014 - nov 4, 2016
+              li
+                p Currently, we focus on the Miskre fulfillment service and international shipping.
+                  br
+                  strong 665
+                  |  commits from 7/2017
+                img(src="/assets/img/miskre.png")
+                p.timestamp jul 2, 2017 - now
+
+  section#whitepaper.home-section
+    .ctn
+      .rw
+        .cl
+          .block-title whitepaper
+          .block-subtitle coming on&nbsp;
+            span#wpdate &nbsp;&nbsp;
+          .counter
+            .day
+              #wpday.number &nbsp;&nbsp;
+              .help days
+            .hour
+              #wphour.number &nbsp;&nbsp;
+              .help hours
+            .minute
+              #wpmin.number &nbsp;&nbsp;
+              .help mins
+            .second
+              #wpsec.number &nbsp;&nbsp;
+              .help secs
+
+  section#roadmap.home-section
+    .ctn
+      .rw
+        .cl.md-10.lg-8.sm-ct
+          .block-title roadmap
+          .block-subtitle goals schedule
+          img.start(src="/assets/img/start.svg")
+          ul.schedule
+            li
+              article
+                .time Apr 13, 2018
+                .title Pre Sale
+                .description for strategic partners with no discount.
+            li
+              article
+                .time May 2018
+                .title Token Sale
+                .description and private sale for strategic partners with no discount.
+            li
+              article
+                .time Q2/2018
+                .title Fulfillment Service on Testnet
+                .description integrate with International Shipping on the blockchain.
+            li
+              article
+                .time Q3/2018
+                .title Ecommerce Store Platform on Testnet
+                .description release sample ecommerce-related smart contracts.
+            li
+              article
+                .time Q4/2018
+                .title Marketplace on Testnet
+                .description integrate Ad Exchange with the Miskre ecommerce eco-system.
+            li
+              article
+                .time Early 2019
+                .title Private Test and Maintainance
+                .description private test on Testnet with strategic partners and a group of token holders.
+            li
+              article
+                .time Q1/2019
+                .title First Mainnet Launch
+                .description maintain system stabilization and general performance.
+            li
+              article
+                .time Q2/2019
+                .title Miskre Membership on Testnet
+                .description integrate with Miskre ecommerce eco-system.
+            li
+              article
+                .time Q3/2019
+                .title Miskre Membership on Mainnet
+                .description maintain system stabilization and general performance.
+          img.finish(src="/assets/img/finish.svg")
+
+  section#team.home-section
+    .ctn
+      .rw
+        .cl.md-10.lg-9.sm-ct
+          .block-title who are we?
+          .block-subtitle meet the team
+          p.help-text We might not have an all-star team with people from big corporate backgrounds,
+            br
+            | but we are the crazy ones with the right skill sets and passion to bring this project to fruition.
+            br
+            | We are fully prepared to dedicate our lives to this project
+          ul.members.bg.sm-2.md-3.lg-4.sp-30
+            li
+              .avatar(data-remodal-target="ec")
+                img(src="/assets/img/ec.jpg")
+              .name Peter Nguyen
+              .role Executive Chairman
+              .links
+                a(href="https://linkedin.com/in/peterqnguyen" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+            li
+              .avatar(data-remodal-target="coo")
+                img(src="/assets/img/coo.jpg")
+              .name Doan Tran
+              .role Chief Operations Officer
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+            li
+              .avatar(data-remodal-target="cd")
+                img(src="/assets/img/cd.jpg")
+              .name Gia Nguyen
+              .role Creative Director
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+                a(href="https://github.com/coadotvn" target="_blank")
+                  img(src="/assets/img/github.svg")
+            li
+              .avatar(data-remodal-target="cto")
+                img(src="/assets/img/cto.jpg")
+              .name Huy Nguyen
+              .role Chief Technology Officer
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+                a(href="https://github.com/huytpyt" target="_blank")
+                  img(src="/assets/img/github.svg")
+            li
+              .avatar(data-remodal-target="cmo")
+                img(src="/assets/img/cmo.jpg")
+              .name Bao Le
+              .role Chief Marketing Officer
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+            li
+              .avatar(data-remodal-target="ea")
+                img(src="/assets/img/ea.jpg")
+              .name Darren Lopes
+              .role Executive Advisor /
+                br
+                | Strategist
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+            //- li
+              .avatar(data-remodal-target="sms")
+                img(src="/assets/img/sms.jpg")
+              .name Derick Lucas
+              .role Social Media Strategist
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+            li
+              .avatar(data-remodal-target="am")
+                img(src="/assets/img/am.jpg")
+              .name Duy Duong
+              .role Ambassador /
+                br
+                | Architect
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+
+  section#faqs.home-section
+    .ctn
+      .rw
+        .cl.md-10.lg-9.sm-ct
+          .block-title faqs
+          .block-subtitle how can we help you?
+          ul.faqs
+            li
+              .question Do you currently have an estimate of when the ICO will start? How will I know when the ICO is open?
+              .answer We are just waiting for our legal process to be completed. We will announce in advance on our media channels.
+            li
+              .question Will there be a presale?
+              .answer No. There will only be a private sale for strategic partners and cash injections from the founders with zero discount from public token sale price.
+            li
+              .question I'd like to be a strategic partner, what should I do?
+              .answer Miskre will have only a few strategic partners who are expected to provide more than funding. If you share our vision for the future and believe you have something else to make that a reality, send an email to contact@miskre.io presenting your proposal and how you intend to add value to Miskre.
+            li
+              .question Are the jobs available?
+              .answer We are glad to attract the interest of so many talented people. At the present moment our team is complete and we have no positions available, however as we grow in the future we will look for new talents.
+
+  section#blogs.home-section
+    .ctn
+      .rw
+        .cl.md-10.lg-9.sm-ct
+          .block-title blogs
+          .block-subtitle latest news &amp; updates
+          ul.articles.bg.sm-1.md-3.sp-30
+            li
+              article
+                a.image(href="#")
+                  img(src="https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb")
+                a.title(href="#") First Miskre Article
+                .description First two weeks of January 2018 updates. We focus on sample smart contracts…
+            li
+              article
+                a.image(href="#")
+                  img(src="https://images.pexels.com/photos/717131/pexels-photo-717131.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb")
+                a.title(href="#") Weekly Updates - Week 4, Jan 2018
+                .description First two weeks of January 2018 updates. We focus on sample smart contracts…
+            li
+              article
+                a.image(href="#")
+                  img(src="https://images.pexels.com/photos/762026/pexels-photo-762026.jpeg?h=350&auto=compress&cs=tinysrgb")
+                a.title(href="#") Final Partner Meetup
+                .description First two weeks of January 2018 updates. We focus on sample smart contracts…
+  
+  section#footer.home-section.dark
+    .ctn
+      .rw
+        .cl
+          .block-title token sale coming soon
+          .block-subtitle join our reading list and conversations
+          .social-links
+            a(href="#")
+              img(src="/assets/img/twitter.svg")
+            a(href="#")
+              img(src="/assets/img/facebook.svg")
+            a(href="#")
+              img(src="/assets/img/medium.svg")
+            a(href="#")
+              img(src="/assets/img/telegram.svg")
+            a(href="#")
+              img(src="/assets/img/slack.svg")
+          .contact
+            .help reach us at
+            a.email(href="mailto:contact@miskre.io") contact@miskre.io
+          .copyright © 2018 Miskre. All Rights Reserved.

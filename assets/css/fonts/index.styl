@@ -1,0 +1,33 @@
+font-url(file)
+  return '' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+  @font-face
+    font-family family
+    src url(font-url(file + '.eot'))
+    src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+        url(font-url(file + '.woff')) format('woff'), 
+        url(font-url(file + '.ttf')) format('truetype'), 
+        url(font-url(file + '.svg#'+ family)) format('svg')
+    font-weight weight
+    font-style normal
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url(font-url(file + '.svg#'+ family)) format('svg')
+
+otf-font-url(file)
+  return './fonts/' + file + '.otf'
+
+otf-webfont(family, file, weight = 'normal', style = 'normal')
+  @font-face
+    font-family family
+    src url(otf-font-url(file)) format('opentype')
+    font-weight weight
+    font-style style
+
+otf-webfont('Circular Std', 'CircularStd-Book', 400)
+// otf-webfont('Circular Std', 'CircularStd-Medium', 400)
+otf-webfont('Circular Std', 'CircularStd-Bold', 700)
+// otf-webfont('Circular Std', 'CircularStd-Black', 700)

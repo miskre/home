@@ -1,0 +1,120 @@
+if include-app-grid
+  
+  app-grid-calc(i = 1, n = app-grid-total-blocks)
+    ceil(100% * (i / n), ceil-size)
+      
+  app-grid-block-sizes(total = app-grid-total-blocks)
+    app-grid-block-size(prefix, total)
+      for i in (1 .. total)
+        &.{prefix}{i}
+          size = app-grid-calc(i, app-grid-total-blocks)
+          flex 0 0 size
+          max-width size
+    @media small
+      app-grid-block-size(small-prefix + gap, total)
+    @media medium
+      app-grid-block-size(medium-prefix + gap, total)
+    @media large
+      app-grid-block-size(large-prefix + gap, total)
+          
+  app-grid-orders(total = app-grid-total-blocks)
+    app-grid-block-order(prefix, total)
+      for i in (0 .. total)
+        &.{prefix}{app-grid-order-prefix}{gap}{i}
+          order i
+    @media small
+      app-grid-block-order(small-prefix + gap, total)
+    @media medium
+      app-grid-block-order(medium-prefix + gap, total)
+    @media large
+      app-grid-block-order(large-prefix + gap, total)
+  
+  app-grid-offsets(total = app-grid-total-blocks)
+    app-grid-offset(prefix, total)
+      for i in (0 .. total)
+        &.{prefix}{app-grid-offset-prefix}{gap}{i}
+          margin-left app-grid-calc(i)
+    @media small
+      app-grid-block-offset(small-prefix + gap, total)
+    @media medium
+      app-grid-block-offset(medium-prefix + gap, total)
+    @media large
+      app-grid-block-offset(large-prefix + gap, total)
+        
+  app-grid-frame()
+    height 100vh
+    
+  app-grid-block()
+    height auto
+    overflow-y scroll
+    overflow-scrolling touch
+    app-grid-block-sizes()
+    app-grid-block-orders()
+    app-grid-block-offsets()
+    app-grid-block-utilities()
+      
+  app-grid-content()
+    display block
+    overflow-y auto
+    overflow-scrolling auto
+    flex 1 1 auto
+    app-grid-content-utilities()
+    
+  app-grid-block-utilities()
+    &.{app-grid-block-shrink-class}
+      flex 0 0 auto
+    
+  app-grid-content-utilities()
+    &.{app-grid-no-scroll-class}
+      overflow visible
+        
+  app-grid-utilities()
+    app-grid-utility(prefix = '')
+      &.{prefix}{app-grid-no-wrap-class}
+        flex-wrap nowrap
+      &.{prefix}{app-grid-wrap-class}
+        flex-wrap wrap
+      &.{prefix}{app-grid-align-left-class}
+        justify-content flex-start
+      &.{prefix}{app-grid-align-right-class}
+        justify-content flex-end
+      &.{prefix}{app-grid-align-center-class}
+        justify-content center
+      &.{prefix}{app-grid-align-justify-class}
+        justify-content space-between
+      &.{prefix}{app-grid-align-spaced-class}
+        justify-content space-around
+      &.{prefix}{app-grid-vertical-prefix}
+          flex-flow column nowrap
+      &.{prefix}{app-grid-horizontal-prefix}
+        flex-flow row nowrap
+    app-grid-utility()
+    @media small
+      app-grid-utility(small-prefix + gap)
+    @media medium
+      app-grid-utility(medium-prefix + gap)
+    @media large
+      app-grid-utility(large-prefix + gap)
+  
+  .{app-grid-frame-class},
+  .{app-grid-block-class}
+    display flex
+    position relative
+    overflow hidden
+    backface-visibility hidden
+    flex 1 1 auto
+    flex-flow row wrap
+    flex-wrap nowrap
+    align-items stretch
+    justify-content flex-start
+    order 0
+    app-grid-utilities()
+    
+  .{app-grid-frame-class}
+    app-grid-frame()
+
+  .{app-grid-block-class}
+    app-grid-block()
+  
+  .{app-grid-content-class}
+    app-grid-content()

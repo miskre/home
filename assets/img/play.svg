@@ -1,0 +1,20 @@
+<svg width="10" height="12" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>play</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-2056 -1045)">
+<g id="play">
+<g id="Page 1">
+<g id="Icons AV">
+<g id="play arrow">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(2056 1045)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 0 12L 9.42857 6L 0 0Z"/>
+</defs>
+</svg>

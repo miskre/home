@@ -1,0 +1,16 @@
+<svg width="16" height="19" viewBox="0 0 16 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>kre</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(372 542)">
+<g id="kre" opacity="0.9">
+<use xlink:href="#path0_fill" transform="translate(-372 -542)" fill="url(#paint0_linear)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-7.99722 -13.8624 -13.8516 8.00347 22.6608 14.2426)">
+<stop offset="0" stop-color="#D20471"/>
+<stop offset="1" stop-color="#770C7E" stop-opacity="0.75"/>
+</linearGradient>
+<path id="path0_fill" d="M 0.258385 8.69463L 15.205 0.0750542C 15.5495 -0.13712 16 0.128098 16 0.525924L 16 17.7916C 16 18.1894 15.5495 18.4546 15.205 18.2425L 0.258385 9.62289C -0.0861283 9.41071 -0.0861283 8.9068 0.258385 8.69463Z"/>
+</defs>
+</svg>

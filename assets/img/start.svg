@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="48px" viewBox="0 0 35 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>start</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-703.000000, -1538.000000)">
+        <g id="roadmap" transform="translate(319.000000, 1427.000000)">
+            <g id="start" transform="translate(384.000000, 111.000000)">
+                <polygon id="Fill-1" fill="#D87E12" points="31.5881379 0.000165517241 21.4452414 5.85616552 15.7936552 13.8349241 0 22.7952 0 45.5910621 31.5881379 27.3543724"></polygon>
+                <polygon id="Fill-2" fill="#F49D2A" points="0 45.5910621 3.03806897 47.2760276 3.03806897 43.8365793"></polygon>
+                <polygon id="Fill-3" fill="#EAE4D4" points="6.30223448 23.6941241 14.1849931 10.0257103 22.0983724 14.5757793"></polygon>
+                <polygon id="Fill-4" fill="#FFFFFF" points="14.2006345 18.4296 22.0833931 4.76118621 29.9951172 9.31125517"></polygon>
+                <polygon id="Fill-5" fill="#FFAF3B" points="24.4832276 7.54154483 18.832469 15.5203034 3.03798621 24.4805793 3.03798621 47.2756138 34.6261241 29.0405793 34.6261241 1.68471724"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

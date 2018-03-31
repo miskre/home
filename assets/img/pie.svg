@@ -1,0 +1,32 @@
+<svg width="80" height="80" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>pie</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1614 -917)">
+<g id="pie">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Subtract">
+<use xlink:href="#path0_fill" transform="translate(1614 917)" fill="#C4C4C4"/>
+</g>
+</mask>
+<g id="Group" mask="url(#mask0_alpha)">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(1653.99 917)" fill="#00FF7A"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(1654 933.499)" fill="#2DC0FF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path3_fill" transform="translate(1614 917)" fill="#57EBFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 40 80C 62.0914 80 80 62.0914 80 40C 80 17.9086 62.0914 0 40 0C 17.9086 0 0 17.9086 0 40C 0 62.0914 17.9086 80 40 80ZM 40 60C 51.0457 60 60 51.0457 60 40C 60 28.9543 51.0457 20 40 20C 28.9543 20 20 28.9543 20 40C 20 51.0457 28.9543 60 40 60Z"/>
+<path id="path1_fill" d="M -1.26521e-06 1.57669e-10C 6.30918 -0.00128501 12.5292 1.48988 18.152 4.3517C 23.7748 7.21352 28.6409 11.3648 32.3528 16.4665L 0.00814693 40L -1.26521e-06 1.57669e-10Z"/>
+<path id="path2_fill" d="M 32.3682 2.39574e-06C 36.075 5.10542 38.5215 11.0153 39.508 17.2469C 40.4945 23.4785 39.9929 29.855 38.0442 35.8557C 36.0955 41.8564 32.755 47.3111 28.2955 51.7741C 23.836 56.2372 18.3841 59.582 12.3849 61.5355L 0 23.5011L 32.3682 2.39574e-06Z"/>
+<path id="path3_fill" d="M 52.3469 78.0467C 46.8499 79.8306 41.0318 80.4021 35.2928 79.722C 29.5538 79.0419 24.0304 77.1264 19.1026 74.1071C 14.1749 71.0879 9.95987 67.0368 6.74774 62.2326C 3.53562 57.4283 1.40265 51.9851 0.495669 46.2776C -0.411314 40.5701 -0.0707489 34.7338 1.49387 29.1705C 3.05848 23.6072 5.81002 18.449 9.55908 14.051C 13.3081 9.65292 17.9657 6.11948 23.2111 3.69385C 28.4566 1.26823 34.1653 0.00802665 39.9444 -4.38351e-07L 40 40L 52.3469 78.0467Z"/>
+</defs>
+</svg>

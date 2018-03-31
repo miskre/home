@@ -1,0 +1,69 @@
+if include-progress-bars
+  
+  create-progress-bar-base(
+    background-color = progress-bar-background-color,
+    height = progress-bar-default-height,
+    margin-bottom = progress-bar-margin-bottom)
+    background-color background-color
+    height height
+    margin-bottom margin-bottom
+    position relative
+    overflow hidden
+    font-size 0
+    line-height 0
+    block-clear()
+    
+  create-progress-bar-meter(
+    background-color = progress-bar-default-color)
+    background-color background-color
+    display block
+    float left
+    height 100%
+    
+  .{progress-bar-class}
+    create-progress-bar-base()
+    > .{progress-bar-meter-class}
+      create-progress-bar-meter()
+      
+      stacked-coloring(color-class, color)
+        &.{color-class}
+          background-color color
+      
+      for color-class, color in progress-bar-colors
+        stacked-coloring(color-class, color)
+    
+    sizing(size, height)
+      &.{size}
+        height height
+    
+    for size, height in progress-bar-heights
+      sizing(size, height)
+      
+    coloring(color-class, color)
+      &.{color-class}
+        > .{progress-bar-meter-class}
+          background-color color
+    
+    for color-class, color in progress-bar-colors
+      coloring(color-class, color)
+    
+    // radius and round
+      
+    radiusing(size)
+      border-radius size
+      > .{progress-bar-meter-class}
+        &:first-child
+          border-top-left-radius size
+          border-bottom-left-radius size
+        &:last-child
+          border-top-right-radius size
+          border-bottom-right-radius size
+      
+    if progress-bar-default-radius > 0
+      radiusing(progress-bar-default-radius)
+      
+    &.{radius-class}
+      radiusing(progress-bar-radius)
+          
+    &.{round-class}
+      radiusing(progress-bar-round)

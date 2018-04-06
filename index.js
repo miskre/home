@@ -7,7 +7,7 @@ const app = express()
 
 app.use(compression())
 app.use(express.static('.'))
-app.use(basicAuth({
+app.use(auth({
   users: {
     'mis': 'kre',
     'gia': ''

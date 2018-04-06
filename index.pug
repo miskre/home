@@ -1,268 +1,456 @@
-extends _layouts/default
+extends layout
 
-block var
-  - title = 'ICO Page'
+block js
+  script(src="/assets/js/index.js")
+
+block menu
+  ul.navigations
+    li
+      a(href="#home") home
+    li
+      a(href="/whitepaper.html") whitepaper
+    li
+      a(href="#roadmap") roadmap
+    li
+      a(href="#team") team
+    li
+      a(href="#faqs") faqs
+    li
+      a(href="#blog") blog
+    li
+      a(href="#reach") reach
 
 block modals
+  //- .remodal.youtube-modal(data-remodal-id="play")
+    .video
+      iframe(width="100%" height="480" src="https://www.youtube.com/embed/gG_dA32oH44?rel=0&amp;showinfo=0&amp;start=180" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
   .bio-modal(data-remodal-id="ec")
     p Peter Nguyen is the world’s foremost authority in direct-to-consumer digital advertising. Peter has created dozens of multi-million dollar Internet brands and is the creator of Accelerated Ventures, which is now being taught at the 2nd-ranked entrepreneurship program in the US.
     p Founder and CEO of Ad Exchange Group, which is the leading direct-to-consumer digital performance-based agency in the nation. Ad Exchange Group services leading brands like Jeunesse, Bulletproof, Dollar Beard Club, Feel Rich, Cosmoderm, Pathway Genomics, and many more.
   .bio-modal(data-remodal-id="coo")
-    p Doan is a super affiliate and has experience managing several e-commerce teams taking them from 0 to 8 figures a year. He has been passionately interested in the economics of cryptocurrencies since 2013.
+    p Doan is a self made entrepreneur and has experience managing several startups taking them from 0 to 8 figures a year. He has been interested in the economics of cryptocurrencies since 2014, and is passionately working to make using cryptocurrency for daily transactions a real thing.
   .bio-modal(data-remodal-id="cto")
     p Huy's specialty is information security, and machine learning. He played a pivotal role in the development of many currency exchange, money remittance, prepaid card issuance/loading, and foreign exchange platforms for the Asian market. He has been researching blockchain since 2013 and believes that blockchain will be the future of money.
   .bio-modal(data-remodal-id="cd")
     p Gia is a super designer and senior front-end engineer. He enjoy turning complex problems into simple, beautiful and intuitive interface designs. He also has experience in building high performance multi-platform applications and ecommerce networks.
-  .bio-modal(data-remodal-id="cmo")
-    p Bao is a super affiliate with over 9 years of internet marketing experience, and is an expert in SEO and E-Commerce. He is super passionate blockchain because he see it as a way to remove advertising fraud on affiliate network for both publishers and advertisers alike.
   .bio-modal(data-remodal-id="ea")
-    p Darren is master in online business and marketing strategies. Being extremely influential in the social media space has given him the ability to take ecommerce brands from 0 to 6 figures revenues within the first day of launching. He has special talent in positioning brands to flourish.
+    p Darren is master in online business and marketing strategies. Being extremely influential in the social media space has given him the ability to take startups from 0 to 6 figures revenues within the first day of launching. He has special talent in positioning brands to flourish.
     p Prior to focusing on ecommerce, Darren was involved in multiple media websites and with his strategies they reached top 200 in the world within the first few months. Now in this crypto era, he's been focused on taking all his learnings of online business and applying it to a decentralized world where there is no boundaries.
-  .bio-modal(data-remodal-id="am")
+  .bio-modal(data-remodal-id="be")
+    p Thoai is a software engineer, with strong understanding of blockchain technologies and architecture. He has been researching blockchain since 2013, and been part of the development team for many cryptocurrency exchanges as well as payment gateway systems.
+  //- .bio-modal(data-remodal-id="am")
     p Duy has been involved in several high profile projects, and have worked with many top 200 sites in the world. Accountable for steering daily operations and strategic directions of many top websites while keeping all initiatives and projects aligned with company mission, values, and philosophy.
     p Has extensive experience in developing clear strategies and key programs in myriad of niche categories. Able to establish and maintain strong cross-functioning business relationships with industry leaders and individuals, optimizing business processes and business goals through effective and collaborative teamwork.
   .bio-modal(data-remodal-id="sms")
+
 block content
+  #preload
+    .text
+      .progress
+        img.mis(src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxNiAxOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGU+bWlzPC90aXRsZT48ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPjxnIGlkPSJDYW52YXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5NiA1NDIpIj48ZyBpZD0ibWlzIj48dXNlIHhsaW5rOmhyZWY9IiNwYXRoMF9maWxsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzk2IC01NDIpIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIi8+PC9nPjwvZz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxNS44NTM3IDkuMTYwMzMgLTkuMTUzMTcgMTUuODY2MSAwLjkxMzMxOCAtMS4yMDAxNSkiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzBDRTRFMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Q4NTVGRiIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggaWQ9InBhdGgwX2ZpbGwiIGQ9Ik0gMTUuNzQxNiA4LjY5NDYzTCAwLjc5NTAzMSAwLjA3NTA1NDJDIDAuNDUwNTE4IC0wLjEzNzEyIDAgMC4xMjgwOTggMCAwLjUyNTkyNEwgMCAxNy43OTE2QyAwIDE4LjE4OTQgMC40NTA1MTggMTguNDU0NiAwLjc5NTAzMSAxOC4yNDI1TCAxNS43NDE2IDkuNjIyODlDIDE2LjA4NjEgOS40MTA3MSAxNi4wODYxIDguOTA2OCAxNS43NDE2IDguNjk0NjNaIi8+PC9kZWZzPjwvc3ZnPg==")
+        img.kre(src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxNiAxOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGU+a3JlPC90aXRsZT48ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPjxnIGlkPSJDYW52YXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3MiA1NDIpIj48ZyBpZD0ia3JlIiBvcGFjaXR5PSIwLjkiPjx1c2UgeGxpbms6aHJlZj0iI3BhdGgwX2ZpbGwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNzIgLTU0MikiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz48L2c+PC9nPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KC03Ljk5NzIyIC0xMy44NjI0IC0xMy44NTE2IDguMDAzNDcgMjIuNjYwOCAxNC4yNDI2KSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRDIwNDcxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNzcwQzdFIiBzdG9wLW9wYWNpdHk9IjAuNzUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGlkPSJwYXRoMF9maWxsIiBkPSJNIDAuMjU4Mzg1IDguNjk0NjNMIDE1LjIwNSAwLjA3NTA1NDJDIDE1LjU0OTUgLTAuMTM3MTIgMTYgMC4xMjgwOTggMTYgMC41MjU5MjRMIDE2IDE3Ljc5MTZDIDE2IDE4LjE4OTQgMTUuNTQ5NSAxOC40NTQ2IDE1LjIwNSAxOC4yNDI1TCAwLjI1ODM4NSA5LjYyMjg5QyAtMC4wODYxMjgzIDkuNDEwNzEgLTAuMDg2MTI4MyA4LjkwNjggMC4yNTgzODUgOC42OTQ2M1oiLz48L2RlZnM+PC9zdmc+")
+      span hello_world
+  #slides
+    section#home.full-height
+      //- .youtube
+        iframe.video(src="https://www.youtube.com/embed/gG_dA32oH44?rel=0&showinfo=0&controls=0&start=190&autoplay=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+      //- video.video(autoplay loop muted playsinline preload="true" src="/assets/mp4/1.mp4")
+      .bg(style="background-image: url(/assets/img/slides/world.jpeg)")
+      #globe.globe.js-globe
+        ul.globe-list.js-list
+        canvas.globe-canvas.js-canvas
+      .fg
+        //- .pages
+          div
+            .title
+              h1 ecommerce
+                br
+                | re-imagined
+            .description We might not have an all-star team with people from big corporate backgrounds, but we are the crazy ones with the right skill sets and passion to bring this project to fruition. We are fully prepared to dedicate our lives to this project
+          div
+            .title
+              h1 miskre
+                br
+                | app
+            .description Multi-purpose app acting as both messaging app and bank account; allowing users to use the app not only to talk to friends and transfer files but also to order goods and services, pay bills, transfer money to other users, online payment processing for internet businesses, and make purchases at physical stores.
+          div
+            .title
+              h1 ecommerce
+                br
+                | platform
+            .description Retail point-of-sale system, allowing users to easily create an online store to sell their own products or to retail products provided by Miskre Marketplace.
+          div
+            .title
+              h1 marketplace
+            .description Global marketplace with items from all over the world, priced in both USD and MSK.
+          div
+            .title
+              h1 ship
+            .description Our system will encompass all form of freight. Users will be able to track their package every step of the way, the moment the product leave the factory to when it arrives at their doorstep with full transparency on the blockchain.
+          div
+            .title
+              h1 fulfillment
+            .description All products will go through our facilities and inspected carefully before being packaged and shipped to customers.
+          div
+            .title
+              h1 miskre
+                br
+                | network
+            .description Transparent and decentralized Ad-Exchange running on our own side-chain: preventing advertising fraud, and protecting the privacy of consumers. Work in unison with our Miskre App; allowing affiliates, internet entrepreneurs, as well as celebrities and personalities to receive payments on time and in accordance with their contracts.
 
-  #fixed
-    .ctn
-      .rw
-        .cl.tr
-          a.menu-toggle
-            img.open(src="/assets/img/icon.menu.svg")
-            img.close(src="/assets/img/icon.close.svg")
+        .title
+          h1#slogan(data-aos="fade-left" data-aos-duration="1000") empowering the&nbsp;
+            br
+            | decentralized world
+        //- .description#part-description We might not have an all-star team with people from big corporate backgrounds, but we are the crazy ones with the right skill sets and passion to bring this project to fruition. We are fully prepared to dedicate our lives to this project
+        //- a.play(href="#play" data-remodal-target="play")
+          img.mr-5(src="/assets/img/play.svg")
+          | why miskre?
+        a.play(href="/whitepaper.html" data-aos="fade-up" data-aos-duration="1000")
+          img.mr-5(src="/assets/img/play.svg")
+          | interactive whitepaper
 
-  section#menu.h
-    .ctn
-      .rw
-        .cl
-          ul.navigations
-            li
-              a(href="#header") home
-            li
-              a(href="#progress") progress
-            li
-              a(href="#whitepaper") whitepaper
-            li
-              a(href="#roadmap") roadmap
-            li
-              a(href="#team") team
-            li
-              a(href="#faqs") faqs
-            li
-              a(href="#blogs") blogs
-            li
-              a(href="#footer") contacts
+        //- ul.pages
+          li.a(data-title="commerce<br>re-imagined" data-description="We might not have an all-star team with people from big corporate backgrounds, but we are the crazy ones with the right skill sets and passion to bring this project to fruition. We are fully prepared to dedicate our lives to this project") 01
+          li(data-title="miskre<br>app" data-description="Multi-purpose app acting as both messaging app and bank account; allowing users to use the app not only to talk to friends and transfer files but also to order goods and services, pay bills, transfer money to other users, online payment processing for internet businesses, and make purchases at physical stores.") 02
+          li(data-title="ecommerce<br>platform" data-description="Retail point-of-sale system, allowing users to easily create an online store to sell their own products or to retail products provided by Miskre Marketplace.") 03
+          li(data-title="marketplace" data-description="Global marketplace with items from all over the world, priced in both USD and MSK.") 04
+          li(data-title="ship" data-description="Our system will encompass all form of freight. Users will be able to track their package every step of the way, the moment the product leave the factory to when it arrives at their doorstep with full transparency on the blockchain.") 05
+          li(data-title="fulfillment" data-description="All products will go through our facilities and inspected carefully before being packaged and shipped to customers.") 06
+          li(data-title="miskre<br>network" data-description="Transparent and decentralized Ad-Exchange running on our own side-chain: preventing advertising fraud, and protecting the privacy of consumers. Work in unison with our Miskre App; allowing affiliates, internet entrepreneurs, as well as celebrities and personalities to receive payments on time and in accordance with their contracts.") 07
 
-  section#header.home-section
-    .ctn
-      .rw
-        .cl.sm-8.sm-ct
-          a.logo(href="/")
-            img(src="/assets/img/logo.light.svg")
-      .rw
-        .cl
-          .hero
-            .canvas
-              include assets/img/hero.svg
-            .info
-              .h(for="app")
-                p.title Miskre App
-                p Multi-purpose app acting as both messaging app and bank account; allowing users to use the app not only to talk to friends and transfer files but also to order goods and services, pay bills, transfer money to other users, online payment processing for internet businesses, and make purchases at physical stores.
-              .h(for="membership")
-                p.title Miskre Membership
-                p Multi-purpose app acting as both messaging app and bank account; allowing users to use the app not only to talk to friends and transfer files but also to order goods and services, pay bills, transfer money to other users, and make purchases at physical stores.
-              .h(for="store")
-                p.title Ecommerce Platform
-                p Retail point-of-sale system, allowing users to easily create an online store to sell their own products or to retail products provided by Miskre Marketplace.
-              .h(for="marketplace")
-                p.title Marketplace
-                p Global marketplace with items from all over the world, priced in both USD and MSK.
-              .h(for="ship")
-                p.title Ship
-                p Our system will encompass all form of freight. Users will be able to track their package every step of the way, the moment the product leave the factory to when it arrives at their doorstep with full transparency on the blockchain.
-              .h(for="fulfillment")
-                p.title Fulfillment
-                p All products will go through our facilities and inspected carefully before being packaged and shipped to customers.
-              .h(for="network")
-                p.title Miskre Network
-                p Transparent and decentralized Ad-Exchange running on our own side-chain: preventing advertising fraud, and protecting the privacy of consumers. Work in unison with our Miskre App; allowing affiliates, internet entrepreneurs, as well as celebrities and personalities to receive payments on time and in accordance with their contracts.
+    section#vision
+      .bg(style="background-image: url(/assets/img/slides/ice.jpeg)")
+      .fg
+        .title(data-aos="fade-left")
+          h1 vision
+        ul.featured.bg.md-2.lg-3.md-sp-30.lg-sp-50
+          li(data-aos="fade-up")
+            .image
+              img(src="/assets/img/governance.jpeg")
+            a.title True governance
+            .description A fair, democratic system of self-governance to ensures those whom are affected by the rules can change the rules.
+          li(data-aos="fade-up")
+            .image
+              img(src="/assets/img/labs.jpeg")
+            a.title Labs all over the world
+            .description Build
+              img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
+              | labs around the world to empower entrepreneurs and kickstart the miskre ecosystem.
+          li(data-aos="fade-up")
+            .image
+              img(src="/assets/img/liquidity.jpeg")
+            a.title All-in-one payment
+            .description Payment gateway system that allows online website and services to enable payment by
+              img.ml-5(src="/assets/img/logo.inline.svg" height="12px")
+              | . Mobile wallet app that allows users to store their MIS to generate KRE, use
+              img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
+              | to pay for good and services both online and offline, and send miskre to other users.
 
-  section#progress.home-section
-    .ctn
-      .rw
-        .cl.md-10.lg-8.sm-ct
-          .block-title progress
-          .block-subtitle start from apr 13, 2014
-          .timeline
-            ul.bxslider
-              li
-                p We start working on Clicklion - an advertising network
-                  br
-                  strong 1920
-                  |  commits from 2014
-                img(src="/assets/img/clicklion.png")
-                p.timestamp apr 13, 2014 - jun 30, 2016
-              li
-                p We also build a system for articles collecting, extracting from random online sources, find relevant contents,
-                  br
-                  | to get analytic information for publishers, advertisers, technical admin and financial analyzer.
-                  br
-                  strong 1346
-                  |  commits from 2014
-                img(src="/assets/img/collector.png")
-                p.timestamp apr 13, 2014 - nov 30, 2015
-              li
-                p We expand our developing field with complete new project.
-                  br
-                  | Clixy - social publishing network, to connect the advertisers to influencers.
-                  br
-                  strong 1270
-                  |  commits from 12/2015
-                img(src="/assets/img/clixy.png")
-                p.timestamp dec 27, 2014 - nov 4, 2016
-              li
-                p Currently, we focus on the Miskre fulfillment service and international shipping.
-                  br
-                  strong 665
-                  |  commits from 7/2017
-                img(src="/assets/img/miskre.png")
-                p.timestamp jul 2, 2017 - now
-
-  section#whitepaper.home-section
-    .ctn
-      .rw
-        .cl
-          .block-title whitepaper
-          .block-subtitle coming on&nbsp;
-            span#wpdate &nbsp;&nbsp;
-          .counter
-            .day
-              #wpday.number &nbsp;&nbsp;
-              .help days
-            .hour
-              #wphour.number &nbsp;&nbsp;
-              .help hours
-            .minute
-              #wpmin.number &nbsp;&nbsp;
-              .help mins
-            .second
-              #wpsec.number &nbsp;&nbsp;
-              .help secs
-
-  section#roadmap.home-section
-    .ctn
-      .rw
-        .cl.md-10.lg-8.sm-ct
-          .block-title roadmap
-          .block-subtitle goals schedule
-          img.start(src="/assets/img/start.svg")
-          ul.schedule
-            li
-              article
+    section#roadmap
+      .bg(style="background-image: url(/assets/img/slides/boat.jpeg)")
+      .fg
+        .title
+          h1 roadmap
+        ul.schedule.bg.lg-2.sp-30
+          li.a(data-aos="fade-up")
+            .status
+              .badge
                 .time Apr 13, 2018
-                .title Pre Sale
-                .description for strategic partners with no discount.
-            li
-              article
-                .time May 2018
-                .title Token Sale
-                .description and private sale for strategic partners with no discount.
-            li
-              article
-                .time Q2/2018
-                .title Fulfillment Service on Testnet
-                .description integrate with International Shipping on the blockchain.
-            li
-              article
-                .time Q3/2018
-                .title Ecommerce Store Platform on Testnet
-                .description release sample ecommerce-related smart contracts.
-            li
-              article
-                .time Q4/2018
-                .title Marketplace on Testnet
-                .description integrate Ad Exchange with the Miskre ecommerce eco-system.
-            li
-              article
-                .time Early 2019
-                .title Private Test and Maintainance
-                .description private test on Testnet with strategic partners and a group of token holders.
-            li
-              article
-                .time Q1/2019
-                .title First Mainnet Launch
-                .description maintain system stabilization and general performance.
-            li
-              article
-                .time Q2/2019
-                .title Miskre Membership on Testnet
-                .description integrate with Miskre ecommerce eco-system.
-            li
-              article
-                .time Q3/2019
-                .title Miskre Membership on Mainnet
-                .description maintain system stabilization and general performance.
-          img.finish(src="/assets/img/finish.svg")
+                .progress 0%
+            .info
+              .title whitelist
+              ul.tasks
+                li
+                  .name Crowdsale whitelist begins.
+                    .r Preparation 100%
+                  .pb
+                    .mt(style="width: 0%")
+          li(data-aos="fade-up")
+            .status
+              .badge
+                .time Apr 20, 2018
+                .progress 0%
+            .info
+              .title crowdsale
+              ul.tasks
+                li
+                  .name Crowdsale live!
+                    .r Preparation 60%
+                  .pb
+                    .mt(style="width: 0%")
+          li(data-aos="fade-up")
+            .status
+              .badge
+                .time Project
+                .progress 22%
+            .info
+              .title
+                .val first 3 labs
+              .completed-date Estimated Completion &mdash; 3 months after crowdsale
+              .description Labs are strategically placed startup incubators around the world.
+              ul.tasks
+                li
+                  .name Lab 1. Bangkok, Thailand
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name Lab 2. Buenos Aires, Argentina
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name Lab 3. Lisbon, Portugal
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name Legal preparation
+                    .r 85%
+                  .pb
+                    .mt(style="width: 85%")
+                li
+                  .name Lab advisors talent search
+                    .r 25%
+                  .pb
+                    .mt(style="width: 25%")
+          li(data-aos="fade-up")
+            .status
+              .badge
+                .time Project
+                .progress 18.75%
+            .info
+              .title
+                .val
+                  img.mr-10(src="/assets/img/miskre.svg" height="16px")
+                  span miskre exchange
+              .completed-date Estimated Completion &mdash; 6 months after crowdsale
+              .description An exchange where people can easily exchange between crypto and fiat.
+              ul.tasks
+                li
+                  .name Development and testing on testnet
+                    .r 75%
+                  .pb
+                    .mt(style="width: 75%")
+                li
+                  .name Closed beta testing on testnet for small group of users
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name Release on mainnet
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name Exchange API and integration with
+                    img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
+                    | pay
+                    .r 0%
+                  .pb
+                    .mt
+          li(data-aos="fade-up")
+            .status
+              .badge
+                .time Project
+                .progress 5%
+            .info
+              .title
+                .val
+                  img.mr-10(src="/assets/img/miskre.svg" height="16px")
+                  span miskre pay
+              .completed-date Estimated Completion &mdash; 4 months after
+                img.mh-10(src="/assets/img/logo.inline.svg" height="10px")
+                | exchange
+              .description All-in-one payment solution that enable users to make quick transactions both offline and online.
+              ul.tasks
+                li
+                  .name Development and testing on testnet
+                    .r 20%
+                  .pb
+                    .mt(style="width: 20%")
+                li
+                  .name Closed beta testing on testnet for small group of users
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name Release on mainnet
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name
+                    img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                    | wallet mobile app
+                    .r 10%
+                  .pb
+                    .mt(style="width: 10%")
+                li
+                  .name Payment Gateway Web Client
+                    .r 0%
+                  .pb
+                    .mt
+                li
+                  .name Payment Gateway SDK
+                    .r 0%
+                  .pb
+                    .mt
+          li(data-aos="fade-up")
+            .status
+              .badge
+                .time Project
+                .progress 0%
+            .info
+              .title renaissance
+              .completed-date Launch &mdash; 2021
+              .description This project aims to launch a community governed distributed ledger that will usher in a new era of free market economy.
+              ul.sub-projects
+                li
+                  .info
+                    .title
+                      .val
+                        img.mr-10(src="/assets/img/miskre.svg" height="16px")
+                        span miskre core
+                    .description Ecosystem’s distributed ledger
+                    ul.tasks
+                      li
+                        .name Maximize transaction speed
+                        .pb
+                          .mt
+                      li
+                        .name Increase stability
+                        .pb
+                          .mt
+                      li
+                        .name Optimize Wallet Client UI
+                        .pb
+                          .mt
+                      li
+                        .name Add support for more smart contract programming languages
+                        .pb
+                          .mt
+                      li
+                        .name Quantum proof research and implementation
+                        .pb
+                          .mt
+                li
+                  .info
+                    .title Delegate System
+                    .description A ranked choice voting system that allow for fair elections of delegates.
+                    ul.tasks
+                      li
+                        .name Development and testing on test net
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Closed beta testing on test net for small group of users
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Public Beta
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Voting API
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Release on mainnet
+                          .r 0%
+                        .pb
+                          .mt
+                li
+                  .info
+                    .title Protocol Update Proposal
+                    .description A system that will allow automatic deployment of protocol updates, removing the need for FOSS maintainers.
+                    ul.tasks
+                      li
+                        .name Development and testing on test net
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Closed beta testing on test net for small group of users
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Public Beta
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Protocol API
+                          .r 0%
+                        .pb
+                          .mt
+                      li
+                        .name Release on mainnet
+                          .r 0%
+                        .pb
+                          .mt
 
-  section#team.home-section
-    .ctn
-      .rw
-        .cl.md-10.lg-9.sm-ct
-          .block-title who are we?
-          .block-subtitle meet the team
-          p.help-text We might not have an all-star team with people from big corporate backgrounds,
-            br
-            | but we are the crazy ones with the right skill sets and passion to bring this project to fruition.
-            br
-            | We are fully prepared to dedicate our lives to this project
-          ul.members.bg.sm-2.md-3.lg-4.sp-30
-            li
+    section#team
+      .bg(style="background-image: url(/assets/img/slides/city.jpeg)")
+      .fg
+        .title
+          h1 team
+          p We might not have an all-star team with people from big corporate backgrounds, but we are the crazy ones with the right skill sets and passion to bring this project to fruition. We are fully prepared to dedicate our lives to this project
+        ul.team.bg.sm-2.md-3.lg-5.sm-sp-20.md-sp-40.lg-sp-50
+          li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="ec")
+                img(src="/assets/img/ec.jpg")
                 img(src="/assets/img/ec.jpg")
               .name Peter Nguyen
               .role Executive Chairman
               .links
                 a(href="https://linkedin.com/in/peterqnguyen" target="_blank")
                   img(src="/assets/img/linkedin.svg")
-            li
+          li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="coo")
                 img(src="/assets/img/coo.jpg")
+                img(src="/assets/img/coo.jpg")
               .name Doan Tran
-              .role Chief Operations Officer
+              .role Operations Manager
               .links
                 a(href="#" target="_blank")
                   img(src="/assets/img/linkedin.svg")
-            li
+          li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="cd")
                 img(src="/assets/img/cd.jpg")
+                img(src="/assets/img/cd.jpg")
               .name Gia Nguyen
-              .role Creative Director
+              .role Blockchain Engineer
               .links
                 a(href="#" target="_blank")
                   img(src="/assets/img/linkedin.svg")
                 a(href="https://github.com/coadotvn" target="_blank")
                   img(src="/assets/img/github.svg")
-            li
+          li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="cto")
-                img(src="/assets/img/cto.jpg")
+                img(src="/assets/img/cto.2.jpg")
+                img(src="/assets/img/cto.2.jpg")
               .name Huy Nguyen
-              .role Chief Technology Officer
+              .role Blockchain Engineer
               .links
                 a(href="#" target="_blank")
                   img(src="/assets/img/linkedin.svg")
                 a(href="https://github.com/huytpyt" target="_blank")
                   img(src="/assets/img/github.svg")
-            li
-              .avatar(data-remodal-target="cmo")
-                img(src="/assets/img/cmo.jpg")
-              .name Bao Le
-              .role Chief Marketing Officer
-              .links
-                a(href="#" target="_blank")
-                  img(src="/assets/img/linkedin.svg")
-            li
+          li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="ea")
+                img(src="/assets/img/ea.jpg")
                 img(src="/assets/img/ea.jpg")
               .name Darren Lopes
               .role Executive Advisor /
@@ -271,7 +459,20 @@ block content
               .links
                 a(href="#" target="_blank")
                   img(src="/assets/img/linkedin.svg")
-            //- li
+          li(data-aos="fade-up")
+            .member
+              .avatar(data-remodal-target="be")
+                img(src="/assets/img/be.jpg")
+                img(src="/assets/img/be.jpg")
+              .name Thoai Vo
+              .role Blockchain Engineer
+              .links
+                a(href="#" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+                a(href="https://github.com" target="_blank")
+                  img(src="/assets/img/github.svg")
+          //- li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="sms")
                 img(src="/assets/img/sms.jpg")
               .name Derick Lucas
@@ -279,8 +480,10 @@ block content
               .links
                 a(href="#" target="_blank")
                   img(src="/assets/img/linkedin.svg")
-            li
+          //- li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="am")
+                img(src="/assets/img/am.jpg")
                 img(src="/assets/img/am.jpg")
               .name Duy Duong
               .role Ambassador /
@@ -290,70 +493,180 @@ block content
                 a(href="#" target="_blank")
                   img(src="/assets/img/linkedin.svg")
 
-  section#faqs.home-section
-    .ctn
-      .rw
-        .cl.md-10.lg-9.sm-ct
-          .block-title faqs
-          .block-subtitle how can we help you?
-          ul.faqs
-            li
-              .question Do you currently have an estimate of when the ICO will start? How will I know when the ICO is open?
-              .answer We are just waiting for our legal process to be completed. We will announce in advance on our media channels.
-            li
-              .question Will there be a presale?
-              .answer No. There will only be a private sale for strategic partners and cash injections from the founders with zero discount from public token sale price.
-            li
-              .question I'd like to be a strategic partner, what should I do?
-              .answer Miskre will have only a few strategic partners who are expected to provide more than funding. If you share our vision for the future and believe you have something else to make that a reality, send an email to contact@miskre.io presenting your proposal and how you intend to add value to Miskre.
-            li
-              .question Are the jobs available?
-              .answer We are glad to attract the interest of so many talented people. At the present moment our team is complete and we have no positions available, however as we grow in the future we will look for new talents.
+    //- section#fundraising
+      .bg(style="background-image: url(/assets/img/slides/graph.jpeg)")
+      .fg
+        .title
+          h1 fundraising
+        .allocation
+          .rw
+            .cl.md-4.lg-3
+              .help-text Total token supply
+              .supply 1B MSK tokens
+              .pie
+                img(src="/assets/img/pie.svg")
+            .cl.md-8.lg-9
+              ul.legend
+                li
+                  .percentage 15%
+                  .amount 150,000,000 MSK
+                  .for
+                    img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                    | founders and advisors.
+                    small Locked for 5 years, and vested 10%, 15%, 20%, 25%, 30% for another 5 years after that.
+                li
+                  .percentage 30%
+                  .amount 300,000,000 MSK
+                  .for
+                    img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                    | company tokens.
+                    small Held at provision for partnerships, marketing, strategic initiatives, market maker for liquidity, and future MSK expenses (We will buy back tokens with company profit if our reserve ever falls under 300M MSK)
+                li
+                  .percentage 55%
+                  .amount 550,000,000 MSK
+                  .for Purchasers, bounty, community building
+                    small
+                      | • Strategic Investor Sale - 40M MSK tokens
+                      br
+                      | • Pre-sale - 90M MSK tokens
+                      br
+                      | • Crowd Sale - 420M MSK tokens
 
-  section#blogs.home-section
-    .ctn
-      .rw
-        .cl.md-10.lg-9.sm-ct
-          .block-title blogs
-          .block-subtitle latest news &amp; updates
-          ul.articles.bg.sm-1.md-3.sp-30
-            li
-              article
-                a.image(href="#")
-                  img(src="https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb")
-                a.title(href="#") First Miskre Article
-                .description First two weeks of January 2018 updates. We focus on sample smart contracts…
-            li
-              article
-                a.image(href="#")
-                  img(src="https://images.pexels.com/photos/717131/pexels-photo-717131.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb")
-                a.title(href="#") Weekly Updates - Week 4, Jan 2018
-                .description First two weeks of January 2018 updates. We focus on sample smart contracts…
-            li
-              article
-                a.image(href="#")
-                  img(src="https://images.pexels.com/photos/762026/pexels-photo-762026.jpeg?h=350&auto=compress&cs=tinysrgb")
-                a.title(href="#") Final Partner Meetup
-                .description First two weeks of January 2018 updates. We focus on sample smart contracts…
-  
-  section#footer.home-section.dark
-    .ctn
-      .rw
-        .cl
-          .block-title token sale coming soon
-          .block-subtitle join our reading list and conversations
+    section#faqs
+      .bg(style="background-image: url(/assets/img/slides/crowd.jpeg)")
+      .fg
+        .title
+          h1 faqs
+        ul.faqs.bg.md-2.lg-3.md-sp-30.lg-sp-50
+          li(data-aos="fade-up")
+            .stamp
+              .question What is
+                img.ml-10(src="/assets/img/logo.inline.svg" height="15px")
+              .answer
+                img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                | is a decentralized currency that uses two native tokens MIS and KRE allowing users to receive and transfer payment in a fair and trustless system.
+          li(data-aos="fade-up")
+            .stamp
+              .question What problems are
+                img.mh-10(src="/assets/img/logo.inline.svg" height="15px")
+                | solving?
+              .answer
+                img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                | solves the centralization issue in blockchain governance by building a true democratic system of governance that uses ranked choice voting in a unique delegates system, along with an automated protocol proposal system.
+                br
+                br
+                img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                | solves the ICO funding craze by building sensible incubators that would be able to invest in tens or even hundreds of startups with the amount of money raised in one successful ICO.
+                br
+                br
+                img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                | solves accessibility in the space by empowering entrepreneurs all around the world to build on the miskre protocol, and bring their technology to local markets increasing miskre adoption worldwide.
+          li(data-aos="fade-up")
+            .stamp
+              .question How is
+                img.mh-10(src="/assets/img/logo.inline.svg" height="15px")
+                | different from other protocols?
+              .answer
+                img.mr-5(src="/assets/img/logo.inline.svg" height="12px")
+                | is a true open source system that requires no maintainers, anyone can propose protocol updates that if gets voted in will automatically be deployed.
+                img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
+                | incorporates many on-chain governance features that will prevent exploitation of the system.
+          li(data-aos="fade-up")
+            .stamp
+              .question What are MIS and KRE?
+              .answer The miskre ecosystem consist of two native tokens MIS and KRE.
+                br
+                br
+                | MIS represents management rights to the network, and by just simply holding it in a wallet it will generate KRE which is the currency of the network.
+          li(data-aos="fade-up")
+            .stamp
+              .question Will MIS generate KRE forever?
+              .answer No, to give early adopters incentive MIS will only generate KRE for approximately 22 years with the rate of KRE generated decreasing every year.
+                ul
+                  li 16% of KRE will be generated first year
+                  li 52% of the KRE generated within the first four years
+                  li 80% KRE generated in twelve years
+          li(data-aos="fade-up")
+            .stamp
+              .question How many MIS and KRE will there be?
+              .answer There will be 20 billion MIS. 0 KRE at the start but will generate over the course of 22 years until the total reach 20 billion KRE.
+
+    section#blog
+      .bg(style="background-image: url(/assets/img/slides/ice.jpeg)")
+      .fg
+        .title
+          h1 blogs
+          p Follow
+            img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
+            | latest updates and news
+        ul.articles.bg.md-2.lg-3.md-sp-30.lg-sp-50
+          li(data-aos="fade-up")
+            article
+              a.image(href="#")
+                img(src="https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb")
+              a.title(href="#") First Article
+              .description First two weeks of January 2018 updates. We focus on sample smart contracts…
+          li(data-aos="fade-up")
+            article
+              a.image(href="#")
+                img(src="https://images.pexels.com/photos/717131/pexels-photo-717131.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb")
+              a.title(href="#") Weekly Updates - Week 4, Jan 2018
+              .description First two weeks of January 2018 updates. We focus on sample smart contracts…
+          li(data-aos="fade-up")
+            article
+              a.image(href="#")
+                img(src="https://images.pexels.com/photos/762026/pexels-photo-762026.jpeg?h=350&auto=compress&cs=tinysrgb")
+              a.title(href="#") Final Partner Meetup
+              .description First two weeks of January 2018 updates. We focus on sample smart contracts…
+
+    section#reach.full-height
+      .bg(style="background-image: url(/assets/img/slides/rocket.jpeg)")
+      .fg
+        .title(data-aos="fade-left")
+          h1 reach
+          p Token sale coming soon.
+            br
+            | Join our reading list and conversations.
+        .contact(data-aos="fade-in")
+
+          .help Reach us at
+          a.email(href="mailto:contact@miskre.org") contact@miskre.org
+
+          .help Social network links
           .social-links
             a(href="#")
-              img(src="/assets/img/twitter.svg")
+              img(src="/assets/img/twitter.v2.svg")
             a(href="#")
-              img(src="/assets/img/facebook.svg")
+              img(src="/assets/img/facebook.v2.svg")
             a(href="#")
-              img(src="/assets/img/medium.svg")
+              img(src="/assets/img/telegram.v2.svg")
             a(href="#")
-              img(src="/assets/img/telegram.svg")
+              img(src="/assets/img/slack.v2.svg")
+
+          .help Get in touch
+          .download
             a(href="#")
-              img(src="/assets/img/slack.svg")
-          .contact
-            .help reach us at
-            a.email(href="mailto:contact@miskre.io") contact@miskre.io
-          .copyright © 2018 Miskre. All Rights Reserved.
+              img(src="/assets/img/get.ios.svg")
+            a(href="#")
+              img(src="/assets/img/get.android.svg")
+
+          .help Whitepaper&nbsp;
+            small &mdash; Coming on&nbsp;
+            span#wpdate &nbsp;&nbsp;
+          .counter
+            .day
+              span#wpday.number &nbsp;&nbsp;
+              span.help days
+            .hour
+              span#wphour.number &nbsp;&nbsp;
+              span.help hours
+            .minute
+              span#wpmin.number &nbsp;&nbsp;
+              span.help mins
+            .second
+              span#wpsec.number &nbsp;&nbsp;
+              span.help secs
+
+        .copyright(data-aos="fade-up") © 2018
+          img.ml-5(src="/assets/img/logo.inline.svg" height="11px")
+          | . All Rights Reserved.

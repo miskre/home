@@ -1,9 +1,10 @@
-WP_DATE = moment '2018-03-01', 'YYYY-MM-DD'
+
+
+WP_DATE = moment '2018-05-01', 'YYYY-MM-DD'
 $day = $hour = $min = $sec = null
 
 whitepaper = () ->
   WP_DEADLINE = WP_DATE.format 'MMM Do, YYYY'
-      .toLowerCase()
   $ '#wpdate'
     .text WP_DEADLINE
   $day = $ '#wpday'
@@ -20,50 +21,38 @@ whitepaper = () ->
   setInterval tick, 1000
   null
 
-hero = () ->
-  $ '#header .hero .stamp'
-    .click (e) ->
-      tag = $ e.delegateTarget
-        .attr 'id'
-      $ '#header .hero'
-        .addClass 'expanded'
-        .find '.info'
-        .click () ->
-          $ '#header .hero'
-            .removeClass 'expanded'
-        .find '> *'
-        .addClass 'h'
-        .filter "[for=#{tag}]"
-        .removeClass 'h'
-
-timeline = () ->
-  $ '#progress .timeline ul'
-    .bxSlider
-      infiniteLoop: false
-      pager: true
-      controls: false
-      auto: true
-      autoStart: true
-      pause: 4000
+remodal = () ->
+  $ '.bio-modal'
+    .remodal
+      hashTracking: false
+      closeOnEscape: true
+      closeOnOutsideClick: true
 
 menu = () ->
   section = $ '#menu'
-  toggle = $ '.menu-toggle'
+  toggle = $ '#top-bar .menu'
   toggle
-    .click () ->
+    .click (e) ->
+      e.preventDefault()
       if section.hasClass 'h'
         section
           .removeClass 'h'
           .hide()
           .fadeIn 'fast'
         toggle.addClass 'opened'
+        $ 'html, body'
+          .addClass 'no-scroll'
       else
         section.fadeOut 'fast', () ->
           section.addClass 'h'
         toggle.removeClass 'opened'
-  $ '#menu .navigations a'
-    .click (e) ->
+        $ 'html, body'
+          .removeClass 'no-scroll'
+  $ section
+    .on 'click', '.navigations a', (e) ->
       section.fadeOut 'fast', () ->
+        $ 'html, body'
+          .removeClass 'no-scroll'
         section.addClass 'h'
       toggle.removeClass 'opened'
       link = $ e.target
@@ -74,17 +63,21 @@ menu = () ->
             scrollTop: element.offset().top
           , 1000
 
-remodal = () ->
-  $ '.bio-modal'
-    .remodal
-      hashTracking: false
-      closeOnEscape: true
-      closeOnOutsideClick: true
+animations = () ->
+  if AOS then AOS.init
+    duration: 500
+
+$ window
+  .on 'load', () ->
+    setTimeout () ->
+        $ '#preload'
+          .fadeOut 'slow'
+        animations()
+        if globe then globe()
+      , 3000
 
 $ document
   .ready () ->
     menu()
-    hero()
-    timeline()
-    whitepaper()
     remodal()
+    whitepaper()

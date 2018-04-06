@@ -1,422 +1,521 @@
 @import 'nib'
 @import 'fonts'
-@import 'gia.ui/gia.ui'
 @import 'remodal'
-@import 'bxslider'
+@import 'globe'
+@import 'slick'
+@import 'gia.ui/gia.ui'
+@import 'whitelist'
+@import '../../node_modules/aos/dist/aos.css'
+
+@keyframes mis
+  0%
+    transform scale(1.2)
+    opacity .75
+  50%
+    transform scale(1)
+    opacity 1
+  100%
+    transform scale(1.2)
+    opacity .75
+
+@keyframes kre
+  0%
+    transform scale(1)
+    opacity .75
+  50%
+    transform scale(1.2)
+    opacity 1
+  100%
+    transform scale(1)
+    opacity .75
 
 main-gradient(direction = top)
-  background linear-gradient(direction, #ffb88c, #de6262)
-
-divider-color = rgba(#002937, .1)
-
-.{grid-container-class}
-  padding-left 15px
-  padding-right @padding-left
-  @media large
-    padding-left 20px
-    padding-right @padding-left
+  // background linear-gradient(direction, #FF717A, #FFC22D)
+  // background linear-gradient(direction, #00FF7A, #2DC0FF)
+  background linear-gradient(direction, #0ce4e1, #d855ff)
 
 html
-  -webkit-font-smoothing antialiased
-
-.home-section
-  text-align center
-  padding 50px 0
-  @media medium
-    padding 90px 0
-  &.dark
-    .block-title
-      color white
-  .block-title
-    font-weight bold
-    color black
-    font-size 36px
-    line-height @font-size
-    margin-bottom 10px
-    @media medium
-      font-size 48px
-      line-height @font-size
-  .block-subtitle
-    font-weight normal
-    font-size 16px
-    color active-color
-
-.menu-toggle
-  text-align right
-  display inline-block
-  margin-top 20px
-  pointer-event all
-  user-select none
-  .open
-    display block
-  .close
-    display none
-  &.opened
-    .open
+body
+  overflow-x hidden
+  background-color darken(#111, 2)
+  &.no-scroll
+    overflow hidden
+  &.no-js
+    .preload
       display none
-    .close
-      display block
 
 .bio-modal
   text-align left
+  background-color rgba(#000, .95)
+  max-width 500px
   p
+    color white
     font-size 14px
+    line-height 1.6em
     margin 0
     &:not(:last-child)
       margin-bottom 15px
 
-#fixed
-  position fixed
-  left 0
+.remodal .x
+  display block
+  position absolute
+  top 0
   right 0
-  z-index 10001
-  top 50px
-  pointer-event none
-  @media medium
-    top 80px
-  @media large
-    top 100px
-  .menu-toggle
-    width 32px
-    @media medium
-      width 36px
+  width 30px
+  height @width
+  background-color active-color
+  color white
+  text-align center
+  line-height @height
 
-#menu
+#preload
+  height 100vh
+  logo-size = 28px
   position fixed
   top 0
   right 0
   bottom 0
   left 0
-  background-color rgba(black, .95)
-  z-index 10000
-  padding-top 120px
+  z-index 9999
+  background-color #000
+  display table
+  width 100%
+  .text
+    display table-cell
+    vertical-align middle
+    color gainsboro
+    font-size: (logo-size * .86)
+    font-weight bold
+    text-align center
+    > *
+      vertical-align top
+  .progress
+    display inline-block
+    position relative
+    width: logo-size * 1.1875
+    margin-right: logo-size * .75
+  .mis
+  .kre
+    width logo-size
+    position absolute
+  .mis
+    left 0
+    animation-name mis
+    animation-duration 1s
+    animation-iteration-count infinite
+    animation-direction both
+  .kre
+    right 0
+    animation-name kre
+    animation-duration 1s
+    animation-iteration-count infinite
+    animation-direction both
+
+.youtube-modal
+  text-align left
+  max-width 800px
+  padding 0
+  .video
+    width 100%
+    height 0
+    padding-top 56.25%
+    > iframe
+    > object
+    > embed
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+
+.slick-slide
+  outline none
+
+.navigation
+  margin-bottom 20px
+  font-size 0
+  .previous
+  .next
+    display inline-block
+    cursor pointer
+    &:before
+      display block
+      font-weight normal
+      width 36px
+      height @width
+      color white
+      background-color #161616
+      line-height @height
+      text-align center
+      font-size 13px
+      transition background-color .5s ease-in-out
+    &:hover
+      &:before
+        background-color #000
+  .previous
+    margin-right 15px
+    &:before
+      content '←'
+  .next
+    &:before
+      content '→'
+
+#particles
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 1001
+  pointer-events none
+
+#menu
+  position fixed
+  background-color rgba(#111, .975)
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 1000
+  padding 90px 20px 40px 60px
   @media medium
-    padding-top 200px
+    padding 120px 20px 50px 120px
+  @media large
+    padding 150px 20px 50px 120px
   ul.navigations
     margin 0
     padding 0
     list-style none
-    font-size 0
-    text-align right
     a
-      color white
-      display inline-block
+      color jumbo
       font-weight bold
-      font-size 24px
-      line-height 36px
+      transition color .5s ease-in-out
+      font-size 20px
+      // text-transform uppercase
+      line-height 30px
       @media medium
-        font-size 28px
-        line-height 38px
-      @media large
-        font-size 36px
-        line-height 48px
+        font-size 24px
+        text-transform none
+        line-height 36px
+      &:hover
+        color white
 
-#header
-  main-gradient()
-  padding-top 50px
-  margin-bottom 50px
+#top-bar
+  position fixed
+  top 0
+  left 0
+  right 0
+  font-size 0
+  pointer-events none
+  z-index 1000
+  padding-top 40px
+  padding-bottom 30px
+  background linear-gradient(top, rgba(#000, .5), transparent)
   @media medium
-    padding-top 80px
-    margin-bottom 100px
-  @media large
-    padding-top 100px
-    margin-bottom 150px
-  .hero
-    position relative
-    &.expanded
-      .canvas
-        transform translateX(-25%)
-      .info
-        display block
-        opacity 1
-        pointer-events all
-    .canvas
-      display inline-block
-      margin-top 50px
-      width 100%
-      max-width 1000px
-      margin-bottom -100px
-      transition transform .5s ease-in-out
-      svg
-        display block
-        max-width 100%
-      @media medium
-        margin-bottom -200px
-      @media large
-        margin-bottom -250px
-    .info
-      opacity 0
-      transition opacity .5s ease-in-out
-      background-color rgba(black, .95)
-      color snow
-      text-align left
-      position absolute
-      padding 30px 20px 20px 20px
-      right 0
-      width 100%
-      top 50px
-      pointer-events none
-      cursor help
-      @media medium
-        width 50%
-        top 100px
-      @media large
-        width 40%
-        top 150px
-      p
-        font-size 14px
-        color base
-        margin 0
-        &:not(:last-child)
-          margin-bottom 15px
-        &.title
-          margin-bottom 20px
-          color white
-          font-size 13px
-          font-weight bold
-          text-transform uppercase
-          letter-spacing 2px
-  g.stamp
-    cursor help
-    transition margin-top .5s ease-in-out
-    &:hover
-      margin-top -100px
-
-#progress
-  .timeline
-    margin-top 35px
-    p
-      font-size 14px
-      line-height 24px
-    .timestamp
-      text-transform uppercase
-      font-size 12px
-      letter-spacing 1px
-      margin 20px 0 0 0
-      color steel
-
-#roadmap
-  .start
-    margin-top 50px
-    margin-bottom 10px
-  .finish
-    margin-top 15px
-  .schedule
-    margin 0
-    list-style none
-    font-size 0
-    position relative
-    z-index 0
-    padding 30px 0
+    padding-top 70px
+    padding-bottom 50px
+  a
+    pointer-events all
+  .menu
+    display inline-block
+    text-align center
+    width 60px
     @media medium
-      padding 0 0 45px 0
-    &:before
-      content ''
-      position absolute
-      left 50%
-      width 1px
-      top 0
-      bottom 0
-      background-color divider-color
-      z-index -1
-    > li
-      &:not(:last-child)
-        margin-bottom 20px
-      @media medium
-        text-align left
-        width 50%
-        z-index 0
-        position relative
-        block-clear()
-        &:before
-          content ''
-          display block
-          position absolute
-          top 50%
-          height 1px
-          width 100%
-          background-color divider-color
-          z-index -1
-        &:not(:last-child)
-          margin-bottom 30px
-        &:nth-child(even)
-          position absolute
-          right 0
-          margin-top -80px
-          article
-            float right
-    article
-      background-color #fafbfc
-      padding 15px 20px
-      @media medium
-        width 80%
-        max-width 320px
-    .time
-      font-size 12px
-      font-weight bold
-      color black
-      margin-bottom 5px
-    .title
-      font-size 15px
-      font-weight bold
-      margin-bottom 5px
-      color active-color
-    .description
-      color steel
-      font-size 14px
-      line-height 20px
+      width 120px
+  .logo
+    display inline-block
+  .enter-whitelist
+    main-gradient(left)
+    display inline-block
+    font-weight bold
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
+    float right
+    color white
+    font-size 16px
+    margin-right 20px
+    margin-top 5px
+
+#social-bar
+  position fixed
+  bottom 0
+  left 0
+  width 120px
+  padding-bottom 70px
+  pointer-events none
+  z-index 1000
+  display none
+  @media medium
+    display block
+  > a
+    display block
+    text-align center
+    pointer-events all
+    &:not(:last-child)
+      margin-bottom 40px
 
 #whitepaper
-  background-color #fafbfc
-  background-repeat no-repeat
-  background-position center
-  background-size auto 100%
-  background-image url(../img/whitepaper.png)
-  .counter
-    margin-top 35px
-    display flex
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
     font-weight bold
-    justify-content center
-    > *
-      padding 0 20px
-    .number
-      font-size 36px
-      line-height 36px
-      color black
-    .help
-      font-size 14
-      color steel
+    color white
+  .section
+    &:not(:last-child)
+      margin-bottom 30px
+      @media medium
+        margin-bottom 40px
+      @media large
+        margin-bottom 50px
+    > h1:first-child
+      padding-bottom 15px
+      border-bottom 1px solid rgba(white, .25)
+      margin-bottom 30px
+  ul
+  dl
+  ol
+    font-size 0
+    dt
+    dd
+    li
+      font-size 15px
+      line-height 30px
+      &:not(:last-child)
+        margin-bottom 10px
+  .document
+    color snow
+  .attachment
+    float left
+    margin-top 15px
+    margin-bottom 30px
+    @media large
+      margin-left -30%
+    .description
+      line-height 26px
+      margin-top 10px
+  p
+    font-size 15px
+    line-height 30px
+    font-weight normal
 
-#team
-  padding-bottom 60px
-  background-image url(../img/geometry.png)
-  background-color #f6f7f8
-  .help-text
-    font-size 14px
-    line-height 24px
-    color steel
-    margin 20px 0 50px 0
-  .members
-    .avatar
-      cursor pointer
-      display block
-      margin-bottom 20px
-      img
-        max-width 120px
-        max-height @max-width
-        border-radius 12px
-    .name
-      font-size 18px
-      line-height 23px
-      font-weight bold
-      color black
-      margin-bottom 3px
-    .role
-      font-size 14px
-      line-height 18px
-      font-weight bold
-      color active-color
-      margin-bottom 15px
-    .bio
-      margin-bottom 20px
-    .bio p
-      font-size 13px
-      color steel
-      margin 0 0 10px 0
-    .links
+
+#slides
+  section
+    position relative
+    width 100%
+    background-color #111
+    transform scale(1)
+    transition transform .3s ease-in-out
+    &.full-height
+      min-height 100vh
+    > .video
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      z-index 1
+      // pointer-events none
+      object-fit cover
+    > .bg
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background-repeat no-repeat
+      background-size cover
+      background-position center
+      // @media large
+      //   left 30%
+      &.static
+        background-attachment fixed
+      &:after
+        content ''
+        position absolute
+        display block
+        top 0
+        right 0
+        bottom 0
+        left 0
+        background radial-gradient(circle at 0 0, #111 15%, rgba(#111, .4))
+    > .fg
+      max-width 1300px
+      position relative
+      z-index 1
+      width 100%
+      padding 120px 20px 40px 20px
+      &.static
+        background-attachment fixed
+      &.full-width
+        max-width none
+      @media medium
+        padding 200px 20px 50px 120px
+      @media large
+        padding 250px 20px 200px 120px
+  .title
+    margin-bottom 30px
+    @media medium
+      margin-bottom 50px
       display flex
-      justify-content center
-      align-items center
-      > a
-        padding 0 10px
+    @media large
+      margin-bottom 80px
+    h1
+      font-weight bold
+      line-height 1em
+      color white
+      font-size 48px
+      @media medium
+        font-size 96px
+      @media large
+        font-size 120px
+    p
+      font-size 13px
+      color #999
+      line-height 22px
+      font-weight normal
+      max-width 600px
+      margin-top 15px
+      @media medium
+        font-size 14px
+        margin-top 20px
+        padding-left 30px
+      @media large
+        margin-top 25px
+  .description
+    font-size 14px
+    color #999
+    line-height 1.5em
+    max-width 600px
 
-#faqs
-  background-repeat no-repeat
-  background-image url(../img/faqs.png)
-  background-position top center
-  .faqs
-    margin 50px 0 0 0
+#vision
+  .featured
+    li
+      text-align left
+      &:hover > .image > img
+        transform scale(1.1)
+      .image
+        display block
+        overflow hidden
+        margin-bottom 25px
+        position relative
+        width 100%
+        height 0
+        padding-top 56.25%
+        > img
+          position absolute
+          min-width 120%
+          height auto
+          min-height 100%
+          left -10%
+          top -10%
+          transform scale(1)
+          transition transform .5s ease-in-out
+      .title
+        display block
+        font-weight bold
+        font-size 20px
+        color white
+        margin-bottom 15px
+        line-height 28px
+      .description
+        font-family font-family-sans-serif
+        font-size 14px
+        color #999
+
+#fundraising
+  .pie
+    margin-bottom 20px
+    img
+      width 100%
+      max-width 240px
+  ul.legend
+    margin 0
     padding 0
     list-style none
-    font-size 0
+    max-width 600px
     > li
-      text-align left
-      border-top 1px solid divider-color
-      padding-top 18px
-      &:not(:last-child)
-        margin-bottom 20px
-      @media medium
-        display flex
-      .question
-        flex 1
-        font-size 15px
-        font-weight bold
-        color black
-        margin-bottom 10px
-        @media medium
-          margin-bottom 0
-          padding-right 20px
-      .answer
-        flex 1
-        font-size 15px
-        color steel
-
-#blogs
-  .articles
-    margin-top 50px
-  article
-    text-align left
-    &:hover > .image > img
-      transform scale(1.1)
-    .image
-      display block
-      overflow hidden
-      margin-bottom 20px
+      padding-left 30px
       position relative
-      width 100%
-      height 0
-      padding-top 56.25%
-      > img
+      &:not(:last-child)
+        margin-bottom 15px
+      &:nth-child(1)
+        &:before
+          background-color #00ff7a
+      &:nth-child(2)
+        &:before
+          background-color #2dc0ff
+      &:nth-child(3)
+        &:before
+          background-color #57edff
+      &:before
+        content ''
         position absolute
-        min-width 120%
-        height auto
-        min-height 100%
-        left -10%
-        top -10%
-        transform scale(1)
-        transition transform .5s ease-in-out
-    .title
-      display block
+        left 0
+        top 8px
+        width 16px
+        height @width
+        border-radius @width
+        background-color jumbo
+    .percentage
+      color white
+      font-size 20px
       font-weight bold
-      font-size 15px
-      color active-color
-      margin-bottom 10px
-    .description
-      font-size 13px
-      color base
+    .amount
+      color jumbo
+      font-size 12px
+    .for
+      margin-top 10px
+      font-size 14px
+      color white
+      small
+        margin-top 5px
+        display block
+        font-size 13px
+        color base
+  .help-text
+    color white
+    margin-bottom 10px
+  .supply
+    main-gradient(left)
+    display inline-block
+    font-weight bold
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
+    font-size 24px
+    margin-bottom 30px
+    @media medium
+      font-size 36px
 
-#footer
-  background-image url(../img/footer.jpg)
-  background-repeat no-repeat
-  background-size cover
-  background-position center
-  padding-top 120px
-  padding-bottom 0
-  .social-links
-    display flex
-    justify-content center
-    margin 40px 0 45px 0
+#reach
+  .download
+    margin 20px 0 30px 0
     > a
-      padding 0 10px
-      @media medium
-        padding 0 25px
+      display inline-block
+      &:not(:last-child)
+        margin-right 30px
+    img
+      opacity .6
+      transition opacity .5s ease-in-out
+      display inline-block
+      height 36px
+      &:hover
+        opacity 1
   .contact
     .help
       color white
-      font-size 16px
+      font-size 14px
+      margin-top 25px
+      small
+        color #444
+        text-transform uppercase
+        font-size 10px
+        letter-spacing 1px
     .email
-      display inline-block
-      main-gradient(right)
+      main-gradient(left)
       display inline-block
       font-weight bold
       -webkit-background-clip text
@@ -424,12 +523,290 @@ html
       font-size 24px
       @media medium
         font-size 36px
+  .social-links
+    margin-top 10px
+    > *:not(:last-child)
+      margin-right 20px
   .copyright
     margin-top 75px
     display inline-block
-    background-color black
+    background-color #161616
     color white
     font-size 12px
     font-weight bold
-    padding 15px 30px
-    border-radius 8px 8px 0 0
+    padding 15px 20px
+  .counter
+    display flex
+    margin-top 10px
+    > *:not(:last-child)
+      padding-right 20px
+    .number
+      font-weight bold
+      font-size 32px
+      line-height 32px
+      color white
+    .help
+      margin-left 5px
+      text-transform uppercase
+      font-size 10px
+      letter-spacing 1px
+      color jumbo
+
+#team
+  .team
+    .avatar
+      width 100%
+      height 0
+      padding-top 100%
+      margin-bottom 25px
+      position relative
+      overflow hidden
+      &:hover
+        > img
+          &:last-child
+            opacity 0
+          &:first-child
+            transform scale3d(1.2, 1.2, 1)
+      > img
+        display block
+        position absolute
+        top 0
+        left 0
+        width 100%
+        &:first-child
+          transition transform .5s ease-in-out
+          transform scale(1.05, 1.05, 1)
+        &:last-child
+          transition opacity .5s ease-in-out
+    .name
+      font-size 18px
+      font-weight bold
+      color white
+      margin-bottom 5px
+    .bio
+      display none
+    .role
+      color #999
+      font-size 13px
+      line-height 20px
+    .links
+      width 100%
+      margin-top 20px
+      > a
+        display inline-block
+        &:not(:last-child)
+          margin-right 15px
+
+#roadmap
+  ul.schedule
+    > li
+      @media medium
+        display flex
+      .status
+        @media medium
+          width 120px
+          min-width 120px
+          max-width 120px
+          margin-right 20px
+          margin-bottom 10px
+      > .info
+        background-color #0f0f0f
+        padding 15px
+        @media medium
+          flex-grow 1
+          padding 0
+          background-color transparent
+      &.a
+        .badge
+          main-gradient(45deg)
+      .badge
+        background-color #050505
+        padding 10px
+        @media small-only
+          clearfix()
+          .time
+            float left
+          .progress
+            float right
+        @media medium
+          padding 20px
+      .title
+        font-size 20px
+        font-weight bold
+        color white
+        margin-bottom 5px
+      .name
+        clearfix()
+        .r
+          @media small-only
+            display none
+      .completed-date
+        color smoke
+        font-size 12px
+        text-align right
+        margin-bottom 10px
+      .time
+        color white
+        font-size 13px
+      .progress
+        color white
+        font-weight bold
+      .description
+        font-size 14px
+        color #999
+      ul.tasks
+        margin 15px 0 0 0
+        padding 0
+        list-style none
+        > li
+          color snow
+          font-size 13px
+          &:not(:last-child)
+            margin-bottom 10px
+          .{progress-bar-class}
+            background-color oil
+            margin 10px 0 0 0
+            height 1px
+          .{progress-bar-meter-class}
+            main-gradient(left)
+  ul.sub-projects
+    margin 0
+    padding 0
+    list-style none
+    > li
+      margin-top 20px
+      &.expanded
+        .tasks
+          display block
+      .tasks
+        display none
+      .title
+        font-size 16px
+
+#faqs
+  .faqs
+    .stamp
+      background-color #161616
+      padding 30px 20px 20px 20px
+      img
+        display inline-block
+        vertical-align baseline
+      .question
+        font-size 20px
+        font-weight bold
+        color white
+        margin-bottom 15px
+      .answer
+        color #999
+        line-height 1.5em
+        img
+          display inline
+
+#blog
+  .articles
+    article
+      text-align left
+      &:hover > .image > img
+        transform scale(1.1)
+      .image
+        display block
+        overflow hidden
+        margin-bottom 25px
+        position relative
+        width 100%
+        height 0
+        padding-top 56.25%
+        > img
+          position absolute
+          min-width 120%
+          height auto
+          min-height 100%
+          left -10%
+          top -10%
+          transform scale(1)
+          transition transform .5s ease-in-out
+      .title
+        display block
+        font-weight bold
+        font-size 20px
+        color white
+        margin-bottom 15px
+      .description
+        font-family font-family-sans-serif
+        font-size 14px
+        color #999
+
+#home
+  .youtube
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index 1
+    pointer-events none
+    @media small-only
+      display none
+  @media (min-aspect-ratio: 16/9)
+    .youtube
+      height 200%
+      top -50%
+  @media (max-aspect-ratio: 16/9)
+    .youtube
+      width 200%
+      left -50%
+  .globe
+    pointer-events none
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index 1
+    transform translateY(25%)
+    @media medium
+      transform translate(0, 15%)
+    @media large
+      transform translate(25%, 15%)
+  .play
+    display inline-block
+    margin-top 50px
+    color white
+    font-weight bold
+    font-size 16px
+    main-gradient(left)
+    padding 18px 30px
+  ul.pages
+    padding 0
+    list-style none
+    display flex
+    margin 50px 0 0 0
+    @media medium
+      margin 80px 0 0 0
+    > li
+      position relative
+      color white
+      text-align center
+      color #666
+      padding-bottom 10px
+      min-width 40px
+      @media medium
+        min-width 60px
+      @media large
+        min-width 80px
+      &:after
+        content ''
+        display block
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        height 1px
+        background #222
+        transition background .5s ease-in-out
+      &.{active-class}
+        color white
+        &:after
+          height 3px
+          bottom -1px
+          main-gradient(left)

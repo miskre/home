@@ -29,19 +29,6 @@ function menu() {
       $('html, body').removeClass('no-scroll')
     }
   })
-  $(section).on('click', '.navigations a', function(e) {
-    var element, link
-    section.fadeOut('fast', function() {
-      $('html, body').removeClass('no-scroll')
-      section.addClass('h')
-    })
-    toggle.removeClass('opened')
-    link = $(e.target).attr('href')
-    element = $(link)
-    $('html, body').animate({
-      scrollTop: element.offset().top
-    }, 1000)
-  })
 }
 
 $(document).ready(function() {

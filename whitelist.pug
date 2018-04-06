@@ -1,0 +1,76 @@
+extends layout
+
+block js
+  script(src="/assets/js/whitepaper.dist.js")
+
+block menu
+  ul.navigations
+    li
+      a(href="#home") home
+    li
+      a(href="/whitepaper.html") whitepaper
+    li
+      a(href="/#roadmap") roadmap
+    li
+      a(href="/#team") team
+    li
+      a(href="/#faqs") faqs
+    li
+      a(href="/#blog") blog
+    li
+      a(href="/#reach") reach
+
+block modals
+  .tos-modal.remodal(data-remodal-id="tos")
+    a.x(href="#" data-remodal-close) &times;
+    h1 whitelist terms
+    p
+      strong Counterparty
+    p The name of the contracting party should normally be in the first paragraph. If it's not, that's a red flag.
+    p Like in any offline contract, an ICO's T&Cs should be clear about who the counterparties are. The buying party is clear, but who is the potential defendant in a litigation against the seller? Any legal counsel will be keen to know who they're dealing with if the project fails and litigation is justified.
+    p In most cases a buyer should expect to see a legal entity on the side of the ICO issuer, which at the very least indicates that the issuer is following certain guidelines, has likely considered structures for conducting the ICO, and may have involved lawyers.
+    p
+      strong Token definition
+    p Terms and conditions might simply refer you to the white paper for token description. This approach is fine. In these cases, terms and conditions should incorporate the white paper by reference, so that token buyers have an understanding of what they are buying.
+    p Alternatively, the rights and obligations associated with the tokens can be spelled out in the terms and conditions. As most tokens are essentially promises of something to happen in the future, investors are better off seeing that promise described in a legal document.
+    p
+      strong Terms of token sale
+    p Terms and conditions should include provisions on pricing and timing of the token sale. This information is likely available on the ICO landing page, but again, it's prudent to go beyond the headline and check what is stated in a legally binding document.
+    p
+      strong Use of proceeds
+    p The ICO is successful, now what? Terms and conditions should include an issuer's plan regarding how ICO proceeds will be used. If the application of proceeds is critical to the success of the investment, make sure the terms provide a binding description.
+    p
+      strong Other oddities
+    p Finally, look for anything that just looks odd.
+    p For example, a provision saying that you obtain no rights by contributing to the project is something one should avoid. If there is something confusing, or that looks fishy, contact the issuer.
+    p As important as T&Cs are, they will not unilaterally protect your investment. Keep in mind that a perfect set of terms can be published on a scam ICO website.
+    p Use your common sense, and always vet what others are saying about the potential investment.
+
+block content
+  #slides
+    section#whitelist-register.full-height
+      .bg(style="background-image: url(/assets/img/slides/metal.jpeg)")
+      .fg
+        .title
+          h1(data-aos="fade-left") enter whitelist
+        .mb-20
+          a(href="/login.html") already on the list?&nbsp;
+            strong login now →
+        form#register(action="/login.html")
+          .rw(data-aos="fade-right")
+            .cl.md-6
+              label email
+                input(type="email" autocomplete="off" required)
+              label password
+                input(type="password" required)
+              label retype password
+                input(type="password" required)
+              .sw.a.rd
+                input#accept-tos(type="checkbox")
+                label.ib(for="accept-tos")
+                span.caption I agree all whitelist terms which be listed&nbsp;
+                a(data-remodal-target="tos" href="#") here
+            .cl.md-6
+          .rw(data-aos="fade-up")
+            .cl
+              button.dis(type="submit") register

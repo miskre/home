@@ -1,0 +1,63 @@
+.tos-modal
+  text-align left
+  background-color rgba(#000, .95)
+  max-width 700px
+  p
+    color smoke
+    font-size 14px
+    line-height 1.6em
+    margin 0
+    &:not(:last-child)
+      margin-bottom 15px
+  h1
+    color white
+    font-weight bold
+    margin-bottom 20px
+
+#whitelist-register
+#whitelist-login
+  label
+    display block
+    color white
+    text-transform uppercase
+    margin-bottom 20px
+    font-size 11px
+    > input
+      margin-top 10px
+  input[type=text]
+  input[type=email]
+  input[type=password]
+    display block
+    appearance none
+    border none
+    background-color jet
+    width 100%
+    max-width 500px
+    font-size 18px
+    line-height 24px
+    padding 15px
+    color white
+    font-weight 100
+    font-family font-family-sans-serif
+    transition background-color .5s ease-in-out
+    &:focus
+      background-color oil
+  .{switch-class}
+    > *
+      vertical-align top
+    .caption
+      color smoke
+      display inline-block
+      margin-left 10px
+  button
+    appearance none
+    border none
+    display inline-block
+    color white
+    font-weight bold
+    font-size 16px
+    background linear-gradient(45deg, #0ce4e1, #d855ff)
+    padding 18px 30px
+    transition opacity .5s ease-in-out
+    &.{disabled-class}
+      opacity 5

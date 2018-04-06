@@ -13,6 +13,7 @@
     "bxslider": "git+https://github.com/stevenwanderski/bxslider-4.git",
     "compression": "^1.7.1",
     "express": "^4.16.2",
+    "express-basic-auth": "^1.1.4",
     "iphone-inline-video": "^2.2.2",
     "jquery": "^3.2.1",
     "modernizr": "^3.6.0",

@@ -12,6 +12,6 @@ app.use(basicAuth({
     'mis': 'kre',
     'gia': ''
   }
-})
+}))
 
 app.listen(port)

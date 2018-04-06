@@ -9,7 +9,8 @@ app.use(auth({
   users: {
     'mis': 'kre',
     'gia': ''
-  }
+  },
+  challenge: true
 }))
 app.use(compression())
 app.use(express.static('.'))

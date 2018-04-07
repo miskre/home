@@ -98,9 +98,45 @@
     width 100%
     height 0
     padding-top 60%
-    background-color jet
     background-size cover
     background-position center
+    cursor pointer
+    position relative
+    &:before
+      content ''
+      z-index -2
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      background-color darken(jet, 5)
+      transition background-color .5s ease-in-out
+    &:hover
+      &:before
+        background-color jet
+    &:after
+      content ''
+      z-index -1
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background-repeat no-repeat
+      background-position center
+    &.front
+    &.back
+    &.selfie
+      &:after
+        background-size 120px
+        opacity .05
+    &.front:after
+      background-image url(../img/front.svg)
+    &.back:after
+      background-image url(../img/back.svg)
+    &.selfie:after
+      background-image url(../img/selfie.svg)
     input
       width 0
       height 0

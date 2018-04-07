@@ -1,0 +1,12 @@
+<svg width="15" height="10" viewBox="0 0 15 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>dropdown</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(361 727)">
+<g id="dropdown">
+<use xlink:href="#path0_stroke" transform="matrix(-0.707107 0.707107 -0.707107 -0.707107 -347.843 -725)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 8 0L 9.5 0L 9.5 -1.5L 8 -1.5L 8 0ZM 0 1.5L 8 1.5L 8 -1.5L 0 -1.5L 0 1.5ZM 6.5 0L 6.5 8L 9.5 8L 9.5 0L 6.5 0Z"/>
+</defs>
+</svg>

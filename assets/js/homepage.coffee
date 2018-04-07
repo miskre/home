@@ -74,7 +74,7 @@ $ window
           .fadeOut 'slow'
         animations()
         if globe then globe()
-      , 3000
+      , 1000
 
 $ document
   .ready () ->

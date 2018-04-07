@@ -1,0 +1,66 @@
+extends layout
+
+block js
+  script(src="/assets/js/whitepaper.dist.js")
+
+block menu
+  ul.navigations
+    li
+      a(href="#home") home
+    li
+      a(href="/whitepaper.html") whitepaper
+    li
+      a(href="/#roadmap") roadmap
+    li
+      a(href="/#team") team
+    li
+      a(href="/#faqs") faqs
+    li
+      a(href="/#blog") blog
+    li
+      a(href="/#reach") reach
+
+block content
+  #slides
+    section#whitelist-user.full-height
+      .bg(style="background-image: url(/assets/img/slides/metal.jpeg)")
+      .fg
+
+        .top-link(data-aos="fade-down") hi, gia@coa.vn!
+          a.ml-10(href="/login.html") logout
+
+        .steps(data-aos="fade-down")
+          a.a(href="/user.html") Whitelist Info
+          a(href="/verify.html") Verify
+          a(href="/status.html") Approved Status
+
+        form#info(action="/verify.html" data-aos="fade-right")
+          .rw.sp-30
+            .cl.md-6
+              label Country
+                include _countries
+              label Full name
+                input(type="text" required)
+              label Date of birth
+                input(type="date" required)
+              label Address
+                input(type="text")
+                input(type="text")
+              .rw.sp-15
+                .cl.sm-6
+                  label State/Region
+                    input(type="text")
+                .cl.sm-6
+                  label City
+                    input(type="text")
+            .cl.md-6
+              label Amount want to buy
+                select
+                  option Choose amount you want to buy in crowdsale
+                  option small than 1 BTC
+                  option 1 BTC to 3 BTC
+              label BTC Wallet Address
+                input(type="text" required)
+          .rw
+            .cl
+              button.dis(type="submit") next

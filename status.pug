@@ -1,0 +1,42 @@
+extends layout
+
+block js
+  script(src="/assets/js/whitepaper.dist.js")
+
+block menu
+  ul.navigations
+    li
+      a(href="#home") home
+    li
+      a(href="/whitepaper.html") whitepaper
+    li
+      a(href="/#roadmap") roadmap
+    li
+      a(href="/#team") team
+    li
+      a(href="/#faqs") faqs
+    li
+      a(href="/#blog") blog
+    li
+      a(href="/#reach") reach
+
+block content
+  #slides
+    section#whitelist-user.full-height
+      .bg(style="background-image: url(/assets/img/slides/metal.jpeg)")
+      .fg
+        .top-link(data-aos="fade-down") hi, gia@coa.vn!
+          a.ml-10(href="/login.html") logout
+        .steps(data-aos="fade-down")
+          a(href="/user.html") Whitelist Info
+          a(href="/verify.html") Verify
+          a.a(href="/status.html") Approved Status
+        .status(data-aos="fade-up")
+          p Waiting for
+            img.mh-10(src="/assets/img/logo.inline.svg" height="12px")
+            | staffs approve your whitelist information.
+          p You will receive updates email about the progess soon.
+            br
+          p You still can update your information, after approved, any changes will be re-checked by our staffs again.
+
+      

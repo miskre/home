@@ -20,6 +20,9 @@ block menu
     li
       a(href="/#reach") reach
 
+block primary
+  a.enter-whitelist(href="/login.html" data-aos="fade-left" data-aos-duration="1000") login
+
 block modals
   .tos-modal.remodal(data-remodal-id="tos")
     a.x(href="#" data-remodal-close) &times;
@@ -49,13 +52,12 @@ block modals
 block content
   #slides
     section#whitelist-register.full-height
-      .bg(style="background-image: url(/assets/img/slides/metal.jpeg)")
+      .bg(style="background-image: url(/assets/img/slides/lift.jpeg)")
       .fg
-        .title
-          h1(data-aos="fade-left") enter whitelist
-        .mb-20
-          a(href="/login.html") already on the list?&nbsp;
-            strong login now →
+        .title(data-aos="fade-left")
+          h1 enter whitelist
+        .top-link(data-aos="fade-down") already on the list?
+          a.ml-10(href="/login.html") login now →
         form#register(action="/login.html")
           .rw(data-aos="fade-right")
             .cl.md-6

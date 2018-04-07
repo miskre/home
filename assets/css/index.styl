@@ -4,8 +4,12 @@
 @import 'globe'
 @import 'slick'
 @import 'gia.ui/gia.ui'
-@import 'whitelist'
 @import '../../node_modules/aos/dist/aos.css'
+
+main-gradient(direction = top)
+  background linear-gradient(direction, #0ce4e1, #d855ff)
+
+@import 'whitelist'
 
 @keyframes mis
   0%
@@ -28,11 +32,6 @@
   100%
     transform scale(1)
     opacity .75
-
-main-gradient(direction = top)
-  // background linear-gradient(direction, #FF717A, #FFC22D)
-  // background linear-gradient(direction, #00FF7A, #2DC0FF)
-  background linear-gradient(direction, #0ce4e1, #d855ff)
 
 html
 body
@@ -372,6 +371,15 @@ body
         font-size 96px
       @media large
         font-size 120px
+    h2
+      font-weight bold
+      line-height 1em
+      color white
+      font-size 24px
+      @media medium
+        font-size 32px
+      @media large
+        font-size 48px
     p
       font-size 13px
       color #999

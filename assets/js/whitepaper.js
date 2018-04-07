@@ -2,7 +2,7 @@
 //@prepros-prepend ../../node_modules/remodal/dist/remodal.min.js
 //@prepros-prepend ../../node_modules/slick-carousel/slick/slick.min.js
 //@prepros-prepend ../../node_modules/aos/dist/aos.js
-//@prepros-prepend ../../node_modules/modernizr/bin/modernizr.js
+//@prepros-prepend ./image-picker.js
 
 function animations() {
   if (AOS) {
@@ -31,7 +31,14 @@ function menu() {
   })
 }
 
+function pickers() {
+  if ($.fn.giaImagePicker) {
+    $('.image-picker').giaImagePicker()
+  }
+}
+
 $(document).ready(function() {
   menu()
   animations()
+  pickers()
 })

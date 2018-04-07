@@ -1,0 +1,69 @@
+extends layout
+
+block js
+  script(src="/assets/js/whitepaper.dist.js")
+
+block menu
+  ul.navigations
+    li
+      a(href="#home") home
+    li
+      a(href="/whitepaper.html") whitepaper
+    li
+      a(href="/#roadmap") roadmap
+    li
+      a(href="/#team") team
+    li
+      a(href="/#faqs") faqs
+    li
+      a(href="/#blog") blog
+    li
+      a(href="/#reach") reach
+
+block content
+  #slides
+    section#whitelist-user.full-height
+      .bg(style="background-image: url(/assets/img/slides/metal.jpeg)")
+      .fg
+        .top-link(data-aos="fade-down") hi, gia@coa.vn!
+          a.ml-10(href="/login.html") logout
+        .steps(data-aos="fade-down")
+          a(href="/user.html") Whitelist Info
+          a.a(href="/verify.html") Verify
+          a(href="/status.html") Approved Status
+
+        form#info(action="/status.html" data-aos="fade-right")
+          .rw.sp-30
+            .cl.md-6
+              label Identification Paper Type
+              .radio-group
+                .radio
+                  input#passport(type="radio" value="passport" name="identification-type" checked)
+                  label(for="passport") Passport
+                .radio
+                  input#national-id(type="radio" value="national-id" name="identification-type")
+                  label(for="national-id") National ID
+                .radio
+                  input#driver-license(type="radio" value="driver-license" name="identification-type")
+                  label(for="driver-license") Driver License
+            .cl.md-6
+              label Identification Number
+                input(type="text" required)
+          .rw
+            .cl
+              ul.bg.md-2.lg-3
+                li
+                  label.mb-10 Front
+                  label.image-picker
+                    input(type="file")
+                li
+                  label.mb-10 Back
+                  label.image-picker
+                    input(type="file")
+                li
+                  label.mb-10 Selfie with Identification
+                  label.image-picker
+                    input(type="file")
+          .rw
+            .cl
+              button.dis(type="submit") next

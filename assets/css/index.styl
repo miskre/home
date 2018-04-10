@@ -254,51 +254,81 @@ body
       margin-bottom 40px
 
 #whitepaper
-  h1
-  h2
-  h3
-  h4
-  h5
-  h6
-    font-weight bold
-    color white
-  .section
-    &:not(:last-child)
-      margin-bottom 30px
-      @media medium
-        margin-bottom 40px
-      @media large
-        margin-bottom 50px
-    > h1:first-child
-      padding-bottom 15px
-      border-bottom 1px solid rgba(white, .25)
-      margin-bottom 30px
-  ul
-  dl
-  ol
-    font-size 0
-    dt
-    dd
-    li
-      font-size 15px
-      line-height 30px
-      &:not(:last-child)
-        margin-bottom 10px
   .document
     color snow
-  .attachment
-    float left
-    margin-top 15px
-    margin-bottom 30px
-    @media large
-      margin-left -30%
-    .description
-      line-height 26px
-      margin-top 10px
-  p
-    font-size 15px
-    line-height 30px
-    font-weight normal
+    h1
+    h2
+    h3
+    h4
+    h5
+    h6
+      font-weight bold
+      color white
+    .section
+      &:not(:last-child)
+        margin-bottom 30px
+        @media medium
+          margin-bottom 40px
+        @media large
+          margin-bottom 50px
+      > h1:first-child
+        padding-bottom 15px
+        border-bottom 1px solid rgba(white, .25)
+        margin-bottom 30px
+    ul
+    dl
+    ol
+      font-size 0
+      dt
+      dd
+      li
+        font-size 15px
+        line-height 30px
+        &:not(:last-child)
+          margin-bottom 10px
+    .attachment
+      float left
+      margin-top 15px
+      margin-bottom 30px
+      @media large
+        margin-left -30%
+      .description
+        line-height 26px
+        margin-top 10px
+    p
+      font-size 15px
+      line-height 30px
+      font-weight normal
+  .download
+    display inline-block
+    color white
+    font-weight bold
+    font-size 16px
+    main-gradient(left)
+    padding 18px 30px
+    margin-bottom 40px
+  .toc
+    ul
+      font-size 0
+    li
+      margin 0
+    img
+      max-height 12px
+    a
+      color jumbo
+    > ul
+      > li
+        &:not(:last-child)
+          margin-bottom 10px
+        ul
+          margin-top 5px
+          li
+            &:not(:last-child)
+              margin-bottom 5px
+        > a
+          font-size 16px
+          text-transform lowercase
+          color white
 
 
 #slides
@@ -784,6 +814,9 @@ body
     font-size 16px
     main-gradient(left)
     padding 18px 30px
+    &.alt
+      background #161616
+      margin-top 10px
   ul.pages
     padding 0
     list-style none

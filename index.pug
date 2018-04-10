@@ -24,7 +24,8 @@ block primary
   a.enter-whitelist(href="/whitelist.html" data-aos="fade-left" data-aos-duration="1000") enter whitelist
 
 block modals
-  //- .remodal.youtube-modal(data-remodal-id="play")
+  .remodal.youtube-modal(data-remodal-id="play")
+    a.x(data-remodal-close href="#") &times;
     .video
       iframe(width="100%" height="480" src="https://www.youtube.com/embed/gG_dA32oH44?rel=0&amp;showinfo=0&amp;start=180" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
   .bio-modal(data-remodal-id="ec")
@@ -32,6 +33,10 @@ block modals
     p Founder and CEO of Ad Exchange Group, which is the leading direct-to-consumer digital performance-based agency in the nation. Ad Exchange Group services leading brands like Jeunesse, Bulletproof, Dollar Beard Club, Feel Rich, Cosmoderm, Pathway Genomics, and many more.
   .bio-modal(data-remodal-id="coo")
     p Doan is a self made entrepreneur and has experience managing several startups taking them from 0 to 8 figures a year. He has been interested in the economics of cryptocurrencies since 2014, and is passionately working to make using cryptocurrency for daily transactions a real thing.
+  .bio-modal(data-remodal-id="ds")
+    p Anh-Cuong Le was promoted to Associate Professor in 2012. Currently, he is PhD, Associate Professor at Ton Duc Thang University, HCMC, Vietnam. Beside teaching, he is technical advising for top Vietnam's social media mornitoring systems.
+    p He is an active researcher in the fields of artificial intelligence, knowledge discovery and data mining, especially in natural language processing. His publications include many articles in specialized international journal and in proceedings of international conferences.
+    p He has been researching blockchain and crypto-currency last several years. He want to apply his best of researches into blockchain application eco-system.
   .bio-modal(data-remodal-id="cto")
     p Huy's specialty is information security, and machine learning. He played a pivotal role in the development of many currency exchange, money remittance, prepaid card issuance/loading, and foreign exchange platforms for the Asian market. He has been researching blockchain since 2013 and believes that blockchain will be the future of money.
   .bio-modal(data-remodal-id="cd")
@@ -109,8 +114,10 @@ block content
         //- a.play(href="#play" data-remodal-target="play")
           img.mr-5(src="/assets/img/play.svg")
           | why miskre?
-        a.play(href="/whitepaper.html" data-aos="fade-up" data-aos-duration="1000")
+        a.play(data-remodal-target="play" href="#" data-aos="fade-up" data-aos-duration="1000")
           img.mr-5(src="/assets/img/play.svg")
+          | 2-min explain
+        a.play.alt(href="/whitepaper.html" data-aos="fade-up" data-aos-duration="1000")
           | interactive whitepaper
 
         //- ul.pages
@@ -130,25 +137,27 @@ block content
         ul.featured.bg.md-2.lg-3.md-sp-30.lg-sp-50
           li(data-aos="fade-up")
             .image
-              img(src="/assets/img/governance.jpeg")
-            a.title True governance
+              img(src="/assets/img/governance.jpg")
+            a.title True self-governance
             .description A fair, democratic system of self-governance to ensures those whom are affected by the rules can change the rules.
           li(data-aos="fade-up")
             .image
-              img(src="/assets/img/labs.jpeg")
+              img(src="/assets/img/labs.jpg")
             a.title Labs all over the world
             .description Build
               img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
               | labs around the world to empower entrepreneurs and kickstart the miskre ecosystem.
           li(data-aos="fade-up")
             .image
-              img(src="/assets/img/liquidity.jpeg")
+              img(src="/assets/img/liquidity.jpg")
             a.title All-in-one payment
             .description Payment gateway system that allows online website and services to enable payment by
               img.ml-5(src="/assets/img/logo.inline.svg" height="12px")
               | . Mobile wallet app that allows users to store their MIS to generate KRE, use
               img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
-              | to pay for good and services both online and offline, and send miskre to other users.
+              | to pay for good and services both online and offline, and send
+              img.mh-5(src="/assets/img/logo.inline.svg" height="12px")
+              | to other users.
 
     section#roadmap
       .bg(style="background-image: url(/assets/img/slides/boat.jpeg)")
@@ -428,11 +437,21 @@ block content
                   img(src="/assets/img/linkedin.svg")
           li(data-aos="fade-up")
             .member
+              .avatar(data-remodal-target="ds")
+                img(src="/assets/img/ds.jpg")
+                img(src="/assets/img/ds.jpg")
+              .name Cuong Le
+              .role Data Scientist / Blockchain Researcher
+              .links
+                a(href="https://scholar.google.com.vn/citations?user=aRV5yIAAAAAJ&hl=en" target="_blank")
+                  img(src="/assets/img/scholar.svg")
+          li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="cd")
                 img(src="/assets/img/cd.jpg")
                 img(src="/assets/img/cd.jpg")
               .name Gia Nguyen
-              .role Blockchain Engineer
+              .role Creative Director
               .links
                 a(href="#" target="_blank")
                   img(src="/assets/img/linkedin.svg")
@@ -653,7 +672,7 @@ block content
             a(href="#")
               img(src="/assets/img/get.android.svg")
 
-          .help Whitepaper&nbsp;
+          .help Interactive Whitepaper&nbsp;
             small &mdash; Coming on&nbsp;
             span#wpdate &nbsp;&nbsp;
           .counter

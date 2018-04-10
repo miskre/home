@@ -775,6 +775,34 @@ body
         color #999
 
 #home
+  .help
+    color white
+    font-size 14px
+    margin-top 30px
+    small
+      color steel
+      text-transform uppercase
+      font-size 10px
+      letter-spacing 1px
+  .email
+    main-gradient(left)
+    display inline-block
+    font-weight bold
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
+    font-size 24px
+    @media medium
+      font-size 36px
+  .counter
+    display flex
+    margin-top 10px
+    > *:not(:last-child)
+      padding-right 20px
+  .number
+    font-weight bold
+    font-size 32px
+    line-height 32px
+    color white
   .youtube
     position absolute
     top 0

@@ -13544,6 +13544,7 @@ function whitepaper() {
     $min.text(~~(diff % 3600000 / 60000))
     $sec.text(~~(diff % 60000 / 1000))
   }
+  setInterval(tick, 1000)
 }
 
 // scrolling

@@ -62,10 +62,10 @@ body
   right 0
   width 30px
   height @width
-  background-color active-color
   color white
   text-align center
   line-height @height
+  main-gradient(45deg)
 
 #preload
   height 100vh
@@ -319,9 +319,17 @@ body
     @media medium
       display none
   .toc
-    display none
-    @media medium
-      display block
+    @media small-only
+      display none
+      position fixed
+      top 0
+      left 0
+      right 0
+      bottom 0
+      overflow-y scroll
+      background-color rgba(#000, .95)
+      padding 20px
+      z-index 1001
     .download
       display inline-block
       color white

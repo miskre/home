@@ -13647,6 +13647,11 @@ function toc() {
   if (toc.scrollToFixed)
     toc.scrollToFixed({
       marginTop: 150,
+      limit: function() {
+        var docTop = $('.document').scrollTop()
+        var docHeight = $('.document').height()
+        return docTop + docHeight - 350
+      },
       dontCheckForPositionFixedSupport: true
     })
   toc.on('click', 'a[href^="#wps-"]', function(ev) {

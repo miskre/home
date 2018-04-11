@@ -210,6 +210,11 @@ body
   padding-top 40px
   padding-bottom 30px
   background linear-gradient(top, rgba(#000, .5), transparent)
+  transition top .5s ease-in-out
+  &.up
+    top -100px
+  &.down
+    top 0
   @media medium
     padding-top 70px
     padding-bottom 50px
@@ -327,7 +332,6 @@ body
               margin-bottom 5px
         > a
           font-size 16px
-          text-transform lowercase
           color white
 
 
@@ -844,7 +848,7 @@ body
     padding 18px 30px
     &.alt
       background #161616
-      margin-top 10px
+      margin-top 15px
   ul.pages
     padding 0
     list-style none

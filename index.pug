@@ -1,7 +1,7 @@
 extends layout
 
 block js
-  script(src="/assets/js/index.js")
+  script(src="/assets/js/miskre.dist.js")
 
 block menu
   ul.navigations
@@ -26,27 +26,29 @@ block primary
 block modals
   .remodal.youtube-modal(data-remodal-id="play")
     a.x(data-remodal-close href="#") &times;
-    .video
+    center
+      p.mv-30 Coming Soon
+    //- .video
       iframe(width="100%" height="480" src="https://www.youtube.com/embed/gG_dA32oH44?rel=0&amp;showinfo=0&amp;start=180" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-  .bio-modal(data-remodal-id="ec")
+  .remodal.bio-modal(data-remodal-id="ec")
     p Peter Nguyen is the world’s foremost authority in direct-to-consumer digital advertising. Peter has created dozens of multi-million dollar Internet brands and is the creator of Accelerated Ventures, which is now being taught at the 2nd-ranked entrepreneurship program in the US.
     p Founder and CEO of Ad Exchange Group, which is the leading direct-to-consumer digital performance-based agency in the nation. Ad Exchange Group services leading brands like Jeunesse, Bulletproof, Dollar Beard Club, Feel Rich, Cosmoderm, Pathway Genomics, and many more.
-  .bio-modal(data-remodal-id="coo")
+  .remodal.bio-modal(data-remodal-id="coo")
     p Doan is a self made entrepreneur and has experience managing several startups taking them from 0 to 8 figures a year. He has been interested in the economics of cryptocurrencies since 2014, and is passionately working to make using cryptocurrency for daily transactions a real thing.
-  .bio-modal(data-remodal-id="ds")
+  .remodal.bio-modal(data-remodal-id="ds")
     p Anh-Cuong Le was promoted to Associate Professor in 2012. Currently, he is PhD, Associate Professor at Ton Duc Thang University, HCMC, Vietnam. Beside teaching, he is technical advising for top Vietnam's social media mornitoring systems.
     p He is an active researcher in the fields of artificial intelligence, knowledge discovery and data mining, especially in natural language processing. His publications include many articles in specialized international journal and in proceedings of international conferences.
     p He has been researching blockchain and crypto-currency last several years. He want to apply his best of researches into blockchain application eco-system.
-  .bio-modal(data-remodal-id="cto")
+  .remodal.bio-modal(data-remodal-id="cto")
     p Huy's specialty is information security, and machine learning. He played a pivotal role in the development of many currency exchange, money remittance, prepaid card issuance/loading, and foreign exchange platforms for the Asian market. He has been researching blockchain since 2013 and believes that blockchain will be the future of money.
-  .bio-modal(data-remodal-id="cd")
+  .remodal.bio-modal(data-remodal-id="cd")
     p Gia is a super designer and senior front-end engineer. He enjoy turning complex problems into simple, beautiful and intuitive interface designs. He also has experience in building high performance multi-platform applications and ecommerce networks.
-  .bio-modal(data-remodal-id="ea")
+  .remodal.bio-modal(data-remodal-id="ea")
     p Darren is master in online business and marketing strategies. Being extremely influential in the social media space has given him the ability to take startups from 0 to 6 figures revenues within the first day of launching. He has special talent in positioning brands to flourish.
     p Prior to focusing on ecommerce, Darren was involved in multiple media websites and with his strategies they reached top 200 in the world within the first few months. Now in this crypto era, he's been focused on taking all his learnings of online business and applying it to a decentralized world where there is no boundaries.
-  .bio-modal(data-remodal-id="be")
+  .remodal.bio-modal(data-remodal-id="be")
     p Thoai is a software engineer, with strong understanding of blockchain technologies and architecture. He has been researching blockchain since 2013, and been part of the development team for many cryptocurrency exchanges as well as payment gateway systems.
-  //- .bio-modal(data-remodal-id="am")
+  //- .remodal.bio-modal(data-remodal-id="am")
     p Duy has been involved in several high profile projects, and have worked with many top 200 sites in the world. Accountable for steering daily operations and strategic directions of many top websites while keeping all initiatives and projects aligned with company mission, values, and philosophy.
     p Has extensive experience in developing clear strategies and key programs in myriad of niche categories. Able to establish and maintain strong cross-functioning business relationships with industry leaders and individuals, optimizing business processes and business goals through effective and collaborative teamwork.
   .bio-modal(data-remodal-id="sms")

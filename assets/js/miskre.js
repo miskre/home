@@ -4,6 +4,7 @@
 //@prepros-prepend ../../node_modules/three/build/three.min.js
 //@prepros-prepend ../../node_modules/aos/dist/aos.js
 //@prepros-prepend ../../node_modules/modernizr/bin/modernizr.js
+//@prepros-prepend ../../node_modules/scrolltofixed/jquery-scrolltofixed-min.js
 //@prepros-prepend orbit-controls.js
 //@prepros-prepend mesh-line.js
 //@prepros-prepend globe.js
@@ -124,8 +125,24 @@ function toc() {
     }
     h1s.append(li)
   })
-  toc.children().remove()
+  toc.children(':not(.download)').remove()
   toc.append(h1s)
+  if (toc.scrollToFixed)
+    toc.scrollToFixed({
+      marginTop: 150,
+      dontCheckForPositionFixedSupport: true
+    })
+  toc.on('click', 'a[href^="#wps-"]', function(ev) {
+    ev.preventDefault()
+    var target = $($(ev.currentTarget).attr('href'))
+    if (!target.length) return
+    var from = $('html').scrollTop()
+    var to = target.offset().top - 150
+    var delta = Math.abs(from - to)
+    $('html, body').animate({
+      scrollTop: to
+    }, delta / 5)
+  })
 }
 
 // preload

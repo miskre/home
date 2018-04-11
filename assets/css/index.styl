@@ -209,7 +209,7 @@ body
   z-index 1000
   padding-top 40px
   padding-bottom 30px
-  background linear-gradient(top, rgba(#000, .5), transparent)
+  background linear-gradient(top, rgba(#000, 8), transparent)
   transition top .5s ease-in-out
   &.up
     top -100px
@@ -287,6 +287,7 @@ body
       dt
       dd
       li
+        color iron
         font-size 15px
         line-height 30px
         &:not(:last-child)
@@ -301,18 +302,34 @@ body
         line-height 26px
         margin-top 10px
     p
+      color iron
       font-size 15px
       line-height 30px
       font-weight normal
-  .download
-    display inline-block
-    color white
+  .toc-toggle
+    position fixed
+    bottom 0
+    left 0
+    right 0
+    display block
+    padding 15px
     font-weight bold
-    font-size 16px
-    main-gradient(left)
-    padding 18px 30px
-    margin-bottom 40px
+    color white
+    main-gradient(45deg)
+    @media medium
+      display none
   .toc
+    display none
+    @media medium
+      display block
+    .download
+      display inline-block
+      color white
+      font-weight bold
+      font-size 16px
+      padding 18px 30px
+      margin-bottom 40px
+      main-gradient(left)
     ul
       font-size 0
     li
@@ -322,26 +339,30 @@ body
     a
       color jumbo
     > ul
+      list-style none
+      margin 0
+      padding 0
       > li
         &:not(:last-child)
           margin-bottom 20px
         ul
-          margin-top 10px
-          li
-            &:not(:last-child)
-              margin-bottom 5px
+          @media medium
+            display none
+          @media large
+            display block
+            margin-top 10px
+            li
+              &:not(:last-child)
+                margin-bottom 5px
         > a
-          font-size 16px
+          font-size 15px
           color white
-
 
 #slides
   section
     position relative
     width 100%
     background-color #111
-    transform scale(1)
-    transition transform .3s ease-in-out
     &.full-height
       min-height 100vh
     > .video

@@ -1,10 +1,12 @@
 const express = require('express')
 const compression = require('compression')
 const auth = require('express-basic-auth')
+const ssl = require('heroku-ssl-redirect')
 
 const port = process.env.PORT || 3000
 const app = express()
 
+app.use(ssl())
 // app.use(auth({
 //   users: {
 //     'mis': 'kre',

@@ -32,7 +32,7 @@ function whitepaper() {
 }
 
 // scrolling
-var didScroll
+var didScroll = false
 var lastScrollTop = 0
 var delta = 5
 function scroller() {
@@ -186,6 +186,7 @@ $(window)
   .scroll(scroller)
 $(document).ready(function() {
   menu()
+  header()
   whitepaper()
   toc()
   pickers()

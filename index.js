@@ -6,7 +6,7 @@ const ssl = require('heroku-ssl-redirect')
 express.compress({
   filter: function (req, res) {
     return true
-  })
+  }
 })
 
 const port = process.env.PORT || 3000

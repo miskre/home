@@ -3,6 +3,12 @@ const compression = require('compression')
 const auth = require('express-basic-auth')
 const ssl = require('heroku-ssl-redirect')
 
+express.compress({
+  filter: function (req, res) {
+    return true
+  })
+})
+
 const port = process.env.PORT || 3000
 const app = express()
 

@@ -14,7 +14,12 @@ app.use(ssl())
 //   },
 //   challenge: true
 // }))
-app.use(compression())
+app.use(compression({
+  filter: function(req, res) {
+    if (req.headers['x-no-compression']) return false
+    return compression.filter(req, res)
+  }
+}))
 app.use(express.static('.', {
   maxage: '2h'
 }))

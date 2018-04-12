@@ -293,9 +293,10 @@ body
         &:not(:last-child)
           margin-bottom 10px
     .attachment
-      float left
       margin-top 15px
       margin-bottom 30px
+      @media medium
+        float left
       @media large
         margin-left -30%
       .description

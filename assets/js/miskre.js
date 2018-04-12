@@ -38,25 +38,28 @@ var delta = 5
 function scroller() {
   didScroll = true
 }
-setInterval(function() {
-  if (didScroll) {
-    hasScrolled()
-    didScroll = false
+function header() {
+  function hasScrolled() {
+    var height = $('#top-bar').outerHeight()
+    var top = $(this).scrollTop()
+    if (Math.abs(lastScrollTop - top) <= delta) return
+    if (top > lastScrollTop && top > height)
+      $('#top-bar').removeClass('down').addClass('up')
+    else if (top + $(window).height() < $(document).height())
+      $('#top-bar').removeClass('up').addClass('down')
+    lastScrollTop = top
   }
-}, 250)
+  if (!$('#home').length) {
+    setInterval(function() {
+      if (didScroll) {
+        hasScrolled()
+        didScroll = false
+      }
+    }, 250)
+  }
+}
 
 // ui
-
-function hasScrolled() {
-  var height = $('#top-bar').outerHeight()
-  var top = $(this).scrollTop()
-  if (Math.abs(lastScrollTop - top) <= delta) return
-  if (top > lastScrollTop && top > height)
-    $('#top-bar').removeClass('down').addClass('up')
-  else if (top + $(window).height() < $(document).height())
-    $('#top-bar').removeClass('up').addClass('down')
-  lastScrollTop = top
-}
 
 function aosing() {
   if (AOS) {
@@ -83,6 +86,20 @@ function menu() {
       $('html, body').removeClass('no-scroll')
     }
   })
+  if ($('#home').length) {
+    section.on('click', '.navigations a', function(e) {
+      section.fadeOut('fast', function() {
+        $('html, body').removeClass('no-scroll')
+        section.addClass('h')
+      })
+      toggle.removeClass('opened')
+      link = $(e.target).attr('href')
+      element = $(link)
+      $('html, body').animate({
+        scrollTop: element.offset().top
+      }, 1000)
+    })
+  }
 }
 
 function pickers() {

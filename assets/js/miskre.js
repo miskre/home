@@ -145,7 +145,7 @@ function toc() {
   })
   toc.children(':not(.download)').remove()
   toc.append(h1s)
-  if (toc.scrollToFixed)
+  if (toc.scrollToFixed && window.innerWidth > 640)
     toc.scrollToFixed({
       marginTop: 150,
       limit: function() {

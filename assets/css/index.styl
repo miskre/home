@@ -321,16 +321,7 @@ body
       display none
   .toc
     @media small-only
-      display none
-      position fixed
-      top 0
-      left 0
-      right 0
-      bottom 0
-      overflow-y scroll
-      background-color rgba(#000, .95)
-      padding 20px
-      z-index 1001
+      display block
     .download
       display inline-block
       color white
@@ -349,16 +340,19 @@ body
       color jumbo
     > ul
       list-style none
-      margin 0
+      margin 0 0 30px 0
       padding 0
       > li
         &:not(:last-child)
-          margin-bottom 20px
+          margin-bottom 10px
+          @media medium
+            margin-bottom 15px
         ul
+          display none
           @media medium
             display none
           @media large
-            display block
+            display none
             margin-top 10px
             li
               &:not(:last-child)
@@ -416,25 +410,25 @@ body
       &.full-width
         max-width none
       @media medium
-        padding 200px 20px 50px 120px
+        padding 170px 20px 50px 120px
       @media large
-        padding 250px 20px 200px 120px
+        padding 200px 20px 150px 120px
   .title
-    margin-bottom 30px
+    margin-bottom 20px
     @media medium
-      margin-bottom 50px
+      margin-bottom 40px
       display flex
     @media large
-      margin-bottom 80px
+      margin-bottom 60px
     h1
       font-weight bold
       line-height 1em
       color white
-      font-size 48px
+      font-size 36px
       @media medium
-        font-size 96px
+        font-size 72px
       @media large
-        font-size 120px
+        font-size 100px
     h2
       font-weight bold
       line-height 1em

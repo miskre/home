@@ -21,7 +21,7 @@ app.use(compression({
   }
 }))
 app.use(express.static('.', {
-  maxage: '2h'
+  maxage: '2w'
 }))
 
 app.listen(port)

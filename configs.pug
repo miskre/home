@@ -3,6 +3,8 @@
 - var telegram = 'https://t.me/miskre'
 - var whitelist = 'https://whitelist.miskre.org'
 - var crowdsale = 'https://crowdsale.miskre.org'
+- var appstore = '#'
+- var googleplay = '#'
 
 mixin enter-whitelist
   a.enter-whitelist(href=whitelist data-aos="fade-left" data-aos-duration="1000") enter whitelist
@@ -23,3 +25,11 @@ mixin social-links
   if slack
     a(target="_blank" href=slack)
       img(src="/assets/img/slack.svg")
+
+mixin google-analytic
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-89272419-1")
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-89272419-1');

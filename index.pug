@@ -70,9 +70,6 @@ block preloads
 block content
   #slides
     section#home.full-height
-      //- .youtube
-        iframe.video(src="https://www.youtube.com/embed/gG_dA32oH44?rel=0&showinfo=0&controls=0&start=190&autoplay=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-      //- video.video(autoplay loop muted playsinline preload="true" src="/assets/mp4/1.mp4")
       .bg(style="background-image: url(/assets/img/slides/world.jpeg)")
       #globe.globe.js-globe
         ul.globe-list.js-list
@@ -661,12 +658,15 @@ block content
           .social-links
             +social-links
 
-          .help Get in touch
-          .download
-            a(href="#")
-              img(src="/assets/img/get.ios.svg")
-            a(href="#")
-              img(src="/assets/img/get.android.svg")
+          if appstore || google
+            .help Get in touch
+            .download
+              if appstore
+                a(href=appstore target="_blank")
+                  img(src="/assets/img/get.ios.svg")
+              if googleplay
+                a(href=googleplay target="_blank")
+                  img(src="/assets/img/get.android.svg")
 
           .help Interactive Whitepaper&nbsp;
             small &mdash; Coming on&nbsp;

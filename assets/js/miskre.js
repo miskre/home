@@ -175,7 +175,13 @@ function loader() {
     var preload = $('#preload')
     var home = $('#home')
     if (preload.length) preload.fadeOut('slow')
-    if (home.length && THREE && globe) globe()
+    if (home.length && THREE && globe) {
+      try {
+        globe()
+      } catch (e) {
+        console.error('WebGL not supported. Please use a browser that supports WebGL.');
+      }
+    }
     if (aosing) aosing()
   }, 0)
 }

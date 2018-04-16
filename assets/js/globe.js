@@ -105,7 +105,7 @@ function showFallback() {
     This function will display an alert if WebGL is not supported.
   */
 
-  alert('WebGL not supported. Please use a browser that supports WebGL.');
+  console.trace('WebGL not supported. Please use a browser that supports WebGL.');
 
 }
 

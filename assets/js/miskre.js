@@ -101,6 +101,15 @@ function pickers() {
   }
 }
 
+function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '')
+}
+
 function toc() {
   var toc = $('.toc')
   if (!toc.length) return
@@ -110,12 +119,14 @@ function toc() {
   var h1s = $('<ul></ul>')
   sections.each(function (i, e) {
     var title = $(e).find('h1')
-    var id = 'wps-' + (i + 1)
+    // var id = 'wps-' + (i + 1)
+    var id = slugify(title.text().trim())
     title.attr('id', id)
     var a = $('<a></a>')
     var li = $('<li></li>')
     a.html(title.html())
     a.attr('href', '#' + id)
+    a.addClass('anchor')
     li.append(a)
     // get all h2
     var children = $(e).find('h2')
@@ -148,7 +159,7 @@ function toc() {
       },
       dontCheckForPositionFixedSupport: true
     })
-  toc.on('click', 'a[href^="#wps-"]', function(ev) {
+  toc.on('click', 'a.anchor', function(ev) {
     ev.preventDefault()
     var target = $($(ev.currentTarget).attr('href'))
     if (!target.length) return

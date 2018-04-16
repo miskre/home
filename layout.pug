@@ -1,7 +1,7 @@
 include configs
 
 doctype html
-html(lang="en")
+html.no-js(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable = no")
@@ -36,6 +36,7 @@ html(lang="en")
       block primary
     #social-bar(data-aos="fade-right" data-aos-duration="1000")
       +socialLinks
+    block preloads
     .remodal-bg
       block modals
       block content

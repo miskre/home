@@ -40,8 +40,11 @@ body
   &.no-scroll
     overflow hidden
   &.no-js
-    .preload
+    #preload
       display none
+    [data-aos]
+      opacity 1
+      transform translate(0) scale(1)
 
 .bio-modal
   text-align left

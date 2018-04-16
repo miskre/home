@@ -1227,4 +1227,4 @@ function OrbitControlsModified(THREE) {
   return OrbitControls;
 }
 
-OrbitControls = OrbitControlsModified(THREE);
+if (THREE) OrbitControls = OrbitControlsModified(THREE);

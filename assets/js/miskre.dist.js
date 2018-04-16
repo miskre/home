@@ -1227,7 +1227,7 @@ function OrbitControlsModified(THREE) {
   return OrbitControls;
 }
 
-OrbitControls = OrbitControlsModified(THREE);
+if (THREE) OrbitControls = OrbitControlsModified(THREE);
 ;(function() {
 
 "use strict";
@@ -2886,7 +2886,7 @@ function loader() {
     var preload = $('#preload')
     var home = $('#home')
     if (preload.length) preload.fadeOut('slow')
-    if (home.length && globe) globe()
+    if (home.length && THREE && globe) globe()
     if (aosing) aosing()
   }, 0)
 }

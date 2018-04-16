@@ -24,4 +24,8 @@ app.use(express.static('.', {
   maxage: '2w'
 }))
 
+app.get('*', function(req, res){
+  res.redirect('/')
+})
+
 app.listen(port)

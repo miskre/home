@@ -1,8 +1,13 @@
 - var medium = 'https://medium.com/miskre'
 - var slack = 'https://miskre.slack.com'
 - var telegram = 'https://t.me/miskre'
+- var whitelist = 'https://whitelist.miskre.org'
+- var crowdsale = 'https://crowdsale.miskre.org'
 
-mixin socialLinks
+mixin enter-whitelist
+  a.enter-whitelist(href=whitelist data-aos="fade-left" data-aos-duration="1000") enter whitelist
+
+mixin social-links
   if twitter
     a(target="_blank" href=twitter)
       img(src="/assets/img/twitter.svg")

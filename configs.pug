@@ -1,0 +1,20 @@
+- var medium = 'https://medium.com/miskre'
+- var slack = 'https://miskre.slack.com'
+- var telegram = 'https://t.me/miskre'
+
+mixin socialLinks
+  if twitter
+    a(target="_blank" href=twitter)
+      img(src="/assets/img/twitter.svg")
+  if facebook
+    a(target="_blank" href=facebook)
+      img(src="/assets/img/facebook.svg")
+  if medium
+    a(target="_blank" href=medium)
+      img(src="/assets/img/medium.svg")
+  if telegram
+    a(target="_blank" href=telegram)
+      img(src="/assets/img/telegram.svg")
+  if slack
+    a(target="_blank" href=slack)
+      img(src="/assets/img/slack.svg")

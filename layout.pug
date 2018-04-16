@@ -1,3 +1,5 @@
+include configs
+
 doctype html
 html(lang="en")
   head
@@ -33,16 +35,7 @@ html(lang="en")
         img(src="/assets/img/logo.v2.svg")
       block primary
     #social-bar(data-aos="fade-right" data-aos-duration="1000")
-      a(href="#")
-        img(src="/assets/img/twitter.v2.svg")
-      a(href="#")
-        img(src="/assets/img/facebook.v2.svg")
-      a(href="#")
-        img(src="/assets/img/telegram.v2.svg")
-      a(href="#")
-        img(src="/assets/img/slack.v2.svg")
-      //- a(href="#")
-        img(src="/assets/img/medium.v2.svg")
+      +socialLinks
     .remodal-bg
       block modals
       block content

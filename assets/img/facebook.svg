@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
-    <title>facebook</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-643.000000, -5107.000000)">
-        <g id="footer" transform="translate(0.000000, 4854.000000)" fill="#AFBBBF">
-            <g id="items" transform="translate(572.000000, 251.000000)">
-                <path d="M81.3846154,2.14423077 L81.3846154,5.31730769 L79.4975962,5.31730769 C78.0192308,5.31730769 77.7427885,6.02644231 77.7427885,7.04807692 L77.7427885,9.31971154 L81.2644231,9.31971154 L80.7956731,12.8774038 L77.7427885,12.8774038 L77.7427885,22 L74.0649038,22 L74.0649038,12.8774038 L71,12.8774038 L71,9.31971154 L74.0649038,9.31971154 L74.0649038,6.69951923 C74.0649038,3.65865385 75.9278846,2 78.6442308,2 C79.9423077,2 81.0600962,2.09615385 81.3846154,2.14423077 Z" id="facebook"></path>
-            </g>
-        </g>
-    </g>
+<svg width="9" height="16" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="facebook">
+<g id="home">
+<g id="footer">
+<g id="items">
+<g id="facebook_2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 8.30769 0.115385L 8.30769 2.65385L 6.79808 2.65385C 5.61539 2.65385 5.39423 3.22115 5.39423 4.03846L 5.39423 5.85577L 8.21154 5.85577L 7.83654 8.70192L 5.39423 8.70192L 5.39423 16L 2.45192 16L 2.45192 8.70192L 0 8.70192L 0 5.85577L 2.45192 5.85577L 2.45192 3.75962C 2.45192 1.32692 3.94231 0 6.11539 0C 7.15385 0 8.04808 0.0769231 8.30769 0.115385Z" fill="#666666"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
 </svg>
+

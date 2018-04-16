@@ -1,13 +1,13 @@
-extends layout
+extends _layout
 
 block menu
   ul.navigations
     li
-      a(href="/index.html") home
+      a(href=__l('home')) home
     li
-      a(href="/whitepaper.html") interactive whitepaper
+      a(href=__l('whitepaper')) interactive whitepaper
     li
-      a(href=pdf) download whitepaper
+      a(href=__l('pdf')) download whitepaper
 
 block primary
   +enter-whitelist
@@ -21,7 +21,7 @@ block content
         .rw
           .cl.md-4.lg-3
             .toc
-              a.download(href=pdf) pdf version
+              a.download(href=__l('pdf')) pdf version
 
             a.toc-toggle(href="#") table of contents
           .cl.md-8.lg-9

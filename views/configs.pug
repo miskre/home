@@ -1,0 +1,64 @@
+mixin enter-whitelist
+  a.enter-whitelist(href=__l('whitelist') data-aos="fade-left" data-aos-duration="1000")
+    case language
+      when 'ru'
+        | Белый список
+      when 'es'
+        | lista blanca
+      when 'zh'
+        | 进入白名单
+      when 'ja'
+        | ホワイトリスト
+      when 'ko'
+        | 허용 목록에 입력
+      when 'de'
+        | geben sie whitelist
+      default
+        | enter whitelist
+
+mixin social-links
+  if links.twitter
+    a(target="_blank" href=links.twitter)
+      img(src="/assets/img/twitter.svg")
+  if links.facebook
+    a(target="_blank" href=links.facebook)
+      img(src="/assets/img/facebook.svg")
+  if links.medium
+    a(target="_blank" href=links.medium)
+      img(src="/assets/img/medium.svg")
+  if links.telegram
+    a(target="_blank" href=links.telegram)
+      img(src="/assets/img/telegram.svg")
+  if links.slack
+    a(target="_blank" href=links.slack)
+      img(src="/assets/img/slack.svg")
+
+mixin google-analytic
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-89272419-1")
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-89272419-1');
+
+mixin hello-world
+  #preload
+    .text
+      .progress
+        img.mis(src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxNiAxOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGU+bWlzPC90aXRsZT48ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPjxnIGlkPSJDYW52YXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5NiA1NDIpIj48ZyBpZD0ibWlzIj48dXNlIHhsaW5rOmhyZWY9IiNwYXRoMF9maWxsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzk2IC01NDIpIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIi8+PC9nPjwvZz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxNS44NTM3IDkuMTYwMzMgLTkuMTUzMTcgMTUuODY2MSAwLjkxMzMxOCAtMS4yMDAxNSkiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzBDRTRFMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Q4NTVGRiIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggaWQ9InBhdGgwX2ZpbGwiIGQ9Ik0gMTUuNzQxNiA4LjY5NDYzTCAwLjc5NTAzMSAwLjA3NTA1NDJDIDAuNDUwNTE4IC0wLjEzNzEyIDAgMC4xMjgwOTggMCAwLjUyNTkyNEwgMCAxNy43OTE2QyAwIDE4LjE4OTQgMC40NTA1MTggMTguNDU0NiAwLjc5NTAzMSAxOC4yNDI1TCAxNS43NDE2IDkuNjIyODlDIDE2LjA4NjEgOS40MTA3MSAxNi4wODYxIDguOTA2OCAxNS43NDE2IDguNjk0NjNaIi8+PC9kZWZzPjwvc3ZnPg==")
+        img.kre(src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxNiAxOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGU+a3JlPC90aXRsZT48ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPjxnIGlkPSJDYW52YXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3MiA1NDIpIj48ZyBpZD0ia3JlIiBvcGFjaXR5PSIwLjkiPjx1c2UgeGxpbms6aHJlZj0iI3BhdGgwX2ZpbGwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNzIgLTU0MikiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz48L2c+PC9nPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KC03Ljk5NzIyIC0xMy44NjI0IC0xMy44NTE2IDguMDAzNDcgMjIuNjYwOCAxNC4yNDI2KSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRDIwNDcxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNzcwQzdFIiBzdG9wLW9wYWNpdHk9IjAuNzUiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGlkPSJwYXRoMF9maWxsIiBkPSJNIDAuMjU4Mzg1IDguNjk0NjNMIDE1LjIwNSAwLjA3NTA1NDJDIDE1LjU0OTUgLTAuMTM3MTIgMTYgMC4xMjgwOTggMTYgMC41MjU5MjRMIDE2IDE3Ljc5MTZDIDE2IDE4LjE4OTQgMTUuNTQ5NSAxOC40NTQ2IDE1LjIwNSAxOC4yNDI1TCAwLjI1ODM4NSA5LjYyMjg5QyAtMC4wODYxMjgzIDkuNDEwNzEgLTAuMDg2MTI4MyA4LjkwNjggMC4yNTgzODUgOC42OTQ2M1oiLz48L2RlZnM+PC9zdmc+")
+      case language
+        when 'ru'
+          span Привет_мир
+        when 'es'
+          span hola_mundo
+        when 'zh'
+          span 你好，世界
+        when 'ja'
+          span こんにちは世界
+        when 'ko'
+          span 안녕_세상
+        when 'de'
+          span hallo_welt
+        default
+          span hello_world

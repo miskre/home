@@ -1,0 +1,336 @@
+extends _layout
+
+block menu
+  ul.navigations
+    li
+      a(href=__l('home')) 홈페이지
+    li
+      a(href=__l('whitepaper')) 대화 형 백서
+    li
+      a(href=__l('pdf')) 백서 다운로드
+
+block primary
+  +enter-whitelist
+
+block content
+  #slides
+    section#whitepaper
+      .fg
+        .title
+          h1(data-aos="fade-left") 백지
+
+        .rw
+          .cl.md-4.lg-3
+            .toc
+              a.download(href=__l('pdf')) 백서 다운로드
+
+            a.toc-toggle(href="#") 목차
+          .cl.md-8.lg-9
+            .document
+              .rw
+                .cl.lg-9.r
+
+                  .section
+                    h1 돈의 진화
+                    p 수세기 동안 돈은 점점 추상적으로 변했습니다. 돈의 진화는 우리를 직접 교환에서 뿌리에서 멀리 떨어진 추상 시스템으로 이끌었습니다.
+                    .attachment
+                      img(src="/assets/img/samples/1.png")
+                      .description 돈은 교환의 매개체입니다. 교환 매체는 판매자로부터 상품이나 서비스를 구매하고자 할 때 구매자가 판매자와 교환 할 수있는 매체입니다.
+                    p 돈이란 무엇입니까? 돈은 교환의 매개체입니다. 교환 매체는 판매자로부터 상품이나 서비스를 구매하고자 할 때 구매자가 판매자와 교환 할 수있는 매체입니다
+                    p 돈은 교환의 매개체입니다. 교환 매체는 판매자로부터 상품이나 서비스를 구매하고자 할 때 구매자가 판매자와 교환 할 수있는 매체입니다.
+                    p 돈은 오늘날 우리가 알고있는 세상에 돈이 없으면 사회를 복잡하고 효율적으로 만들지 못할 것입니다. 그러나 돈은 어떻게 생겨 났습니까? 돈은 개인 이익으로 인해 개인이 행한 행동을 통해 자발적으로 출현했으며, 정부 나 왕이 잉태하지 못했습니다.
+                    ol
+                      li 인류 초기에는 돈이 없었으며 사람들은 음식, 장식품, 의류, 공구, 무기 등 실용적인 가치가있는 물건을 거래했습니다. 직접 거래에서는 양 당사자가 거래가 발생하기 위해 상대방이 원하는 것을 가지고 있어야합니다.
+                      li 교류의 매개체를 통한 간접적 인 교류라는 개념은 사람들이 갖고있는 상품을 반드시 교환하기 시작했을 때 모양이 나타나기 시작합니다. 상품을 교환하고 싶지는 않지만 다른 것을 교환하기 위해서는 상품성이 좋습니다.
+                      li 실용적인 가치 (보석에 사용될 수 있음), 이식성 (동일한 가치의 교환의 원시 매체보다 휴대하기 더 쉽다), 내구성 (그것은 소처럼 죽지 않았고, 옥수수와 같이 썩었습니다. ), 나누기 (금속을 더 작은 단위로 나눌 수 있고 같은 가치가있을 수 있습니다).
+                      li 진화의 다음 단계는 거래의 속도와 신뢰를 높이기 위해 동전을 표준화 한 것이므로 사람들은 매 거래마다 귀중한 금속을 계량 할 필요가 없으며 상품이나 서비스를 위해 현재 받고있는 가치를 정확히 알고 있습니다. 그것이 교환의 속도를 높이는 동안, 그것은 통화의 정부 debasement와 같은 많은 위험을 가져온다.
+                      li 탈퇴는 인류 역사상 가장 위대한 제국 중 하나였던 로마 제국의 몰락을 초래 한 주요 원인 중 하나였다. 200 년 동안 로마 데나리온은은 90 % +에서 동전 0.5 % 이하로 제국 전역에 막대한 인플레이션을 초래했습니다.
+                      li 종이 돈은 돈을 추상화하는 중대한 도약입니다. 종이 돈은 600 년 전 중국에서 처음 소개되었지만 유럽인들은 1600 년대까지 초기 종이 돈을 사용하지 않았습니다. 런던 상인들은 보관을 위해 안전한 보관실에 금을 입금하기 시작할 것이고 예금에 대한 영수증을 받게 될 것입니다. 점점 더 많은 금 세공인이 종이 영수증 발행을 시작함에 따라, 입금 한 금 세공인뿐만 아니라 모든 금 세공인에게 금을 입금하고 교환 할 수있게되었습니다.
+                      li 사람들은 자신들의 거래를 위해 영수증을 사용하고, 좋은 물건과 서비스를 교환하기 시작했고, 사람들은 지폐를 사용하고 그 가치를 신뢰하기 시작했습니다. 금세 공인에게 가서 금으로 교환 할 수 있기 때문입니다.
+                      li 결국 종이 돈은 신뢰 받고 대중적이되어 정부가 그것을 인쇄하기 시작했으나 돈은 대개 금세가의 메모와는 달리 실제적인 것이 뒷받침되지 않습니다. 식민지 미국에서, 지폐는 연방 정부, 주 및 개인 (예 : Benjamin Franklin)이 자유롭게 인쇄했습니다. 그러나이 돈은 무엇이든 통화의 지속적인 인쇄로 뒷받침되지 않기 때문에 돈이 쓸모 없게 된 시점까지 인플레이션이 발생했습니다. 이 경험을 겪은 후 사람들은 예금 수령과 함께 물물 교환 시스템으로 돌아갑니다.
+                      li 1860 년대에 정부는 남북 전쟁에 자금을 지원하기 위해 다시 지폐를 인쇄하기 시작했다. 그러나 전쟁이 끝나면 $ 300 정도의 가치가 있었지만 사람들은 다시 시스템에 대한 신뢰를 잃어 버렸고 소중한 것을 쌓아두기로 돌아갔다. 금속 및 bartered. 1880 년에 미국은 금메달로 금전을 지원하기 시작했고 사람들은 금메달을 현금으로 현금화 할 수있었습니다.
+                      li World World I에서 미국 정부는 전쟁 자금으로 더 많은 돈을 인쇄하기 위해 금본위 제를 포기했습니다. 1933 년 보석과 동전 수집을 제외하고 사람들은 더 이상 합법적으로 금을 소유 할 수 없었습니다. 정부는 모든 것이 달러에 의존하기 시작한 1970 년대 중반에이 금지령을 되돌려 놓았습니다.
+                      li 전자 화폐는 온라인 뱅킹, 신용 카드 등의 형태로 등장하기 시작합니다.
+
+                  .section
+                    h1 중앙 통제 화폐가 왜 문제입니까??
+                    p Suppose there are only 10 people in the world, and each have 10 unit of the same currency, but the only one who can add more money into the system is Person 1.
+                    p Now suppose person 1 prints 25 more unit of currency (whether through actual printing or typing a number on a screen in the electronic banking era), making the total increase to 125 meaning a 25% inflation. All goods and services price will go up by 25%.
+                    p
+                      strong Now why is this a problem?
+                    p When Person 1 print money, it doesn’t get distributed to everyone equally so the person who isn’t on the receiving end of the newly printed money is actually losing value and isn’t receiving anything for their loss of value.
+                    p If say before the inflation, you could buy 1 banana for 1 unit of currency. Now with an inflation of 25%, your 10 unit of currency can only buy 8 bananas at 1.25 per. Yes, Person 1 is also affected by this inflation, their 30 unit of currency can only buy 24 bananas. However, that is still 14 more than they could buy before, meanwhile everyone else lost 2. What if no one knows how much Person 1 printed? And before people knew there were an influx of new money, he used all 30 units of currency and bought 30 bananas? Leaving us in a bigger dilemma.
+
+                  .section
+                    h1 전자 화폐 대 Cryptocurrencies
+                    p What is electronic money? Electronic money is fiat money that exists in the digital form, over 92% of the world’s money exists in a digital format while only roughly 8% exists in paper form.
+                    p What is a cryptocurrency? A cryptocurrency is a medium of exchange and has set rules in which it can operate by. It is considered reliable because it’s based on cryptography. No supervisory authority controls all the action on the network and it uses blockchain technology to ensure that no information is changed or interrupted by third parties.
+
+                    h2 Electronic Money
+                    p
+                      strong Advantages:
+                    ul
+                      li Has an existing infrastructure
+                      li Major credit/debit cards are  accepted nearly everywhere
+                      li Consumer Protection in case of fraud (Although can also be used for fraud)
+                    p
+                      strong Disadvantages:
+                    ul
+                      li Open to manipulation (Creating new money impoverishes everyone who holds the currency)
+                      li Lack of transparency
+                      li High merchant processing fees
+                    h2 Cryptocurrencies
+                    p
+                      strong Advantages
+                    ul
+                      li Permissionless (Can move your money anywhere without anyone’s permission)
+                      li Trustless (Does not need to trust governments or banks, because everything is secured on the blockchain)
+                      li Cheap and fast transactions to anywhere in the world
+                    p
+                      strong Disadvantages:
+                    ul
+                      li Currently does not have mass adoption
+
+                  .section
+                    h1 문맥
+                    p Only the upper classes of the word currently have access to banking, credit, and international finance capabilities roughly around 1 billion people or around 13% of the world’s population; the rest of the world lives in a cash-based society. With the emergence of blockchain technology, we can now create an international peer-to-peer financial system that allows everyone to participate by just downloading a simple application. Cryptocurrency levels the playing field, it’s neutral to the sender, the recipient, and the value of transaction, meaning that no matter if you’re a farmer living in rural Africa or a large enterprise, you can operate on the same level.
+                    p Emergence of blockchain technology represents a transformation of money, the oldest technology we have in civilization. This radical innovation is disruptive to the current financial system we know, you have absolute control over your money unlike our current system. With cryptocurrency, no one can seize, censor, or freeze your money; no one can tell you what to do or what not to do with your money, and anyone in the world can participate with a device as simple as a text-messaging phone.
+                    p Truly disruptive technologies have always encountered difficulties, and cryptocurrency will be no different. The invention of automobiles didn’t immediately replace horses, it took decades for the full transition to happen, people ridiculed that the early automobiles were slower than horses, they broke down all the time, and gasoline wasn’t readily available. People also ridiculed the invention of electricity saying that it was a fad and would soon die down soon, after all they already had infrastructure for natural gas which provided heating and light, as well as powered machineries. The invention of automobiles, electricity, and the internet all required massive infrastructure inversions to be successful. We aim to be at the forefront of this cryptocurrency movement, and lay down infrastructure to help innovation and boost adoption rate, so we can truly have a global economy that is accessible for all and free of manipulators.
+
+                  .section
+                    h1
+                      span.miskre.ml-0 miskre
+                      | 가 모든 것을 바꾸기를 원하는가
+                    h2 What Is
+                      span.miskre miskre
+                      | ?
+                    .attachment
+                      img(src="/assets/img/samples/governance.jpg")
+                      .description
+                        span.miskre miskre
+                        | will change everything
+                    p
+                      span.miskre.ml-0 miskre
+                      | is a truly decentralized currency built based off NEO’s source-code, and is being developed into a standalone community-governed protocol with no central power, ensuring that those affected by the rules can participate in modifying the rules.
+                      span.miskre miskre
+                      | aims to build a global ecosystem that empowers entrepreneurs to bring new technologies to market, and bring monetary freedom to the masses. Allowing everyone; no matter who they are, where they live, or their financial status to participate in the global economy with full authority and freedom.
+                    p Striving to be completely autonomous,
+                      span.miskre miskre
+                      | is not an “NEP5-token” it’s a standalone blockchain. The
+                      span.miskre miskre
+                      | ecosystem will consist of two tokens:
+                      span.mis MIS
+                      | and
+                      span.kre.mr-0 KRE
+                      | .
+                      span.mis MIS
+                      | 20 billion tokens representing rights to the network.
+                      span.kre KRE
+                      | 20 billion tokens to be the currency of the network.
+
+                    h2 Why
+                      span.miskre miskre
+                      | ?
+                    p We created
+                      span.miskre miskre
+                      | because we truly believe that blockchain will change the world, freeing us from the financial system we know today. However, we see a problem in the direction the space is heading, with founders giving themselves a huge majority of the currency they’re creating and holding too much power over the network while talking about decentralization, when in reality you’re just moving from one robber baron to the next.
+                    p We believe that the current ICO craze will hold back development and adoption in this space due to the agonizing fact that most of these companies will fail, causing people to shy away from the cryptocurrency space after losing their investments. We think the power of crowdfunding is truly revolutionary, but due to misuse its becoming a platform for greed with startups disguising themselves as cryptocurrencies in order to raise way more money than actually needed.
+                      span.miskre miskre
+                      | seeks to overcome this issue by creating a truly decentralised currency, in which only a minimal amount of the tokens go to the founders.
+                    .attachment
+                      img(src="http://via.placeholder.com/1000x600")
+                      .description Distribution diagram
+
+                  .section
+                    h1
+                      span.miskre.ml-0 miskre
+                      | 실험실
+                    p
+                      span.miskre.ml-0 miskre
+                      | labs are strategically placed incubators in order to spread
+                      span.miskre miskre
+                      | adoption worldwide, anyone from anywhere can apply and come build their dream at
+                      span.miskre miskre
+                      | labs locations around the world. We aim to provide everything a startup would need to succeed from finding product market fit, getting users validation, to finding additional funding.
+                      span.miskre miskre
+                      | labs are key mechanisms of value creation for the
+                      span.miskre miskre
+                      | ecosystem, enabling businesses around the globe to build on the
+                      span.miskre miskre
+                      | protocol and providing products and services to the community.
+                    h2 Where are The
+                      span.miskre miskre
+                      | Labs Located?
+                    p First three labs locations:
+                      ol
+                        li Bangkok, Thailand
+                        li Buenos Aires, Argentina
+                        li Lisbon, Portugal
+                    p Next three planned locations:
+                      ol
+                        li Fukuoka, Japan
+                        li Cairo, Egypt
+                        li Cape Town, South Africa
+                    .attachment
+                      img(src="/assets/img/samples/labs.jpg")
+                      .description Lab locations are chosen based on many aspects.
+                    p Locations are chosen based on but not limited to these criterias:
+                    ol
+                      li Cheap rental, so we are able to set up a large facility. Ideally can house 20-30 teams consisting of around 2-5 people per team as well as our Lab Advisors.
+                      li Startup hubs so we will be able to find a lot of interesting projects to invest in locally, and it would be easy for teams that we invest in to find additional talents if needed.
+                      li Cheap cost of living meaning we’ll spend less money on each team. If we move a North American or European team here to live and build their dream project, it would cost significantly less than if we were to give them enough money to live in their home country.
+                      li Cryptocurrency laws are attractive and government is generally allowing cryptocurrency to flourish.
+                      li In the regions of the poorest humans on the planet, we will to be able to help local entrepreneurs build technology to help the development of the regions, as well as spread
+                        span.miskre miskre
+                        | adoption to people who otherwise wouldn’t be able to have access.
+                    h2
+                      span.miskre.ml-0 miskre
+                      | Labs Investment
+                    p
+                      span.miskre.ml-0 miskre
+                      | Foundation will invest in early startups by providing them with guidance and support from our Lab Advisors, a place to work, accommodation, and a basic salary. Anyone from anywhere can apply to
+                      span.miskre miskre
+                      | labs and be funded by sending in an application online and tell us about your business and your team.
+                    h2 Why Get Investment From
+                      span.miskre miskre
+                      | Foundation Instead of Doing Their Own ICO?
+                    .attachment
+                      img(src="/assets/img/samples/liquidity.jpg")
+                      .description Get investment from
+                        span.miskre miskre
+                        | to build the eco-system together
+                    p
+                      ul
+                        li Immediate user base and feedback from the
+                          span.miskre miskre
+                          | community when released.
+                        li Success from product market fit, instead of ability to raise tens of millions in an ICO.
+                        li To start an ICO requires a lot of paperwork, that would cost quite a bit of money in lawyer fees.
+                        li Most new entrepreneurs don’t have the background or previous success in order to convince people to invest in their ICO. (Not that having a corporate background or previous success is a prerequisite for future success)
+                        li Intense incubation period with full support from industry experts working as Lab Advisors.
+                        li Access to resources and connections of
+                          span.miskre miskre
+                          | Foundation.
+                        li Build on an established blockchain
+                        li Every startup in the ecosystem uses
+                          span.mis MIS
+                          | and
+                          span.kre KRE
+                          | , which will boost the utilities of the tokens and grow the ecosystem
+
+                  .section
+                    h1 정부가 아닌 거버넌스
+                    h2 Current Problems with Governance in Blockchain
+                    dl
+                      dt Distribution
+                      dd Most cryptocurrencies founders talk about the negatives of centralization and how they are looking to change that with their token, this is, however, often not reflected in their actions, with founders sometimes giving themselves more than 50% of the total coin.
+                      dt Democracy
+                      dd Today we have very prominent figures in this space that simply hold too much power over the community: miners, developers, foundations, and maintainers. There is no point of a decentralized currency if the network of people that hold the power to change the currency is centralized.
+                      dt Example
+                      dd The DAO hack. The Ethereum Foundation started an informal vote to determine if there should be a hard fork or not. Only 5.5% of Ethereum holders actually voted because not everyone knows there was a poll running or they just simply didn’t understand what was going on, the poll only ran for 24 hours and 25% of YES votes came from 1 wallet. This shows that if 100% of ETH holders voted, the results might have been different. In this scenario, the Ethereum Foundation had the power to start the vote, choose the time limit, and carry out the act.
+                    h2 The
+                      span.miskre miskre
+                      | Solutions
+                    .attachment
+                      img(src="/assets/img/samples/2.png")
+                      .description
+                        span.miskre.ml-0 miskre
+                        | goal is to solve blockchain governance problem
+                    dl
+                      dt Fair Distribution
+                      dd Only 5% of the
+                        span.mis MIS
+                        | tokens will go to the founding team. With the full project completion set to be completed within 2 years time from date of the crowdsale, the
+                        span.miskre miskre
+                        | founders have to wait another 3 years to prove the idea and vision before receiving any
+                        span.mis MIS
+                        | as reward.
+                        br
+                        span.mis.ml-0 MIS
+                        | tokens are set to be locked for the first 5 years, then vested to the full amount after another 5 years.
+                      dt True Democracy
+                      dd
+                        p
+                          span.miskre.ml-0 miskre
+                          | introduces a new system of incentivized on-chain governance using a ranked choice voting system.
+                        .attachment
+                          img(src="http://via.placeholder.com/1000x600")
+                          .description Infographic of delegate and ranked-choice voting system)
+                        p
+                          span.miskre.ml-0 miskre
+                          | delegates are chosen from a highly competitive election system, driven by
+                          span.mis MIS
+                          | holders. Delegates are responsible to uphold the integrity of the system by verifying transactions, and gets rewarded by the system fee that the network receives.
+                        p The amount of delegates will be determined using the formula 3n+1= total delegates, to ensure ⅔ consensus can be reached. To ensure sustainable growth of the system, the amount of delegates, system fees, and pretty much everything else can be changed with protocol updates.
+                        p Each protocol update requires ⅔ vote yes from delegates in order to enter “Pending Deployment” stage. Pending Deployment stage = ⅔ of total delegates voted yes will automatically be deployed in x days. Delegates can change their vote at any time before the protocol is deployed, if delegates that voted yes change their vote to no and the update no longer has ⅔ consensus it will lose “Pending Deployment” status until it reach ⅔ consensus again and start a new deployment countdown. People can vote for new delegates at anytime, and replacement delegates can change previous delegates’ votes.
+                        p Anyone can submit a protocol update, change anything in the system, and request a desired amount of
+                          span.kre KRE
+                          | for their contribution. If a protocol update is deployed, the system will automatically send the requested reward to the attached wallet/wallets. A protocol update can attach infinite amount of wallets, and can specify which wallet get what ratio of the total reward.
+                    h2
+                      span.miskre.ml-0 miskre
+                      | Economics
+                    .attachment
+                      img(src="http://via.placeholder.com/1000x600")
+                      .description
+                        span.mis MIS
+                        | and
+                        span.kre KRE
+                        | distribution infographic
+                    p The
+                      span.miskre miskre
+                      | ecosystem will consist of two tokens:&nbsp;
+                      span.mis MIS
+                      | and
+                      span.kre.mr-0 KRE
+                      | .
+                      dl
+                        dt
+                          span.mis.ml-0 MIS
+                        dd 20 billion tokens representing rights to the network.
+                          br
+                          | Minimum unit is 1
+                          ul
+                            li 5%
+                              span.mis MIS
+                              | for the founding team (Locked for 5 years and vested 10% 6th year, 15% 7th year, 20% 8th year, 25% 9th year, 30% 10th year) Locked = Cannot transfer to another wallet
+                            li 2.5%
+                              span.mis MIS
+                              | for seed investors
+                            li 92.5%
+                              span.mis MIS
+                              | crowd sell
+                        dt
+                          span.kre.ml-0 KRE
+                        dd 20 billion tokens to be the currency of the network.
+                          br
+                          | Minimum unit is 0.000001
+                          br
+                          | The initial amount of
+                          span.kre KRE
+                          | is zero and will be generated by holding
+                          span.mis.mr-0 MIS
+                          | .
+                          br
+                          span.mis MIS
+                          | will continue to generate
+                          span.kre KRE
+                          | until the total
+                          span.kre KRE
+                          | reach 20 billion, this process will take 22 years. The rate of
+                          span.kre KRE
+                          | generated will decrease every year, to incentivize people to become early adopters.
+                          ul
+                            li 16% of
+                              span.kre KRE
+                              | generated first year
+                            li 52% of the
+                              span.kre KRE
+                              | generated within the first four years
+                            li 80%
+                              span.kre KRE
+                              | generated in twelve years
+
+
+
+
+

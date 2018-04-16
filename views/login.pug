@@ -1,22 +1,16 @@
-extends layout
+extends _layout
 
 block menu
   ul.navigations
     li
       a(href="#home") home
-    li
-      a(href="/whitepaper.html") whitepaper
-    li
-      a(href="/#roadmap") roadmap
-    li
-      a(href="/#team") team
-    li
-      a(href="/#faqs") faqs
-    li
-      a(href="/#blog") blog
-    li
-      a(href="/#reach") reach
-      
+    if whitepaper
+      li
+        a(href=whitepaper) interactive whitepaper
+    if pdf
+      li
+        a(href=pdf) download whitepaper
+
 block primary
   a.enter-whitelist(href="/whitelist.html" data-aos="fade-left" data-aos-duration="1000") enter whitelist
 

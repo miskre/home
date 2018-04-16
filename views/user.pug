@@ -1,13 +1,15 @@
-extends layout
+extends _layout
 
 block menu
   ul.navigations
     li
-      a(href="/index.html") home
-    li
-      a(href="/whitepaper.html") interactive whitepaper
-    li
-      a(href=pdf) download whitepaper
+      a(href="/") home
+    if whitepaper
+      li
+        a(href=whitepaper) interactive whitepaper
+    if pdf
+      li
+        a(href=pdf) download whitepaper
 
 block content
   #slides

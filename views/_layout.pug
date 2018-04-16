@@ -1,7 +1,7 @@
 include configs
 
 doctype html
-html.no-js(lang="en")
+html.no-js(lang=language)
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no")
@@ -31,7 +31,7 @@ html.no-js(lang="en")
     #top-bar
       a.menu(href="#" data-aos="fade-right" data-aos-duration="1000")
         img(src="/assets/img/menu.svg")
-      a.logo(href="/" data-aos="fade-down" data-aos-duration="1000")
+      a.logo(href=__l('home') data-aos="fade-down" data-aos-duration="1000")
         img(src="/assets/img/logo.svg")
       block primary
     #social-bar(data-aos="fade-right" data-aos-duration="1000")

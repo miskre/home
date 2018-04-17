@@ -47,6 +47,7 @@ body
       transform translate(0) scale(1)
       
 span.miskre
+  display inline-block
   background-image url(../img/favicon.png)
   background-repeat no-repeat
   background-position left center
@@ -59,6 +60,7 @@ span.miskre
   margin-right .4em
 span.mis
 span.kre
+  display inline-block
   background-image url(../img/mis.svg)
   background-repeat no-repeat
   background-position left center
@@ -486,12 +488,14 @@ span.kre
       margin-bottom 60px
     h1
       font-weight bold
-      line-height 1em
+      line-height 1.15em
       color white
       font-size 40px
       @media medium
         font-size 72px
+        line-height 1.1em
       @media large
+        line-height 1em
         font-size 100px
     h2
       font-weight bold
@@ -811,6 +815,7 @@ span.kre
         font-weight bold
         color white
         margin-bottom 15px
+        line-height 1.3em
       .answer
         color #999
         line-height 1.5em
@@ -852,6 +857,12 @@ span.kre
         color #999
 
 #home
+  .part
+    margin-top 50px
+    @media medium
+      margin-top 30px
+    @media large
+      margin-top 0
   .help
     color white
     font-size 14px

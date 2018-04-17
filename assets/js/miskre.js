@@ -39,14 +39,12 @@ function header() {
       $('#top-bar').removeClass('up').addClass('down')
     lastScrollTop = top
   }
-  if (!$('#home').length) {
-    setInterval(function() {
-      if (didScroll) {
-        hasScrolled()
-        didScroll = false
-      }
-    }, 250)
-  }
+  setInterval(function() {
+    if (didScroll) {
+      hasScrolled()
+      didScroll = false
+    }
+  }, 250)
 }
 
 // ui

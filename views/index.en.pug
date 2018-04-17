@@ -669,14 +669,14 @@ block content
           .social-links
             +social-links
 
-          if appstore || google
+          if links.appstore || links.googleplay
             .help Get in touch
             .download
-              if appstore
-                a(href=appstore target="_blank")
+              if links.appstore
+                a(href=links.appstore target="_blank")
                   img(src="/assets/img/get.ios.svg")
-              if googleplay
-                a(href=googleplay target="_blank")
+              if links.googleplay
+                a(href=links.googleplay target="_blank")
                   img(src="/assets/img/get.android.svg")
 
         .copyright © 2018

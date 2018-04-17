@@ -9,6 +9,7 @@
   "author": "Gia <gia@coa.vn>",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.2.0",
     "compression": "^1.7.1",
     "express": "^4.16.2",
     "heroku-ssl-redirect": "0.0.4",

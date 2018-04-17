@@ -41,6 +41,12 @@ mixin google-analytic
     gtag('js', new Date());
     gtag('config', 'UA-89272419-1');
 
+mixin language-modal
+  .remodal.languages-modal(data-remodal-id="languages")
+    .languages
+      each name, code in supported
+        a(href=__l('home', code) class=(code == language ? code + ' a' : code))= name
+
 mixin hello-world
   #preload
     .text

@@ -23,18 +23,27 @@ app.set('views', './views')
 app.use(function(req, res, next) {
   res.locals = {
     language: 'en',
+    supported: {
+      en: 'English',
+      de: 'German',
+      zh: 'Chinese',
+      ja: 'Japanese',
+      ko: 'Korean',
+      es: 'Spanish',
+      ru: 'Russian'
+    },
     links: {
-      home: function() {
-        return '/' + res.locals.language + '/'
+      home: function(lang = res.locals.language) {
+        return '/' + lang + '/'
       },
-      whitepaper: function() {
-        return '/' + res.locals.language + '/whitepaper'
+      whitepaper: function(lang = res.locals.language) {
+        return '/' + lang + '/whitepaper'
       },
-      whitelist: function() {
-        return 'https://whitelist.miskre.org' + '/' + res.locals.language
+      whitelist: function(lang = res.locals.language) {
+        return 'https://whitelist.miskre.org' + '/' + lang
       },
-      crowdsale: function() {
-        return 'https://crowdsale.miskre.org' + '/' + res.locals.language
+      crowdsale: function(lang = res.locals.language) {
+        return 'https://crowdsale.miskre.org' + '/' + lang
       },
       pdf: '#',
       appstore: '#',
@@ -43,9 +52,9 @@ app.use(function(req, res, next) {
       slack: 'https://miskre.slack.com',
       telegram: 'https://t.me/miskre'
     },
-    __l: function(name) {
+    __l: function(name, args) {
       switch (typeof res.locals.links[name]) {
-        case 'function': return res.locals.links[name]()
+        case 'function': return res.locals.links[name](args)
         case 'string':
         default: return res.locals.links[name]
       }

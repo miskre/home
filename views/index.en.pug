@@ -26,6 +26,7 @@ block primary
   +enter-whitelist
 
 block modals
+  +language-modal
   .remodal.youtube-modal(data-remodal-id="play")
     a.x(data-remodal-close href="#") &times;
     center
@@ -53,7 +54,7 @@ block modals
     p Jay is a serial internet entrepreneur, world traveler, and photographer. Having developed a passion for entrepreneurship at a very young age, Jay has always been fascinated by social media and the marketing power it harnesses. 
     p Jay has built several e-commerce brands from the ground up, traveled the globe through brand partnerships, competed as a quarterback on the NCAA level, and is passionate about how a decentralized world will shape our future. He is dedicated to leaving this place better than he found it -empowering and inspiring one day at a time.
   .remodal.bio-modal(data-remodal-id="nhu")
-    p Nhu has always been passionate about the ideas of liberty and freedom, which make her a wonderful addition to our project. Nhu have a unique background which will no doubt add interesting flavor to our project having been a model, dj, artist manager, and catwalk director. She have experience in managing and working with large groups of people to ensure proper proceedings of many shows and large events.
+    p Nhu has always been passionate about the ideas of liberty and freedom, which make her a wonderful addition to our project. Nhu have a unique background which will no doubt add interesting flavor to our project having been a model, DJ, artist manager, and catwalk director. She have experience in managing and working with large groups of people to ensure proper proceedings of many shows and large events.
   //- .remodal.bio-modal(data-remodal-id="am")
     p Duy has been involved in several high profile projects, and have worked with many top 200 sites in the world. Accountable for steering daily operations and strategic directions of many top websites while keeping all initiatives and projects aligned with company mission, values, and philosophy.
     p Has extensive experience in developing clear strategies and key programs in myriad of niche categories. Able to establish and maintain strong cross-functioning business relationships with industry leaders and individuals, optimizing business processes and business goals through effective and collaborative teamwork.
@@ -116,6 +117,24 @@ block content
         //- a.play(href="#play" data-remodal-target="play")
           img.mr-5(src="/assets/img/play.svg")
           | why miskre?
+
+        .help Interactive Whitepaper&nbsp;
+          small &mdash; Coming on&nbsp;
+          span#wpdate &nbsp;&nbsp;
+        .counter
+          .day
+            span#wpday.number &nbsp;&nbsp;
+            span.help days
+          .hour
+            span#wphour.number &nbsp;&nbsp;
+            span.help hours
+          .minute
+            span#wpmin.number &nbsp;&nbsp;
+            span.help mins
+          .second
+            span#wpsec.number &nbsp;&nbsp;
+            span.help secs
+
         a.play(data-remodal-target="play" href="#" data-aos="fade-up" data-aos-duration="1000")
           img.mr-5(src="/assets/img/play.svg")
           | miskre in 2-mins
@@ -660,23 +679,6 @@ block content
               if googleplay
                 a(href=googleplay target="_blank")
                   img(src="/assets/img/get.android.svg")
-
-          .help Interactive Whitepaper&nbsp;
-            small &mdash; Coming on&nbsp;
-            span#wpdate &nbsp;&nbsp;
-          .counter
-            .day
-              span#wpday.number &nbsp;&nbsp;
-              span.help days
-            .hour
-              span#wphour.number &nbsp;&nbsp;
-              span.help hours
-            .minute
-              span#wpmin.number &nbsp;&nbsp;
-              span.help mins
-            .second
-              span#wpsec.number &nbsp;&nbsp;
-              span.help secs
 
         .copyright © 2018
           span.miskre.mr-0 miskre

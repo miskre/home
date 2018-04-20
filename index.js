@@ -13,8 +13,11 @@ app.use(compression({
   }
 }))
 
+app.use('/docs', express.static('./docs', {
+  maxAge: '2w'
+}))
 app.use('/assets', express.static('./assets', {
-  maxage: '2w'
+  maxAge: '2w'
 }))
 
 app.set('view engine', 'pug')
@@ -45,7 +48,9 @@ app.use(function(req, res, next) {
       crowdsale: function(lang = res.locals.language) {
         return 'https://crowdsale.miskre.org' + '/' + lang
       },
-      pdf: '#',
+      pdf: function(lang = res.locals.language) {
+        return '/docs/whitepaper.' + lang + '.pdf'
+      },
       appstore: '#',
       googleplay: '#',
       medium: 'https://medium.com/miskre',

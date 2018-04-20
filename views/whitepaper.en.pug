@@ -7,7 +7,7 @@ block menu
     li
       a(href=__l('whitepaper')) whitepaper
     li
-      a(href=__l('pdf')) download whitepaper
+      a(href=__l('pdf') target="_blank") download whitepaper
 
 block primary
   +enter-whitelist
@@ -21,7 +21,7 @@ block content
         .rw
           .cl.md-4.lg-3
             .toc
-              a.download(href=__l('pdf')) pdf version
+              a.download(href=__l('pdf') target="_blank") pdf version
 
             a.toc-toggle(href="#") table of contents
           .cl.md-8.lg-9

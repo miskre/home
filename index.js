@@ -53,6 +53,10 @@ app.use(function(req, res, next) {
       },
       appstore: '#',
       googleplay: '#',
+      facebook: null,
+      instagram: null,
+      reddit: 'https://www.reddit.com/r/miskre/',
+      twitter: 'https://twitter.com/Miskre_Global',
       medium: 'https://medium.com/miskre',
       slack: 'https://miskre.slack.com',
       telegram: 'https://t.me/miskre'

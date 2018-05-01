@@ -58,7 +58,7 @@ app.use(function(req, res, next) {
       reddit: 'https://www.reddit.com/r/miskre/',
       twitter: 'https://twitter.com/Miskre_Global',
       medium: 'https://medium.com/miskre',
-      slack: 'https://miskre.slack.com',
+      slack: 'https://chat.miskre.org',
       telegram: 'https://t.me/miskre'
     },
     __l: function(name, args) {

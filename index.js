@@ -55,6 +55,7 @@ app.use(function(req, res, next) {
       googleplay: '#',
       facebook: null,
       instagram: null,
+      explorer: 'https://explorer.miskre.org',
       reddit: 'https://www.reddit.com/r/miskre/',
       twitter: 'https://twitter.com/Miskre_Global',
       medium: 'https://medium.com/miskre',

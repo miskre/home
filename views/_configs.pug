@@ -1,20 +1,21 @@
 mixin enter-whitelist
-  a.enter-whitelist(href=__l('whitelist') data-aos="fade-left" data-aos-duration="1000")
-    case language
-      when 'ru'
-        | Белый список
-      when 'es'
-        | lista blanca
-      when 'zh'
-        | 进入白名单
-      when 'ja'
-        | ホワイトリスト
-      when 'ko'
-        | 허용 목록에 입력
-      when 'de'
-        | geben sie whitelist
-      default
-        | enter whitelist
+  if __l('whitelist')
+    a.enter-whitelist(href=__l('whitelist') data-aos="fade-left" data-aos-duration="1000")
+      case language
+        when 'ru'
+          | Белый список
+        when 'es'
+          | lista blanca
+        when 'zh'
+          | 进入白名单
+        when 'ja'
+          | ホワイトリスト
+        when 'ko'
+          | 허용 목록에 입력
+        when 'de'
+          | geben sie whitelist
+        default
+          | enter whitelist
 
 mixin social-links
   if links.twitter

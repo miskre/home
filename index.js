@@ -43,6 +43,7 @@ app.use(function(req, res, next) {
         return '/' + lang + '/whitepaper'
       },
       whitelist: function(lang = res.locals.language) {
+        return null
         return 'https://whitelist.miskre.org' + '/' + lang
       },
       crowdsale: function(lang = res.locals.language) {

@@ -337,7 +337,7 @@ function addGlobeDots() {
   var geometry = new THREE.Geometry();
 
   // Make circle
-  var canvasSize = 6;
+  var canvasSize = 4;
   var halfSize = canvasSize / 2;
   var textureCanvas = document.createElement('canvas');
   textureCanvas.width = canvasSize;

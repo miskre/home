@@ -75,11 +75,18 @@ app.use(function(req, res, next) {
 })
 
 var router = express.Router()
+
 router.get('/', function(req, res) {
   res.render('index')
 })
+
 router.get('/whitepaper', function(req, res) {
   res.render('whitepaper')
+})
+
+router.get('/html/:file', function(req, res) {
+  const file = req.params.file
+  res.render(file)
 })
 
 app.use(router)

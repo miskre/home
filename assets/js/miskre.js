@@ -3,7 +3,7 @@
 // whitepaper
 function whitepaper() {
   if (!$('#home').length) return
-  var WP_DATE = moment('2018-06-15', 'YYYY-MM-DD')
+  var WP_DATE = moment('2018-07-01', 'YYYY-MM-DD')
   var WP_DEADLINE = WP_DATE.format('MMM Do, YYYY')
   $('#wpdate').text(WP_DEADLINE)
   var $day = $('#wpday')

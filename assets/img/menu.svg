@@ -1,20 +1,7 @@
-<svg width="20" height="21" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<title>menu</title>
-<desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(671 439)">
+<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="menu">
-<g id="Line">
-<use xlink:href="#path0_stroke" transform="translate(-671 -438)" fill="#666666"/>
+<line id="Line" y1="-0.5" x2="20" y2="-0.5" transform="translate(0 1)" stroke="#999999"/>
+<line id="Line_2" y1="-0.5" x2="20" y2="-0.5" transform="translate(0 11)" stroke="#999999"/>
+<line id="Line_3" y1="-0.5" x2="20" y2="-0.5" transform="translate(0 21)" stroke="#999999"/>
 </g>
-<g id="Line">
-<use xlink:href="#path0_stroke" transform="translate(-671 -428)" fill="#666666"/>
-</g>
-<g id="Line">
-<use xlink:href="#path0_stroke" transform="translate(-671 -418)" fill="#666666"/>
-</g>
-</g>
-</g>
-<defs>
-<path id="path0_stroke" d="M 0 0L 20 0L 20 -1L 0 -1L 0 0Z"/>
-</defs>
 </svg>

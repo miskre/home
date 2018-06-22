@@ -52,8 +52,8 @@ app.use(function(req, res, next) {
       pdf: function(lang = res.locals.language) {
         return '/docs/whitepaper.' + lang + '.pdf'
       },
-      appstore: '#',
-      googleplay: '#',
+      appstore: null,
+      googleplay: null,
       facebook: null,
       instagram: null,
       explorer: 'https://explorer.miskre.org',

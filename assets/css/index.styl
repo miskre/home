@@ -493,6 +493,12 @@ span.kre
         padding 170px 20px 50px 120px
       @media large
         padding 200px 20px 150px 120px
+  .part-title
+    color white
+    font-size 24px
+    font-weight bold
+    margin-bottom 20px
+    color white
   .title
     margin-bottom 20px
     @media medium
@@ -535,7 +541,7 @@ span.kre
         margin-top 25px
   .description
     font-size 14px
-    color #999
+    color #bbb
     line-height 1.5em
     max-width 600px
 
@@ -689,10 +695,11 @@ span.kre
 
 #team
   .team
+  .advisors
     .avatar
       width 100%
       height 0
-      padding-top 100%
+      padding-top @width
       margin-bottom 25px
       position relative
       overflow hidden
@@ -722,7 +729,7 @@ span.kre
     .bio
       display none
     .role
-      color #999
+      color #aaa
       font-size 13px
       line-height 20px
     .links
@@ -732,6 +739,17 @@ span.kre
         display inline-block
         &:not(:last-child)
           margin-right 15px
+  .team
+    .avatar
+      width 35%
+      padding-top @width
+      float left
+      margin-right 15px
+      margin-bottom 15px
+      @media small-only
+        width 20%
+        padding-top @width
+        margin-bottom 10px
 
 #roadmap
   ul.schedule

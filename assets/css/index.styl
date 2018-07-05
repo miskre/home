@@ -478,7 +478,7 @@ span.kre
         right 0
         bottom 0
         left 0
-        background radial-gradient(circle at 0 0, #111 15%, rgba(#111, .2))
+        background radial-gradient(circle at 0 0, rgba(#111, .75) 15%, rgba(#111, .2))
     > .fg
       max-width 1300px
       position relative
@@ -895,6 +895,8 @@ span.kre
   min-height 100vh
   @media (min-height: 1200px)
     min-height 1200px
+  .bg:after
+    background radial-gradient(circle at 0 0, rgba(#111, .5) 15%, rgba(#111, .05)) !important
   .part
     margin-top 50px
     @media medium

@@ -74,20 +74,20 @@ function menu() {
       $('html, body').removeClass('no-scroll')
     }
   })
-  if ($('#home').length) {
-    section.on('click', '.navigations a', function(e) {
-      section.fadeOut('fast', function() {
-        $('html, body').removeClass('no-scroll')
-        section.addClass('h')
-      })
-      toggle.removeClass('opened')
-      link = $(e.target).attr('href')
+  section.on('click', '.navigations a', function(e) {
+    section.fadeOut('fast', function() {
+      $('html, body').removeClass('no-scroll')
+      section.addClass('h')
+    })
+    toggle.removeClass('opened')
+    link = $(e.target).attr('href')
+    if (link.startsWith('#')) {
       element = $(link)
       $('html, body').animate({
         scrollTop: element.offset().top
       }, 1000)
-    })
-  }
+    }
+  })
 }
 
 function pickers() {

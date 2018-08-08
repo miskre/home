@@ -1,6 +1,7 @@
 const express = require('express')
 const compression = require('compression')
 const ssl = require('heroku-ssl-redirect')
+const path = require('path')
 
 const port = process.env.PORT || 3000
 const app = express()
@@ -77,7 +78,7 @@ app.use(function(req, res, next) {
 var router = express.Router()
 
 router.get('/googled694d4e666d3effb.html', function(req, res) {
-  res.sendFile('./googled694d4e666d3effb.html')
+  res.sendFile(path.join(__dirname, './googled694d4e666d3effb.html'))
 })
 
 router.get('/', function(req, res) {

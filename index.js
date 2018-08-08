@@ -13,7 +13,7 @@ app.use(compression({
   }
 }))
 
-app.get('/googled694d4e666d3effb.html', () => {
+app.get('/googled694d4e666d3effb.html', (req, res) => {
   res.sendFile('./googled694d4e666d3effb.html')
 })
 

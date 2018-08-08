@@ -14,6 +14,10 @@ app.use(compression({
   }
 }))
 
+app.use('/', express.static('./static', {
+  maxAge: '2w'
+}))
+
 app.use('/docs', express.static('./docs', {
   maxAge: '2w'
 }))
@@ -76,10 +80,6 @@ app.use(function(req, res, next) {
 })
 
 var router = express.Router()
-
-router.get('/googled694d4e666d3effb.html', function(req, res) {
-  res.sendFile(path.join(__dirname, './googled694d4e666d3effb.html'))
-})
 
 router.get('/', function(req, res) {
   res.render('index')

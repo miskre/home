@@ -13,6 +13,10 @@ app.use(compression({
   }
 }))
 
+app.get('/googled694d4e666d3effb.html', () => {
+  res.sendFile('./googled694d4e666d3effb.html')
+})
+
 app.use('/docs', express.static('./docs', {
   maxAge: '2w'
 }))

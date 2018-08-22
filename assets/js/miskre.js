@@ -189,10 +189,17 @@ function loader() {
 $(window)
   .on('load', loader)
   .scroll(scroller)
-$(document).ready(function() {
-  menu()
-  header()
-  whitepaper()
-  toc()
-  pickers()
-})
+
+$(document)
+  .on('closing', '.youtube-modal', function(e) {
+    var iframe = $(e.currentTarget)
+      .find('iframe')
+    iframe.attr('src', iframe.attr('src'))
+  })
+  .ready(function() {
+    menu()
+    header()
+    whitepaper()
+    toc()
+    pickers()
+  })

@@ -31,15 +31,14 @@ block primary
 block modals
   .remodal.youtube-modal(data-remodal-id="play")
     a.x(data-remodal-close href="#") &times;
-    center
-      p.mv-30 Coming Soon
+    iframe(width="100%" height="400px" src="https://www.youtube.com/embed/tlu5QaEnjs8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
     //- .video
       iframe(width="100%" height="480" src="https://www.youtube.com/embed/gG_dA32oH44?rel=0&amp;showinfo=0&amp;start=180" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-  .remodal.bio-modal(data-remodal-id="peter" data-remodal-options="hashTracking: false")
+  //- .remodal.bio-modal(data-remodal-id="peter" data-remodal-options="hashTracking: false")
     a.x(href="#" data-remodal-action="close") &times;
     p Peter Nguyen is the world’s foremost authority in direct-to-consumer digital advertising. Peter has created dozens of multi-million dollar internet brands and is the creator of Accelerated Ventures, which is now being taught at the 2nd-ranked entrepreneurship program in the United States.
     p He has also made his name as the Founder and CEO of Ad Exchange Group, which is the leading direct-to-consumer digital performance-based agency in the United States. Ad Exchange Group provides services to leading brands, such as Jeunesse, Bulletproof, Feel Rich, Cosmoderm, Pathway Genomics, and many more.
-  .remodal.bio-modal(data-remodal-id="doan" data-remodal-options="hashTracking: false")
+  //- .remodal.bio-modal(data-remodal-id="doan" data-remodal-options="hashTracking: false")
     a.x(href="#" data-remodal-action="close") &times;
     p Doan is a self-made entrepreneur and has experience managing several startups taking them from 0 to 8 figures a year. He has been interested in the economics of cryptocurrencies since 2014, and is passionately working towards a future where cryptocurrencies are used globally for daily transactions. Doan specializes in optimizing the business process and making things efficient.
   .remodal.bio-modal(data-remodal-id="cuong" data-remodal-options="hashTracking: false")
@@ -512,23 +511,13 @@ block content
                 img(src="/assets/img/darren.jpg")
               .name Darren Lopes
               .role Chairman
-          li(data-aos="fade-up")
+          //- li(data-aos="fade-up")
             .member
               .avatar(data-remodal-target="doan")
                 img(src="/assets/img/doan.jpg")
                 img(src="/assets/img/doan.jpg")
               .name Cong Doan
               .role Chief Operating Officer
-          li(data-aos="fade-up")
-            .member
-              .avatar(data-remodal-target="anthony")
-                img(src="/assets/img/anthony.jpg")
-                img(src="/assets/img/anthony.jpg")
-              .name Anthony Romano
-              .role Chief Investment Officer
-              .links
-                a(href="https://linkedin.com/in/peterqnguyen" target="_blank")
-                  img(src="/assets/img/linkedin.svg")
           li(data-aos="fade-up")
             .member
               .avatar(data-remodal-target="cuong")
@@ -584,6 +573,16 @@ block content
         ul.advisors.bg.sm-2.md-3.lg-5.sm-sp-20.md-sp-40.lg-sp-50
           li(data-aos="fade-up")
             .member
+              .avatar(data-remodal-target="anthony")
+                img(src="/assets/img/anthony.jpg")
+                img(src="/assets/img/anthony.jpg")
+              .name Anthony Romano
+              .role Advisor
+              .links
+                a(href="https://linkedin.com/in/peterqnguyen" target="_blank")
+                  img(src="/assets/img/linkedin.svg")
+          li(data-aos="fade-up")
+            .member
               .avatar(data-remodal-target="quan")
                 img(src="/assets/img/quan.jpg")
                 img(src="/assets/img/quan.jpg")
@@ -614,7 +613,7 @@ block content
               .links
                 a(href="https://www.linkedin.com/in/samson-day-114933112/" target="_blank")
                   img(src="/assets/img/linkedin.svg")
-          li(data-aos="fade-up")
+          //- li(data-aos="fade-up")
             .member
               .avatar(data-remodal-target="peter")
                 img(src="/assets/img/peter.jpg")

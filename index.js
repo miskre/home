@@ -45,7 +45,7 @@ app.use(function(req, res, next) {
         return '/' + lang + '/'
       },
       whitepaper: function(lang = res.locals.language) {
-        return '/' + lang + '/whitepaper'
+        return '/docs/whitepaper.' + lang + '.pdf'
       },
       whitelist: function(lang = res.locals.language) {
         return null

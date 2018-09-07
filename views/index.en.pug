@@ -11,8 +11,8 @@ block menu
     li
       a(href=__l('explorer') target="_blank") explorer
     li
-      a(href=__l('whitepaper')) whitepaper
-    li
+      a(target="_blank" href=__l('whitepaper')) whitepaper
+    // li
       a(href=__l('pdf') target="_blank") download whitepaper
     li
       a(href="#roadmap") roadmap
@@ -128,7 +128,7 @@ block content
           img.mr-5(src="/assets/img/play.svg")
           | Miskre in 3-mins
         if links.whitepaper
-          a.play.alt(href=__l('whitepaper') data-aos="fade-up" data-aos-duration="1000")
+          a.play.alt(target="_blank" href=__l('whitepaper') data-aos="fade-up" data-aos-duration="1000")
             | Whitepaper
 
     section#vision

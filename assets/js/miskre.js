@@ -1,18 +1,18 @@
 //@prepros-prepend image-picker.js
 
-// whitepaper
-function whitepaper() {
+// counters
+function counters() {
   if (!$('#home').length) return
-  var WP_DATE = moment('2018-09-30', 'YYYY-MM-DD')
-  var WP_DEADLINE = WP_DATE.format('MMM Do, YYYY')
-  $('#wpdate').text(WP_DEADLINE)
-  var $day = $('#wpday')
-  var $hour = $('#wphour')
-  var $min = $('#wpmin')
-  var $sec = $('#wpsec')
+  var DATE = moment('2018-10-30', 'YYYY-MM-DD')
+  var DEADLINE = DATE.format('MMM Do, YYYY')
+  $('#date').text(DEADLINE)
+  var $day = $('#day')
+  var $hour = $('#hour')
+  var $min = $('#min')
+  var $sec = $('#sec')
   var tick = function() {
     var now = moment()
-    var diff = WP_DATE.diff(now)
+    var diff = DATE.diff(now)
     $day.text(~~(diff / 86400000))
     $hour.text(~~(diff % 86400000 / 3600000))
     $min.text(~~(diff % 3600000 / 60000))
@@ -48,7 +48,6 @@ function header() {
 }
 
 // ui
-
 function aosing() {
   if (AOS) {
     AOS.init({
@@ -185,7 +184,6 @@ function loader() {
 }
 
 // bind
-
 $(window)
   .on('load', loader)
   .scroll(scroller)
@@ -199,7 +197,7 @@ $(document)
   .ready(function() {
     menu()
     header()
-    whitepaper()
+    counters()
     toc()
     pickers()
   })

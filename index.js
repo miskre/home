@@ -3,7 +3,7 @@ const compression = require('compression')
 const ssl = require('heroku-ssl-redirect')
 const path = require('path')
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 const app = express()
 
 // app.use(ssl())
